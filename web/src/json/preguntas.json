@@ -1,5 +1,256 @@
 [
   {
+    "topic": "Personajes",
+    "q": "¿Quién escribió 'El Aleph' y es uno de los máximos exponentes de la literatura argentina?",
+    "options": ["Borges", "Cortázar", "Hernández", "Echeverría"],
+    "correct": 0,
+    "explain": "Jorge Luis Borges es considerado uno de los escritores más importantes del siglo XX, autor de 'El Aleph' y 'Ficciones'."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién escribió la novela 'Rayuela'?",
+    "img": "../src/img/personajes/Cortazar.jpg",
+    "options": ["Sábato", "Cortázar", "Borges", "Hernández"],
+    "correct": 1,
+    "explain": "Julio Cortázar fue un escritor argentino y autor de 'Rayuela', una obra fundamental del boom latinoamericano."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién escribió el poema épico 'Martín Fierro'?",
+    "img": "../src/img/personajes/Hernandez.jpg",
+    "options": ["Echeverría", "Borges", "Hernández", "Lugones"],
+    "correct": 2,
+    "explain": "José Hernández escribió 'El gaucho Martín Fierro', obra cumbre de la literatura gauchesca argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue el autor de 'El Matadero', relato que retrata la violencia política del siglo XIX?",
+    "img": "../src/img/personajes/Echeverria.jpg",
+    "options": ["Echeverría", "Mitre", "Borges", "Cortázar"],
+    "correct": 0,
+    "explain": "Esteban Echeverría escribió 'El Matadero', considerada la primera obra narrativa argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue uno de los presidentes más influyentes del siglo XIX y fundador del diario 'La Nación'?",
+    "img": "../src/img/personajes/Mitre.jpg",
+    "options": ["Roca", "Mitre", "Urquiza", "Avellaneda"],
+    "correct": 1,
+    "explain": "Bartolomé Mitre fue presidente, militar, historiador y fundador del diario 'La Nación'."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué presidente impulsó la ley de sufragio universal masculino y modernizó el país a fines del siglo XIX?",
+    "img": "../src/img/personajes/Roca.jpg",
+    "options": ["Rivadavia", "Roca", "Pellegrini", "Alvear"],
+    "correct": 1,
+    "explain": "Julio Argentino Roca presidió dos veces el país y fue figura clave en la consolidación del Estado nacional."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue la primera mujer en ocupar la presidencia de la Argentina?",
+    "img": "../src/img/personajes/Peron.jpg",
+    "options": ["Evita", "Cristina Fernández", "Isabel Perón", "Julieta Lanteri"],
+    "correct": 2,
+    "explain": "María Estela Martínez de Perón, 'Isabelita', fue la primera presidenta de la Argentina y del mundo."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué presidente radical fue derrocado por un golpe militar en 1930?",
+    "img": "../src/img/personajes/Yrigoyen.jpg",
+    "options": ["Yrigoyen", "Frondizi", "Alfonsín", "Illia"],
+    "correct": 0,
+    "explain": "Hipólito Yrigoyen, líder de la Unión Cívica Radical, fue el primer presidente elegido por voto secreto y universal."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué presidente argentino promovió la industrialización y fue derrocado en 1962?",
+    "img": "../src/img/personajes/Frondizi.jpg",
+    "options": ["Frondizi", "Alfonsín", "Illia", "Perón"],
+    "correct": 0,
+    "explain": "Arturo Frondizi impulsó la industria y la educación técnica, pero fue destituido por un golpe militar."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue un militar entrerriano que lideró la batalla de Caseros y derrocó a Rosas?",
+    "img": "../src/img/personajes/Urquiza.jpg",
+    "options": ["Urquiza", "Lavalle", "Laprida", "Alsina"],
+    "correct": 0,
+    "explain": "Justo José de Urquiza fue gobernador de Entre Ríos, militar y presidente de la Confederación Argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue presidente entre 1874 y 1880 y creó instituciones educativas y científicas?",
+    "img": "../src/img/personajes/Avellaneda.jpg",
+    "options": ["Mitre", "Avellaneda", "Roca", "Sarmiento"],
+    "correct": 1,
+    "explain": "Nicolás Avellaneda fue presidente y ministro de Educación, impulsando la instrucción pública y la inmigración."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue un líder de la Revolución de Mayo y firmante del Acta de Independencia?",
+    "img": "../src/img/personajes/Saavedra.jpg",
+    "options": ["Belgrano", "Saavedra", "Paso", "Laprida"],
+    "correct": 1,
+    "explain": "Cornelio Saavedra presidió la Primera Junta tras la Revolución de Mayo en 1810."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién presidió el Congreso de Tucumán que declaró la independencia en 1816?",
+    "img": "../src/img/personajes/Laprida.jpg",
+    "options": ["Saavedra", "Paso", "Laprida", "Castelli"],
+    "correct": 2,
+    "explain": "Francisco Narciso de Laprida fue el presidente del Congreso de Tucumán el 9 de julio de 1816."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué político fue conocido por impulsar la Ley de Inmigración y Colonización en 1876?",
+    "img": "../src/img/personajes/Alsina.jpg",
+    "options": ["Alsina", "Pellegrini", "Viamonte", "Lavalle"],
+    "correct": 0,
+    "explain": "Adolfo Alsina fue vicepresidente y ministro de Guerra, impulsando la colonización del territorio nacional."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue un reconocido político y economista apodado 'El piloto de tormentas'?",
+    "img": "../src/img/personajes/Pellegrini.jpg",
+    "options": ["Pellegrini", "Avellaneda", "Rawson", "Paso"],
+    "correct": 0,
+    "explain": "Carlos Pellegrini fue presidente entre 1890 y 1892 y estabilizó la economía argentina tras una gran crisis."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue médico, político y filántropo, impulsor de la salud pública en Argentina?",
+    "img": "../src/img/personajes/Rawson.jpg",
+    "options": ["Carrillo", "Rawson", "Favaloro", "Frondizi"],
+    "correct": 1,
+    "explain": "Guillermo Rawson fue médico y político, pionero de la sanidad y cofundador de la Cruz Roja Argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién es esta figura histórica?",
+    "img": "../src/img/personajes/SanMartin.jpg",
+    "options": ["Belgrano", "San Martín", "Roca", "Sarmiento"],
+    "correct": 1,
+    "explain": "José de San Martín fue el libertador de Argentina, Chile y Perú, figura clave en la independencia sudamericana."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue el creador de la bandera argentina?",
+    "img": "../src/img/personajes/Belgrano.jpg",
+    "options": ["Belgrano", "Mitre", "Saavedra", "Güemes"],
+    "correct": 0,
+    "explain": "Manuel Belgrano creó la bandera argentina en 1812 y fue uno de los principales líderes patriotas."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue la 'abanderada de los humildes'?",
+    "img": "../src/img/personajes/Evita.jpg",
+    "options": ["Evita", "Azurduy", "Cristina Fernández", "Juana Manso"],
+    "correct": 0,
+    "explain": "Eva Duarte de Perón, 'Evita', luchó por los derechos de los trabajadores y las mujeres en Argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué presidente argentino impulsó la educación pública y fundó escuelas en todo el país?",
+    "img": "../src/img/personajes/Sarmiento.jpg",
+    "options": ["Mitre", "Sarmiento", "Rivadavia", "Alfonsín"],
+    "correct": 1,
+    "explain": "Domingo Faustino Sarmiento fue presidente y principal promotor de la educación pública argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue conocido como el 'Libertador del Norte'?",
+    "img": "../src/img/personajes/Guemes.jpg",
+    "options": ["San Martín", "Belgrano", "Güemes", "Dorrego"],
+    "correct": 2,
+    "explain": "Martín Miguel de Güemes defendió el norte argentino con tácticas guerrilleras durante la independencia."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué médico argentino se destacó mundialmente por sus avances en cirugía cardiovascular?",
+    "img": "../src/img/personajes/Favaloro.jpg",
+    "options": ["Carrillo", "Favaloro", "Rawson", "Alfonsín"],
+    "correct": 1,
+    "explain": "René Favaloro fue un médico y educador argentino, pionero del bypass coronario."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué famoso músico y cantante fue un símbolo del tango argentino?",
+    "img": "../src/img/personajes/Gardel.jpg",
+    "options": ["Piazzolla", "Gardel", "Borges", "Spinetta"],
+    "correct": 1,
+    "explain": "Carlos Gardel es considerado el máximo exponente del tango y un ícono cultural argentino."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue el líder político y militar conocido como 'Restaurador de las Leyes'?",
+    "img": "../src/img/personajes/Rosas.jpg",
+    "options": ["Rivadavia", "Rosas", "Urquiza", "Mitre"],
+    "correct": 1,
+    "explain": "Juan Manuel de Rosas gobernó Buenos Aires con poder absoluto y defendió la soberanía nacional."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué figura lideró la organización nacional y fue el primer presidente constitucional argentino?",
+    "img": "../src/img/personajes/Mitre.jpg",
+    "options": ["Urquiza", "Mitre", "Sarmiento", "Avellaneda"],
+    "correct": 1,
+    "explain": "Bartolomé Mitre fue militar, historiador y el primer presidente constitucional argentino (1862–1868)."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue un héroe de la independencia que murió fusilado en 1828?",
+    "img": "../src/img/personajes/Dorrego.jpg",
+    "options": ["Dorrego", "Laprida", "Viamonte", "Saavedra"],
+    "correct": 0,
+    "explain": "Manuel Dorrego fue gobernador de Buenos Aires y defensor del federalismo, fusilado por Lavalle."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue el revolucionario argentino que participó en la Revolución Cubana?",
+    "img": "../src/img/personajes/Guevara.jpg",
+    "options": ["Perón", "Guevara", "Frondizi", "Azurduy"],
+    "correct": 1,
+    "explain": "Ernesto 'Che' Guevara fue un médico y revolucionario argentino, figura central de la Revolución Cubana."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue el futbolista considerado uno de los mejores de todos los tiempos?",
+    "img": "../src/img/personajes/Maradona.jpg",
+    "options": ["Messi", "Maradona", "Kempes", "Batistuta"],
+    "correct": 1,
+    "explain": "Diego Armando Maradona llevó a la Argentina a ganar el Mundial de 1986 y es un ícono del fútbol mundial."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue presidente de Argentina y símbolo del retorno democrático en 1983?",
+    "img": "../src/img/personajes/Alfonsin.jpg",
+    "options": ["Frondizi", "Perón", "Alfonsín", "Illia"],
+    "correct": 2,
+    "explain": "Raúl Alfonsín asumió la presidencia en 1983, marcando el regreso a la democracia tras la dictadura militar."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué prócer oriental también luchó por la independencia del Río de la Plata?",
+    "img": "../src/img/personajes/Artigas.jpg",
+    "options": ["Artigas", "Saavedra", "Belgrano", "San Martín"],
+    "correct": 0,
+    "explain": "José Gervasio Artigas fue el líder de la independencia uruguaya y defensor del federalismo rioplatense."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Qué mujer luchó por la independencia y comandó tropas en el Alto Perú?",
+    "img": "../src/img/personajes/Azurduy.jpg",
+    "options": ["Azurduy", "Evita", "Juana Manso", "Mariquita Sánchez"],
+    "correct": 0,
+    "explain": "Juana Azurduy fue una heroína de la independencia, reconocida por su valentía en el campo de batalla."
+  },
+
+
+
+
+  {
     "topic": "Historia",
     "q": "¿En qué año se declaró la independencia de la Argentina?",
     "options": ["1810", "1816", "1820", "1853"],
@@ -489,4 +740,371 @@
     "correct": 1,
     "explain": "Lola Mora fue una destacada escultora argentina de fines del siglo XIX."
   }
+  ,
+
+
+  {
+    "topic": "Malvinas",
+    "q": "¿En qué año ocurrió la Guerra de las Malvinas?",
+    "options": ["1976", "1982", "1989", "1994"],
+    "correct": 1,
+    "explain": "La Guerra de las Malvinas comenzó el 2 de abril de 1982 entre Argentina y el Reino Unido."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué país enfrentó a la Argentina en la Guerra de Malvinas?",
+    "options": ["Estados Unidos", "Francia", "Reino Unido", "Chile"],
+    "correct": 2,
+    "explain": "La guerra fue entre Argentina y el Reino Unido por la soberanía de las Islas Malvinas."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué presidente argentino estaba en el poder durante la guerra?",
+    "options": ["Raúl Alfonsín", "Jorge Rafael Videla", "Leopoldo Galtieri", "Carlos Menem"],
+    "correct": 2,
+    "explain": "El general Leopoldo Fortunato Galtieri era presidente de facto cuando comenzó el conflicto en 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué fecha conmemora el Día del Veterano y de los Caídos en la Guerra de Malvinas?",
+    "options": ["24 de marzo", "2 de abril", "9 de julio", "20 de junio"],
+    "correct": 1,
+    "explain": "El 2 de abril se conmemora el desembarco argentino en las Islas Malvinas en 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿En qué océano están ubicadas las Islas Malvinas?",
+    "options": ["Atlántico Sur", "Pacífico", "Índico", "Ártico"],
+    "correct": 0,
+    "explain": "Las Islas Malvinas se encuentran en el Atlántico Sur, a unos 500 km de la costa argentina."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué fuerza británica desembarcó en las islas durante la guerra?",
+    "options": ["Royal Air Force", "Royal Navy", "Royal Army", "Royal Marines"],
+    "correct": 3,
+    "explain": "Los Royal Marines y el ejército británico retomaron el control de las islas en junio de 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Cuántos días duró aproximadamente el conflicto bélico?",
+    "options": ["15", "45", "74", "120"],
+    "correct": 2,
+    "explain": "La guerra duró 74 días, desde el 2 de abril hasta el 14 de junio de 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué barco argentino fue hundido por un submarino británico durante la guerra?",
+    "options": ["ARA Belgrano", "ARA San Juan", "ARA Bouchard", "ARA Salta"],
+    "correct": 0,
+    "explain": "El crucero ARA General Belgrano fue hundido por el submarino HMS Conqueror el 2 de mayo de 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué ciudad fue la base principal de operaciones argentinas en el continente durante la guerra?",
+    "options": ["Río Gallegos", "Comodoro Rivadavia", "Ushuaia", "Puerto Deseado"],
+    "correct": 1,
+    "explain": "Comodoro Rivadavia fue una de las principales bases logísticas argentinas durante el conflicto."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué nombre recibió la operación argentina de recuperación de las islas?",
+    "options": ["Operación Independencia", "Operación Rosario", "Operación Atlántico", "Operación Libertad"],
+    "correct": 1,
+    "explain": "La Operación Rosario fue el nombre en clave del desembarco argentino del 2 de abril de 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Quién era el primer ministro del Reino Unido durante la guerra?",
+    "options": ["Winston Churchill", "Margaret Thatcher", "Tony Blair", "Harold Wilson"],
+    "correct": 1,
+    "explain": "Margaret Thatcher era la primera ministra británica y dirigió la respuesta militar del Reino Unido."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Cuál fue la principal base aérea argentina en las islas durante el conflicto?",
+    "options": ["Base Cóndor", "Base Darwin", "Base Puerto Argentino", "Base Goose Green"],
+    "correct": 2,
+    "explain": "La base aérea principal fue Puerto Argentino (Stanley), desde donde operaron los aviones argentinos."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué arma argentina logró hundir el destructor británico HMS Sheffield?",
+    "options": ["Torpedo", "Misil Exocet", "Bomba de aviación", "Cañón naval"],
+    "correct": 1,
+    "explain": "El HMS Sheffield fue hundido por un misil Exocet lanzado por un avión Super Étendard argentino."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué fuerza argentina tuvo un papel fundamental en el transporte y suministro logístico durante la guerra?",
+    "options": ["Ejército Argentino", "Armada Argentina", "Fuerza Aérea Argentina", "Gendarmería Nacional"],
+    "correct": 2,
+    "explain": "La Fuerza Aérea Argentina realizó misiones extremas de transporte y ataque pese a la superioridad británica."
+  },
+
+
+  {
+    "topic": "Historia",
+    "q": "¿Qué batalla marcó el fin de las guerras de independencia en América del Sur?",
+    "options": ["Ayacucho", "Junín", "Chacabuco", "Maipú"],
+    "correct": 0,
+    "explain": "La batalla de Ayacucho (1824) selló la independencia definitiva de América del Sur del dominio español."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué provincia no envió representantes al Congreso de Tucumán en 1816?",
+    "options": ["Córdoba", "Buenos Aires", "Santa Fe", "Tucumán"],
+    "correct": 2,
+    "explain": "Santa Fe no participó inicialmente en el Congreso de Tucumán por conflictos con el poder central de Buenos Aires."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué tratado firmado en 1820 puso fin a la guerra civil entre Buenos Aires, Santa Fe y Entre Ríos?",
+    "options": ["Tratado del Pilar", "Tratado de Benegas", "Pacto Federal", "Tratado de San Nicolás"],
+    "correct": 0,
+    "explain": "El Tratado del Pilar (1820) marcó el inicio del federalismo argentino tras la caída del Directorio."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué papel desempeñó Bernardino Rivadavia en la historia argentina?",
+    "options": ["Fue el primer presidente constitucional del país", "Dirigió la campaña de los Andes", "Encabezó la Confederación Argentina", "Fue gobernador de Córdoba durante la independencia"],
+    "correct": 0,
+    "explain": "Bernardino Rivadavia fue el primer presidente de las Provincias Unidas del Río de la Plata (1826–1827)."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué provincia se separó de la Confederación Argentina en 1852 y formó un Estado autónomo?",
+    "options": ["Buenos Aires", "Corrientes", "Córdoba", "Entre Ríos"],
+    "correct": 0,
+    "explain": "Tras la batalla de Caseros, Buenos Aires se separó de la Confederación y funcionó como Estado independiente hasta 1862."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué conflicto internacional involucró a Argentina durante el gobierno de Rosas por bloqueos navales?",
+    "options": ["Bloqueo anglo-francés del Río de la Plata", "Guerra del Paraguay", "Bloqueo español al Río de la Plata", "Guerra con Brasil"],
+    "correct": 0,
+    "explain": "El bloqueo anglo-francés (1838–1850) fue una medida impuesta por potencias europeas contra el gobierno de Rosas."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué líder federal fue asesinado en Barranca Yaco en 1835, generando una crisis política nacional?",
+    "options": ["Dorrego", "Quiroga", "Peñaloza", "Urquiza"],
+    "correct": 1,
+    "explain": "Facundo Quiroga fue asesinado en 1835 en Barranca Yaco, hecho que fortaleció el poder de Rosas en Buenos Aires."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué presidente argentino impulsó la Ley Sáenz Peña de voto secreto, universal y obligatorio?",
+    "options": ["Roque Sáenz Peña", "Roca", "Alvear", "Pellegrini"],
+    "correct": 0,
+    "explain": "Roque Sáenz Peña promulgó en 1912 la ley que estableció el voto secreto y obligatorio para los varones."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Cuál fue el principal objetivo del Plan de Operaciones redactado por Mariano Moreno en 1810?",
+    "options": ["Centralizar el poder en Buenos Aires", "Defender la monarquía española", "Asegurar la independencia mediante medidas revolucionarias", "Evitar conflictos con Inglaterra"],
+    "correct": 2,
+    "explain": "El Plan de Operaciones proponía medidas drásticas para consolidar la revolución y asegurar la independencia."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué batalla enfrentó a las fuerzas unitarias de Lavalle con los federales de Rosas y Estanislao López en 1829?",
+    "options": ["Navarro", "Ituzaingó", "Cepeda", "La Ciudadela"],
+    "correct": 0,
+    "explain": "La batalla de Navarro (1829) enfrentó a Lavalle contra Rosas y López, consolidando el dominio federal en Buenos Aires."
+  },
+
+
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué unidad británica fue la primera en desembarcar en San Carlos durante la reconquista de las islas?",
+    "options": ["Royal Marines", "Parachute Regiment", "Scots Guards", "Gurkhas"],
+    "correct": 1,
+    "explain": "El 2.º Batallón del Parachute Regiment (2 Para) fue el primero en desembarcar en San Carlos el 21 de mayo de 1982."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué oficial argentino comandó las tropas en Puerto Argentino durante la rendición?",
+    "options": ["Mario Benjamín Menéndez", "Carlos Büsser", "Jofre Castañeda", "Luciano Benjamín Menéndez"],
+    "correct": 0,
+    "explain": "El general Mario Benjamín Menéndez fue el gobernador militar de las islas y firmó la rendición el 14 de junio."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué avión británico realizó bombardeos de largo alcance sobre las islas desde la isla Ascensión?",
+    "options": ["Harrier", "Tornado", "Vulcan", "Buccaneer"],
+    "correct": 2,
+    "explain": "El bombardero Avro Vulcan realizó las operaciones 'Black Buck' desde más de 6.000 km de distancia."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué país latinoamericano brindó apoyo logístico y de inteligencia al Reino Unido durante el conflicto?",
+    "options": ["Brasil", "Uruguay", "Chile", "Perú"],
+    "correct": 2,
+    "explain": "Chile, bajo el régimen de Pinochet, brindó asistencia logística e información al Reino Unido."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Cuántos soldados argentinos perdieron la vida durante la guerra?",
+    "options": ["255", "323", "649", "982"],
+    "correct": 2,
+    "explain": "Murieron 649 argentinos, 255 británicos y 3 civiles isleños durante el conflicto."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué nombre recibió la pista de aterrizaje principal argentina en las islas durante el conflicto?",
+    "options": ["Base Cóndor", "Base Stanley", "Base Calderón", "Base Darwin"],
+    "correct": 0,
+    "explain": "La pista de aviones ligeros en Goose Green fue llamada Base Cóndor, usada por aviones Pucará."
+  },
+  {
+    "topic": "Malvinas",
+    "q": "¿Qué operación secreta argentina planeaba un ataque aéreo final masivo antes de la rendición?",
+    "options": ["Operación Rosario II", "Operación Algeciras", "Operación Invierno", "Operación Cóndor Sur"],
+    "correct": 1,
+    "explain": "La Operación Algeciras fue un intento argentino de sabotaje en Gibraltar, frustrado antes de ejecutarse."
+  },
+
+  
+  {
+    "topic": "Historia",
+    "q": "¿Qué batalla marcó el fin de las guerras de independencia en América del Sur?",
+    "options": ["Ayacucho", "Junín", "Chacabuco", "Maipú"],
+    "correct": 0,
+    "explain": "La batalla de Ayacucho (1824) selló la independencia definitiva de América del Sur del dominio español."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué provincia no envió representantes al Congreso de Tucumán en 1816?",
+    "options": ["Córdoba", "Buenos Aires", "Santa Fe", "Tucumán"],
+    "correct": 2,
+    "explain": "Santa Fe no participó inicialmente en el Congreso de Tucumán por conflictos con el poder central de Buenos Aires."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué tratado firmado en 1820 puso fin a la guerra civil entre Buenos Aires, Santa Fe y Entre Ríos?",
+    "options": ["Tratado del Pilar", "Tratado de Benegas", "Pacto Federal", "Tratado de San Nicolás"],
+    "correct": 0,
+    "explain": "El Tratado del Pilar (1820) marcó el inicio del federalismo argentino tras la caída del Directorio."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué papel desempeñó Bernardino Rivadavia en la historia argentina?",
+    "options": ["Fue el primer presidente constitucional del país", "Dirigió la campaña de los Andes", "Encabezó la Confederación Argentina", "Fue gobernador de Córdoba durante la independencia"],
+    "correct": 0,
+    "explain": "Bernardino Rivadavia fue el primer presidente de las Provincias Unidas del Río de la Plata (1826–1827)."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué provincia se separó de la Confederación Argentina en 1852 y formó un Estado autónomo?",
+    "options": ["Buenos Aires", "Corrientes", "Córdoba", "Entre Ríos"],
+    "correct": 0,
+    "explain": "Tras la batalla de Caseros, Buenos Aires se separó de la Confederación y funcionó como Estado independiente hasta 1862."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué conflicto internacional involucró a Argentina durante el gobierno de Rosas por bloqueos navales?",
+    "options": ["Bloqueo anglo-francés del Río de la Plata", "Guerra del Paraguay", "Bloqueo español al Río de la Plata", "Guerra con Brasil"],
+    "correct": 0,
+    "explain": "El bloqueo anglo-francés (1838–1850) fue una medida impuesta por potencias europeas contra el gobierno de Rosas."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué líder federal fue asesinado en Barranca Yaco en 1835, generando una crisis política nacional?",
+    "options": ["Dorrego", "Quiroga", "Peñaloza", "Urquiza"],
+    "correct": 1,
+    "explain": "Facundo Quiroga fue asesinado en 1835 en Barranca Yaco, hecho que fortaleció el poder de Rosas en Buenos Aires."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué presidente argentino impulsó la Ley Sáenz Peña de voto secreto, universal y obligatorio?",
+    "options": ["Roque Sáenz Peña", "Roca", "Alvear", "Pellegrini"],
+    "correct": 0,
+    "explain": "Roque Sáenz Peña promulgó en 1912 la ley que estableció el voto secreto y obligatorio para los varones."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Cuál fue el principal objetivo del Plan de Operaciones redactado por Mariano Moreno en 1810?",
+    "options": ["Centralizar el poder en Buenos Aires", "Defender la monarquía española", "Asegurar la independencia mediante medidas revolucionarias", "Evitar conflictos con Inglaterra"],
+    "correct": 2,
+    "explain": "El Plan de Operaciones proponía medidas drásticas para consolidar la revolución y asegurar la independencia."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué batalla enfrentó a las fuerzas unitarias de Lavalle con los federales de Rosas y Estanislao López en 1829?",
+    "options": ["Navarro", "Ituzaingó", "Cepeda", "La Ciudadela"],
+    "correct": 0,
+    "explain": "La batalla de Navarro (1829) enfrentó a Lavalle contra Rosas y López, consolidando el dominio federal en Buenos Aires."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué tratado puso fin al conflicto entre Buenos Aires y la Confederación Argentina tras la batalla de Pavón?",
+    "options": ["Tratado de Pilar", "Tratado de San Nicolás", "Pacto de San José de Flores", "Tratado del Cuadrilátero"],
+    "correct": 2,
+    "explain": "El Pacto de San José de Flores (1859) permitió la reincorporación de Buenos Aires a la Confederación tras la batalla de Cepeda."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué general argentino dirigió la campaña libertadora que cruzó los Andes hacia Chile en 1817?",
+    "options": ["Belgrano", "San Martín", "Güemes", "Rivadavia"],
+    "correct": 1,
+    "explain": "José de San Martín organizó y lideró el Cruce de los Andes, una de las hazañas militares más grandes de la historia americana."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿En qué año se sancionó la Constitución Nacional que rige, con reformas, hasta la actualidad?",
+    "options": ["1816", "1826", "1853", "1860"],
+    "correct": 2,
+    "explain": "La Constitución Nacional fue sancionada en 1853 en Santa Fe, tras la caída de Rosas y la organización del país."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué batalla fue decisiva para asegurar la independencia argentina frente a los realistas en el norte?",
+    "options": ["Tucumán", "Ayacucho", "Ituzaingó", "Vilcapugio"],
+    "correct": 0,
+    "explain": "La batalla de Tucumán (1812), liderada por Manuel Belgrano, fue fundamental para frenar el avance realista en el norte argentino."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué conflicto bélico enfrentó a la Confederación Argentina contra la Confederación Perú-Boliviana en 1837?",
+    "options": ["Guerra del Brasil", "Guerra del Pacífico", "Guerra del Paraguay", "Guerra contra la Confederación Perú-Boliviana"],
+    "correct": 3,
+    "explain": "La guerra contra la Confederación Perú-Boliviana (1837–1839) enfrentó a las fuerzas de Rosas y Lavalle con las de Andrés de Santa Cruz."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué hecho provocó la caída de Juan Manuel de Rosas en 1852?",
+    "options": ["La batalla de Caseros", "El levantamiento de los Colorados", "La invasión de los ingleses", "La batalla de Pavón"],
+    "correct": 0,
+    "explain": "La derrota de Rosas ante las tropas de Urquiza en la batalla de Caseros (1852) puso fin a su largo gobierno."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Cuál fue el principal motivo de la Guerra de la Triple Alianza (1864–1870)?",
+    "options": ["Conflictos territoriales en la Patagonia", "La expansión del Paraguay y la disputa del Río de la Plata", "Invasión brasileña a Uruguay", "Bloqueo francés y británico a Buenos Aires"],
+    "correct": 1,
+    "explain": "La guerra se originó por las tensiones derivadas de la política expansionista paraguaya bajo el mando de Solano López."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué prócer argentino murió en el exilio en Francia y sus restos fueron repatriados recién en 1880?",
+    "options": ["San Martín", "Belgrano", "Sarmiento", "Rivadavia"],
+    "correct": 0,
+    "explain": "José de San Martín murió en Boulogne-sur-Mer (Francia) en 1850. Sus restos fueron repatriados en 1880."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué grupo político impulsó la Revolución de Mayo de 1810?",
+    "options": ["Los carlotistas", "Los unitarios", "Los patriotas criollos", "Los federales"],
+    "correct": 2,
+    "explain": "Los patriotas criollos, inspirados por las ideas ilustradas y la crisis del poder español, promovieron la Revolución de Mayo."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué líder federal fue asesinado por orden del general Lavalle en 1828?",
+    "options": ["Dorrego", "Quiroga", "Peñaloza", "Urquiza"],
+    "correct": 0,
+    "explain": "Manuel Dorrego fue fusilado por orden de Juan Lavalle tras un conflicto entre unitarios y federales."
+  }
+
 ]

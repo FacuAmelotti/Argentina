@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-S<html lang="es">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Revolucion Nacional</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-      <link rel="icon" type="image/png" href="../src/img/arg.png">
+      
+  <link rel="icon" type="image/png" href="../src/img/arg.png">
+  
   <style>
     /* ===========================
        RESET & BASE
@@ -1240,6 +1242,7 @@ S<html lang="es">
 
     
   </style>
+
   <style>
 /* ===========================
    RESET & BASE
@@ -1455,6 +1458,24 @@ html, body {
 
 .points {
   color: #ffd166;
+}
+
+
+/* 🔹 Posiciona correctamente el botón Cambiar */
+#changeQuestionBtn {
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2000;
+}
+#changeQuestionBtn:hover {
+  background: rgba(255,255,255,0.15);
 }
 
 /* ===========================
@@ -1676,7 +1697,7 @@ html, body {
   color: #fff;
 }
 
-</style>
+  </style>
 
 </head>
 <body>
@@ -2223,7 +2244,26 @@ const THOUGHTS = [
   "{name} ondea la bandera celeste y blanca…",
   "{name} piensa cómo unir al pueblo…",
   "{name} recuerda a los caídos por la patria…",
-  "{name} prepara su próxima revolución…"
+  "{name} prepara su próxima revolución…",
+    "{name} mira el horizonte y sueña con libertad…",
+  "{name} traza un plan digno de un prócer…",
+  "{name} piensa en el futuro de la patria…",
+  "{name} escucha el eco de la historia…",
+  "{name} recuerda las voces del pueblo…",
+  "{name} levanta su copa por la independencia…",
+  "{name} afila su pluma para escribir historia…",
+  "{name} siente el peso del deber argentino…",
+  "{name} respira hondo y sigue la causa…",
+  "{name} honra la bandera con el alma…",
+  "{name} recuerda a los que nunca se rindieron…",
+  "{name} enciende el fuego de una nueva era…",
+  "{name} escucha marchas en su memoria…",
+  "{name} siente el pulso de la revolución…",
+  "{name} defiende sus ideales con pasión…",
+  "{name} contempla el cielo celeste y blanco…",
+  "{name} guarda silencio, pero planea acción…",
+  "{name} sonríe ante el destino de su nación…",
+  "{name} jura no olvidar jamás la historia…"
 ];
 
 
@@ -2244,31 +2284,38 @@ function botSay(idx, text, ms = 1200) {
 
 
 function buildPlayers(playerName, mode) {
-  // base de bots
-  const baseBots = [
-    { id: "L", name: "SanMartin",   type: "bot", hp: INIT_HP, acc: 0.70, style: "proser",   alive: true, img: "../src/img/visuales/pj_2.jpg" },
-    { id: "F", name: "Rosas",type: "bot", hp: INIT_HP, acc: 0.55, style: "proser",  alive: true, img: "../src/img/visuales/pj_3.jpg" },
-    { id: "B", name: "Belgrano",  type: "bot", hp: INIT_HP, acc: 0.85, style: "proser", alive: true, img: "../src/img/visuales/pj_4.jpg" },
-  ];
-
-  const extraBots = [
-    { id: "G", name: "Maradona",     type: "bot", hp: INIT_HP, acc: 0.65, style: "leyenda",    alive: true, img: "../src/img/visuales/pj_5.jpg" },
-    { id: "P", name: "Messi",   type: "bot", hp: INIT_HP, acc: 0.60, style: "leyenda",  alive: true, img: "../src/img/visuales/pj_7.jpg" },
-    { id: "C", name: "Favaloro", type: "bot", hp: INIT_HP, acc: 0.68, style: "leyenda",  alive: true, img: "../src/img/visuales/pj_6.jpg" },
-    { id: "M", name: "Peron",    type: "bot", hp: INIT_HP, acc: 0.62, style: "proser",    alive: true, img: "../src/img/visuales/pj_8.jpg" },
-  ];
-
+  const allBots = [
+    { id: "1", name: "San Martín",   type: "bot", hp: INIT_HP, acc: 0.75, alive: true, img: "../src/img/visuales/pj_2.jpg" },
+   { id: "2", name: "Urquiza",     type: "bot", hp: INIT_HP, acc: 0.8,  alive: true, img: "../src/img/visuales/pj_4.jpg" },
+    { id: "3", name: "Julio Roca",        type: "bot", hp: INIT_HP, acc: 0.65, alive: true, img: "../src/img/visuales/pj_3.jpg" },
+    { id: "4", name: "Perón",        type: "bot", hp: INIT_HP, acc: 0.68, alive: true, img: "../src/img/visuales/pj_8.jpg" },
+    { id: "5", name: "Artigas",        type: "bot", hp: INIT_HP, acc: 0.72, alive: true, img: "../src/img/visuales/pj_9.jpg" },
+    { id: "6", name: "Gardel",       type: "bot", hp: INIT_HP, acc: 0.7,  alive: true, img: "../src/img/visuales/pj_11.jpg" },
+    { id: "7", name: "Maradona",     type: "bot", hp: INIT_HP, acc: 0.68, alive: true, img: "../src/img/visuales/pj_5.jpg" },
+    { id: "8", name: "Messi",        type: "bot", hp: INIT_HP, acc: 0.65, alive: true, img: "../src/img/visuales/pj_7.jpg" },
+    { id: "9", name: "Favaloro",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_6.jpg" },
+        { id: "10", name: "Sarmiento",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_12.jpg" },
+    { id: "11", name: "Cortazar",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_13.jpg" },
+    { id: "12", name: "Rivadavia",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_14.jpg" },
+    { id: "13", name: "Criollo",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_15.jpg" },
+     { id: "14", name: "Charly",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_16.jpg" },
+     { id: "15", name: "Evita",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_17.jpg" },
+     { id: "16", name: "Macri",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_18.jpg" },
+         { id: "16", name: "Cristina",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_19.jpg" },
+            { id: "16", name: "Guemes",     type: "bot", hp: INIT_HP, acc: 0.78, alive: true, img: "../src/img/visuales/pj_20.jpg" },
+   
+         { id: "17", name: "Gaucho",     type: "bot", hp: INIT_HP, acc: 0.8, alive: true, img: "../src/img/visuales/pj_10.jpg" } ];
   const human = { id: "H", name: playerName, type: "human", hp: INIT_HP, acc: 0.75, alive: true, img: "../src/img/visuales/pj_1.jpg" };
 
-  // 🔀 Mezclamos bots aleatoriamente
-  const bots = (mode === "full") 
-    ? [...baseBots, ...extraBots].sort(() => Math.random() - 0.5)
-    : [...baseBots].sort(() => Math.random() - 0.5);
+  // 🧠 Barajamos todo el conjunto de bots
+  const shuffled = allBots.sort(() => Math.random() - 0.5);
 
-  // 🧩 Orden: jugador + bots mezclados
-  const players = [human, ...bots];
+  // 🎯 Selección aleatoria según modo
+  const numBots = mode === "full" ? 7 : 3;
+  const selectedBots = shuffled.slice(0, numBots);
 
-  return players;
+  // 🧩 Devolvemos el jugador + bots seleccionados
+  return [human, ...selectedBots];
 }
 
 
@@ -2360,6 +2407,14 @@ function startTurnTimer() {
   clearInterval(state.interval);
   state.timer = TURN_TIME;
   state.awaitingAnswer = false; // ✅ Reiniciamos flag cada nuevo turno
+
+  // 🔹 Elegir una pregunta fija al comenzar el turno del jugador
+if (state.order[state.turnIdx] === 0) {
+  state.fixedQuestion = rnd(QUESTIONS);
+    state.remainingChanges = 3;
+}
+
+
   updateTimerUI();
 
   state.interval = setInterval(() => {
@@ -2485,23 +2540,71 @@ function startTurnTimer() {
 let savedTimer = null;
 
 function askQuestion(kind) {
-  savedTimer = state.timer; // ⏱️ guardamos tiempo actual
+  savedTimer = state.timer;
   state.awaitingAnswer = true;
 
   $("#qModal").classList.add("active");
-  const q = rnd(QUESTIONS);
+  // 🔹 Botón de cambiar pregunta
+// 🔹 Crear botón “Cambiar (3)” junto al botón Cerrar
+let changeBtn = document.getElementById("changeQuestionBtn");
+if (!changeBtn) {
+  changeBtn = document.createElement("button");
+  changeBtn.id = "changeQuestionBtn";
+changeBtn.className = "btn-ghost small";
+changeBtn.style.marginRight = "8px"; // 🔹 separación visual
+
+  changeBtn.textContent = `Cambiar pregunta (${state.remainingChanges})`;
+  changeBtn.onclick = () => changeQuestion(kind);
+
+  // 📍 Insertar justo ANTES del botón cerrar
+  const closeBtn = document.getElementById("btnCloseQuestion");
+  closeBtn.parentNode.insertBefore(changeBtn, closeBtn);
+} else {
+  changeBtn.textContent = `Cambiar pregunta (${state.remainingChanges})`;
+}
+changeBtn.style.display = "inline-block";
+changeBtn.disabled = state.remainingChanges <= 0;
+
+changeBtn.textContent = `Cambiar pregunta (${state.remainingChanges})`;
+
+
+const q = state.order[state.turnIdx] === 0 && state.fixedQuestion
+  ? state.fixedQuestion
+  : rnd(QUESTIONS);
+
+
   $("#qTopic").textContent = q.topic;
   $("#qTitle").textContent = q.q;
   $("#qExplain").style.display = "none";
   $("#qExplain").innerHTML = "";
-  $("#chipBonus").style.display = state.spyBonus ? "inline-block" : "none";
+
+  // ✅ Mostrar imagen si existe
+  const imgBox = document.getElementById("qImage");
+  if (q.img) {
+    if (!imgBox) {
+      const imgEl = document.createElement("img");
+      imgEl.id = "qImage";
+      imgEl.src = q.img;
+    imgEl.style = `
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  opacity: 0.95;
+`;
+  $("#qTitle").insertAdjacentElement("beforebegin", imgEl);
+    } else {
+      imgBox.src = q.img;
+      imgBox.style.display = "block";
+    }
+  } else if (imgBox) {
+    imgBox.style.display = "none";
+  }
 
   const optBox = $("#qOptions");
   optBox.innerHTML = "";
-
-  const shuffled = q.options.map((text, i) => ({ text, i }))
-    .sort(() => Math.random() - 0.5);
-
+  const shuffled = q.options.map((text, i) => ({ text, i })).sort(() => Math.random() - 0.5);
   shuffled.forEach(opt => {
     const btn = document.createElement("button");
     btn.className = "opt";
@@ -2535,6 +2638,25 @@ $("#btnCloseQuestion").onclick = () => {
   }
 };
 
+function changeQuestion(kind) {
+  if (state.remainingChanges > 0) {
+    state.remainingChanges--;
+
+    // Genera una nueva pregunta aleatoria
+    const newQ = rnd(QUESTIONS);
+    state.fixedQuestion = newQ;
+
+    // Vuelve a mostrar la pregunta actualizada
+    askQuestion(kind);
+
+    // Actualiza el texto del botón
+    const btn = document.getElementById("changeQuestionBtn");
+    if (btn) {
+      btn.textContent = `Cambiar (${state.remainingChanges})`;
+      if (state.remainingChanges <= 0) btn.disabled = true;
+    }
+  }
+}
 
 function resolveQuestion(q, idx, kind) {
   if (!state.awaitingAnswer) return;
@@ -2542,6 +2664,9 @@ function resolveQuestion(q, idx, kind) {
 
   // 🔒 Ocultar el botón cerrar inmediatamente
   $("#btnCloseQuestion").style.display = "none";
+  // 🔹 Ocultar el botón de cambiar pregunta cuando ya se respondió
+  const changeBtn = document.getElementById("changeQuestionBtn");
+  if (changeBtn) changeBtn.style.display = "none";
 
   const correct = (idx === q.correct);
   const explainBox = $("#qExplain");
@@ -2696,21 +2821,18 @@ if (kind === "fortify") {
 
          sfx.death.play();
 
-        // Remover del orden de turnos
-        const oldOrder = [...state.order];
-        state.order = state.order.filter(i => i !== idx);
+// Remover del orden de turnos
+const currentId = state.order[state.turnIdx]; // quién estaba jugando
+state.order = state.order.filter(i => i !== idx);
 
-        // Ajustar índice de turno si es necesario
-        if (state.order.length > 0) {
-        // Encontrar quién sigue después del eliminado
-        const wasAtIdx = oldOrder.indexOf(idx);
-        if (state.turnIdx >= state.order.length) {
-          state.turnIdx = 0;
-        }
+// Mantener la posición actual del turno
+let newIdx = state.order.indexOf(currentId);
+if (newIdx === -1) {
+  // si el que jugaba murió, pasar al siguiente jugador válido
+  newIdx = state.turnIdx % state.order.length;
+}
 
-        // Asegurar que el índice esté en rango
-        state.turnIdx = state.turnIdx % state.order.length;
-        }
+state.turnIdx = newIdx;
 
         // Game over si muere el jugador
         if (idx === 0) {
