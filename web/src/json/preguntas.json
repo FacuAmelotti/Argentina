@@ -1,0 +1,492 @@
+[
+  {
+    "topic": "Historia",
+    "q": "¿En qué año se declaró la independencia de la Argentina?",
+    "options": ["1810", "1816", "1820", "1853"],
+    "correct": 1,
+    "explain": "La independencia se declaró el 9 de julio de 1816 en Tucumán."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué ritmo musical es originario del Río de la Plata?",
+    "options": ["Samba", "Tango", "Cueca", "Chacarera"],
+    "correct": 1,
+    "explain": "El tango nació en Buenos Aires y Montevideo a fines del siglo XIX."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Cuál es la montaña más alta de la Argentina?",
+    "options": ["Aconcagua", "Lanín", "Fitz Roy", "Chañi"],
+    "correct": 0,
+    "explain": "El Aconcagua, en Mendoza, alcanza 6.962 metros sobre el nivel del mar."
+  },
+  {
+    "topic": "Símbolos",
+    "q": "¿Qué colores tiene la bandera argentina?",
+    "options": ["Rojo y blanco", "Celeste y blanco", "Azul y blanco", "Celeste y dorado"],
+    "correct": 1,
+    "explain": "La bandera nacional es celeste y blanca, creada por Manuel Belgrano."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue el creador del tango 'La Cumparsita'?",
+    "options": ["Gardel", "Piazzolla", "Rodríguez Peña", "Matos Rodríguez"],
+    "correct": 3,
+    "explain": "Gerardo Matos Rodríguez compuso 'La Cumparsita' en 1916."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué se celebra el 25 de mayo en Argentina?",
+    "options": ["La independencia", "La Revolución de Mayo", "El Día de la Bandera", "La Constitución"],
+    "correct": 1,
+    "explain": "El 25 de mayo de 1810 se formó el Primer Gobierno Patrio."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Quién fue el primer presidente de Argentina?",
+    "options": ["San Martín", "Rivadavia", "Rosas", "Urquiza"],
+    "correct": 1,
+    "explain": "Bernardino Rivadavia fue el primer presidente argentino en 1826."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿En qué ciudad se declaró la independencia argentina?",
+    "options": ["Buenos Aires", "Córdoba", "Tucumán", "Mendoza"],
+    "correct": 2,
+    "explain": "La independencia se declaró en San Miguel de Tucumán el 9 de julio de 1816."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué libertador cruzó los Andes para liberar Chile?",
+    "options": ["Belgrano", "San Martín", "Güemes", "Bolívar"],
+    "correct": 1,
+    "explain": "José de San Martín cruzó la cordillera en 1817 con el Ejército de los Andes."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Quién creó la bandera argentina?",
+    "options": ["San Martín", "Belgrano", "Moreno", "Castelli"],
+    "correct": 1,
+    "explain": "Manuel Belgrano creó la bandera nacional a orillas del río Paraná en 1812."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿En qué año se sancionó la primera Constitución Nacional?",
+    "options": ["1810", "1816", "1853", "1880"],
+    "correct": 2,
+    "explain": "La Constitución Nacional fue sancionada en Santa Fe en 1853."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Quién fue Martín Miguel de Güemes?",
+    "options": ["Un científico", "Un militar que defendió el norte", "Un poeta", "Un político porteño"],
+    "correct": 1,
+    "explain": "Güemes defendió la frontera norte con sus gauchos durante la guerra de independencia."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué se conmemora el 20 de junio?",
+    "options": ["Día de la Bandera", "Día de la Independencia", "Día de la Revolución", "Día del Himno"],
+    "correct": 0,
+    "explain": "El 20 de junio se celebra el Día de la Bandera por el fallecimiento de Belgrano."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Dónde nació José de San Martín?",
+    "options": ["Buenos Aires", "Mendoza", "Yapeyú", "Tucumán"],
+    "correct": 2,
+    "explain": "San Martín nació en Yapeyú, Corrientes, el 25 de febrero de 1778."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Quién escribió el Himno Nacional Argentino?",
+    "options": ["Vicente López y Planes", "Esteban Echeverría", "José Hernández", "Domingo F. Sarmiento"],
+    "correct": 0,
+    "explain": "La letra del Himno fue escrita por Vicente López y Planes en 1813."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Quién fue Carlos Gardel?",
+    "options": ["Un político", "Un cantante de tango", "Un escritor", "Un pintor"],
+    "correct": 1,
+    "explain": "Carlos Gardel fue el cantante de tango más famoso de la historia."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué bebida es típica de Argentina?",
+    "options": ["Té", "Café", "Mate", "Chocolate"],
+    "correct": 2,
+    "explain": "El mate es la infusión tradicional argentina que se comparte socialmente."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Quién escribió el 'Martín Fierro'?",
+    "options": ["Borges", "Cortázar", "José Hernández", "Sarmiento"],
+    "correct": 2,
+    "explain": "José Hernández escribió este poema gauchesco en 1872."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué deporte es más popular en Argentina?",
+    "options": ["Básquet", "Tenis", "Fútbol", "Rugby"],
+    "correct": 2,
+    "explain": "El fútbol es el deporte más popular y Argentina ha ganado tres Mundiales."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué comida argentina es famosa mundialmente?",
+    "options": ["Tacos", "Asado", "Sushi", "Pizza"],
+    "correct": 1,
+    "explain": "El asado argentino es reconocido internacionalmente por su calidad."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Quién fue Astor Piazzolla?",
+    "options": ["Un bandoneonista", "Un futbolista", "Un actor", "Un político"],
+    "correct": 0,
+    "explain": "Piazzolla revolucionó el tango con su música de vanguardia."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué escritor argentino ganó el Premio Nobel de Literatura?",
+    "options": ["Cortázar", "Borges", "Bioy Casares", "Ninguno de Argentina lo ha ganado"],
+    "correct": 3,
+    "explain": "Aunque Borges fue candidato múltiples veces, ningún argentino ha ganado el Nobel de Literatura."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué baile es característico de Argentina?",
+    "options": ["Salsa", "Tango", "Bachata", "Merengue"],
+    "correct": 1,
+    "explain": "El tango es el baile tradicional argentino, Patrimonio Cultural Inmaterial de la Humanidad."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Cómo se llaman las empanadas argentinas más famosas?",
+    "options": ["Chilenas", "Tucumanas", "Mexicanas", "Peruanas"],
+    "correct": 1,
+    "explain": "Las empanadas tucumanas son especialmente famosas, aunque hay variedades regionales."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué dulce argentino se hace con leche?",
+    "options": ["Mermelada", "Dulce de leche", "Miel", "Cajeta"],
+    "correct": 1,
+    "explain": "El dulce de leche es un producto típico argentino hecho con leche y azúcar."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Cuál es la capital de Argentina?",
+    "options": ["Córdoba", "Rosario", "Buenos Aires", "Mendoza"],
+    "correct": 2,
+    "explain": "Buenos Aires es la capital y ciudad más poblada de Argentina."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué océano baña las costas argentinas?",
+    "options": ["Pacífico", "Índico", "Atlántico", "Ártico"],
+    "correct": 2,
+    "explain": "Argentina tiene costa sobre el Océano Atlántico en el este del país."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Cuántas provincias tiene Argentina?",
+    "options": ["20", "23", "24", "25"],
+    "correct": 2,
+    "explain": "Argentina tiene 23 provincias más la Ciudad Autónoma de Buenos Aires."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué región argentina es conocida por sus vinos?",
+    "options": ["Patagonia", "Cuyo", "Litoral", "Pampa"],
+    "correct": 1,
+    "explain": "La región de Cuyo, especialmente Mendoza, es famosa por sus vinos."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué cataratas famosas están en Argentina?",
+    "options": ["Del Niágara", "Del Iguazú", "Victoria", "Ángel"],
+    "correct": 1,
+    "explain": "Las Cataratas del Iguazú están en Misiones, en la frontera con Brasil."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué río atraviesa Buenos Aires?",
+    "options": ["Paraná", "Uruguay", "Río de la Plata", "Colorado"],
+    "correct": 2,
+    "explain": "El Río de la Plata baña la costa de Buenos Aires."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Cuál es la región más austral de Argentina?",
+    "options": ["Pampa", "Cuyo", "Patagonia", "NOA"],
+    "correct": 2,
+    "explain": "La Patagonia es la región más al sur, incluyendo Tierra del Fuego."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué glaciar famoso está en Argentina?",
+    "options": ["Perito Moreno", "Grey", "Balmaceda", "Upsala"],
+    "correct": 0,
+    "explain": "El Glaciar Perito Moreno en Santa Cruz es uno de los más famosos del mundo."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿En qué provincia está la ciudad de Bariloche?",
+    "options": ["Neuquén", "Río Negro", "Chubut", "Mendoza"],
+    "correct": 1,
+    "explain": "San Carlos de Bariloche está en la provincia de Río Negro."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué animal es típico de la Patagonia argentina?",
+    "options": ["Jaguar", "Pingüino", "Tapir", "Mono"],
+    "correct": 1,
+    "explain": "Los pingüinos magallánicos son característicos de la costa patagónica."
+  },
+  {
+    "topic": "Símbolos",
+    "q": "¿Qué tiene el sol de la bandera argentina?",
+    "options": ["16 rayos", "32 rayos", "24 rayos", "20 rayos"],
+    "correct": 1,
+    "explain": "El Sol de Mayo tiene 32 rayos, 16 rectos y 16 flamígeros."
+  },
+  {
+    "topic": "Símbolos",
+    "q": "¿Cómo se llama el sol de la bandera argentina?",
+    "options": ["Sol Dorado", "Sol de Mayo", "Sol Patrio", "Sol Inca"],
+    "correct": 1,
+    "explain": "Se llama Sol de Mayo en referencia a la Revolución de Mayo de 1810."
+  },
+  {
+    "topic": "Símbolos",
+    "q": "¿Qué animal representa el escudo argentino?",
+    "options": ["Cóndor y águila", "Puma y vicuña", "León y águila", "Cóndor y puma"],
+    "correct": 0,
+    "explain": "El escudo muestra dos brazos estrechados, rodeados por laureles, con el Sol de Mayo arriba."
+  },
+  {
+    "topic": "Símbolos",
+    "q": "¿De qué color es la escarapela argentina?",
+    "options": ["Roja y blanca", "Celeste y blanca", "Azul y amarilla", "Verde y blanca"],
+    "correct": 1,
+    "explain": "La escarapela nacional es celeste y blanca, como la bandera."
+  },
+  {
+    "topic": "Símbolos",
+    "q": "¿Quién compuso la música del Himno Nacional?",
+    "options": ["Blas Parera", "Vicente López", "Juan P. Esnaola", "Alberto Williams"],
+    "correct": 0,
+    "explain": "La música fue compuesta por Blas Parera en 1813."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Eva Perón?",
+    "options": ["Una actriz", "Primera dama y líder social", "Una cantante", "Una escritora"],
+    "correct": 1,
+    "explain": "Eva Perón fue primera dama y una importante figura política y social argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Diego Maradona?",
+    "options": ["Un músico", "Un futbolista", "Un actor", "Un político"],
+    "correct": 1,
+    "explain": "Diego Maradona fue uno de los mejores futbolistas de la historia."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Lionel Messi?",
+    "options": ["Un tenista", "Un futbolista", "Un basquetbolista", "Un político"],
+    "correct": 1,
+    "explain": "Lionel Messi es considerado uno de los mejores futbolistas de todos los tiempos."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Jorge Luis Borges?",
+    "options": ["Un pintor", "Un escritor", "Un músico", "Un científico"],
+    "correct": 1,
+    "explain": "Borges fue uno de los escritores más importantes de la literatura universal."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Domingo Faustino Sarmiento?",
+    "options": ["Presidente y educador", "General", "Músico", "Deportista"],
+    "correct": 0,
+    "explain": "Sarmiento fue presidente y promovió fuertemente la educación pública."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Manuel Belgrano?",
+    "options": ["Un poeta", "Abogado, militar y creador de la bandera", "Un músico", "Un deportista"],
+    "correct": 1,
+    "explain": "Belgrano fue abogado, militar y creador de la bandera argentina."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Juana Azurduy?",
+    "options": ["Una cantante", "Una militar independentista", "Una escritora", "Una bailarina"],
+    "correct": 1,
+    "explain": "Juana Azurduy luchó por la independencia en el Alto Perú."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue René Favaloro?",
+    "options": ["Un político", "Un médico cardiólogo", "Un escritor", "Un músico"],
+    "correct": 1,
+    "explain": "Favaloro fue el pionero del bypass coronario en el mundo."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Julio Cortázar?",
+    "options": ["Un músico", "Un escritor", "Un pintor", "Un científico"],
+    "correct": 1,
+    "explain": "Cortázar fue un destacado escritor de cuentos y novelas."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue César Milstein?",
+    "options": ["Un político", "Un científico Premio Nobel", "Un deportista", "Un músico"],
+    "correct": 1,
+    "explain": "Milstein ganó el Premio Nobel de Medicina en 1984."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué se celebra el 12 de octubre en Argentina?",
+    "options": ["Día de la Raza", "Día del Respeto a la Diversidad Cultural", "Día de Colón", "Día de la Hispanidad"],
+    "correct": 1,
+    "explain": "Desde 2010 se conmemora el Día del Respeto a la Diversidad Cultural."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿En qué batalla participó San Martín en Chile?",
+    "options": ["Maipú", "Tucumán", "Salta", "Caseros"],
+    "correct": 0,
+    "explain": "La Batalla de Maipú en 1818 consolidó la independencia de Chile."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Quién fue Juan Manuel de Rosas?",
+    "options": ["Un poeta", "Un gobernador de Buenos Aires", "Un músico", "Un explorador"],
+    "correct": 1,
+    "explain": "Rosas gobernó Buenos Aires entre 1829-1832 y 1835-1852."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué se celebra el 11 de septiembre?",
+    "options": ["Día del Maestro", "Día del Estudiante", "Día de la Industria", "Día de Sarmiento"],
+    "correct": 0,
+    "explain": "El Día del Maestro se celebra en honor a Domingo F. Sarmiento."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿En qué año se federalizó Buenos Aires?",
+    "options": ["1853", "1860", "1880", "1900"],
+    "correct": 2,
+    "explain": "En 1880 Buenos Aires se convirtió en la capital federal de Argentina."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué es el locro?",
+    "options": ["Un baile", "Una comida típica", "Un instrumento", "Una celebración"],
+    "correct": 1,
+    "explain": "El locro es un guiso tradicional que se come en fechas patrias."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué es la zamba?",
+    "options": ["Una comida", "Un baile folklórico", "Un instrumento", "Una bebida"],
+    "correct": 1,
+    "explain": "La zamba es una danza folklórica tradicional argentina."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué es el dulce de membrillo?",
+    "options": ["Una fruta", "Un dulce típico", "Una bebida", "Un postre helado"],
+    "correct": 1,
+    "explain": "Es un dulce tradicional hecho con membrillo que se come con queso."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué instrumento es fundamental en el tango?",
+    "options": ["Guitarra", "Bandoneón", "Piano", "Violín"],
+    "correct": 1,
+    "explain": "El bandoneón es el instrumento característico del tango."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué es el alfajor?",
+    "options": ["Una bebida", "Un dulce típico", "Un baile", "Una comida"],
+    "correct": 1,
+    "explain": "El alfajor es un dulce de dos tapas con dulce de leche en el medio."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué provincia es conocida como 'La Docta'?",
+    "options": ["Buenos Aires", "Córdoba", "Santa Fe", "Mendoza"],
+    "correct": 1,
+    "explain": "Córdoba es llamada 'La Docta' por su tradición universitaria."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué desierto hay en Argentina?",
+    "options": ["Sahara", "Atacama", "Patagónico", "Gobi"],
+    "correct": 2,
+    "explain": "El desierto patagónico es el más grande de Argentina."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué provincia tiene la Quebrada de Humahuaca?",
+    "options": ["Salta", "Jujuy", "Tucumán", "Catamarca"],
+    "correct": 1,
+    "explain": "La Quebrada de Humahuaca está en Jujuy, declarada Patrimonio de la Humanidad."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿En qué provincia está el Cerro de los Siete Colores?",
+    "options": ["Salta", "Jujuy", "La Rioja", "Catamarca"],
+    "correct": 1,
+    "explain": "El Cerro de los Siete Colores está en Purmamarca, Jujuy."
+  },
+  {
+    "topic": "Geografía",
+    "q": "¿Qué ciudad argentina se llama 'La Perla del Atlántico'?",
+    "options": ["Mar del Plata", "Pinamar", "Villa Gesell", "Necochea"],
+    "correct": 0,
+    "explain": "Mar del Plata es conocida como 'La Perla del Atlántico'."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Qué batalla fue clave para la independencia del norte argentino?",
+    "options": ["Maipú", "Tucumán", "Caseros", "Pavón"],
+    "correct": 1,
+    "explain": "La Batalla de Tucumán en 1812 fue decisiva para frenar el avance realista."
+  },
+  {
+    "topic": "Historia",
+    "q": "¿Quién fue el primer virrey del Río de la Plata?",
+    "options": ["Liniers", "Sobremonte", "Vértiz", "Cevallos"],
+    "correct": 3,
+    "explain": "Pedro de Cevallos fue el primer virrey del Río de la Plata en 1776."
+  },
+  {
+    "topic": "Cultura",
+    "q": "¿Qué es el mate cocido?",
+    "options": ["Un té", "Yerba mate hervida", "Café con leche", "Una infusión de hierbas"],
+    "correct": 1,
+    "explain": "El mate cocido es yerba mate preparada como té en saquitos o a granel."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Bartolomé Mitre?",
+    "options": ["Un músico", "Presidente e historiador", "Un militar", "Un poeta"],
+    "correct": 1,
+    "explain": "Mitre fue presidente, militar, historiador y fundador del diario La Nación."
+  },
+  {
+    "topic": "Personajes",
+    "q": "¿Quién fue Lola Mora?",
+    "options": ["Una cantante", "Una escultora", "Una actriz", "Una escritora"],
+    "correct": 1,
+    "explain": "Lola Mora fue una destacada escultora argentina de fines del siglo XIX."
+  }
+]

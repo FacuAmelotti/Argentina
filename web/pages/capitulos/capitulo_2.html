@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Unidad 2: Revolución de Mayo e Independencia (1810–1820)</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="icon" type="image/png" href="../../src/img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        
+/* Layout principal */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 60px 20px;
+            min-height: 100vh;
+        }
+
+
+        /* Contenido principal */
+        .content-wrapper {
+            max-width: 800px;
+        }
+
+        .page-header {
+            margin-bottom: 60px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #ffffff;
+        }
+
+        .breadcrumb-separator {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* Secciones de contenido */
+        .content-section {
+            margin-bottom: 60px;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 2.5rem;
+            opacity: 0.8;
+        }
+
+        .section-content {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            margin-top: 20px;
+        }
+
+        .section-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .section-content strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Listas */
+        .content-section ul,
+        .content-section ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .content-section li {
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Ejemplos */
+        .example-box {
+            background: rgba(120, 119, 198, 0.1);
+            border-left: 3px solid rgba(120, 119, 198, 0.5);
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .example-title {
+            font-weight: 600;
+            color: rgba(120, 119, 198, 1);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Fórmulas */
+        .formula-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Destacados */
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+
+        .highlight-box h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Grid de conceptos */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .concept-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .concept-card h4 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .concept-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Botones de navegación */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-button {
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: #000000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-button.secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .highlight-box h4 {
+          color: rgb(120,255,150);
+          text-shadow: 0 0 8px rgba(120,255,150,0.3);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 100px 30px 40px;
+            }
+
+            .sidebar {
+                position: static;
+                top: auto;
+            }
+
+            .content-wrapper {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                padding: 100px 20px 40px;
+            }
+
+            .section-content {
+                padding: 25px 20px;
+            }
+
+            .concepts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+
+
+        /* Tabla */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+    <style>
+.section-icon {
+  font-size: 2.2rem;
+  opacity: 0.9;
+  line-height: 1;
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif !important;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));
+}
+
+
+</style>
+</head>
+
+<body>
+  <!-- Fondo animado -->
+  <div class="animated-bg"></div>
+  <div class="floating-elements">
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="" class="logo">Historia Argentina - Unidad 2</a>
+      <ul class="nav-menu">
+        <li><a href="../historia.html" class="nav-link">Temario</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Layout principal -->
+  <div class="main-layout">
+
+    <!-- Contenido principal -->
+    <main class="content-wrapper">
+      <header class="page-header">
+        <nav class="breadcrumb">
+          <a href="../../index.html">Inicio</a>
+          <span class="breadcrumb-separator">›</span>
+          <a href="../temario.html">Temario</a>
+          <span class="breadcrumb-separator">›</span>
+          <span>Unidad 2</span>
+        </nav>
+        <div class="scroll-progress-bar"></div>
+        <h1 class="page-title">Revolución de Mayo y Proceso Independentista (1810–1820)</h1>
+        <p class="page-description">
+          De la crisis de la monarquía española a la ruptura política con el virreinato: causas, semana de Mayo, juntas,
+          campañas militares, símbolos patrios, Asamblea del Año XIII y Declaración de la Independencia en Tucumán.
+        </p>
+      </header>
+
+      <!-- Introducción -->
+      <section id="introduccion" class="content-section">
+        <h2 class="section-title">📜 Introducción</h2>
+        <div class="section-content">
+          <p>
+            Entre 1810 y 1820 se desarrolló el ciclo revolucionario rioplatense que quebró el orden virreinal y dio lugar
+            a un nuevo poder político: las <strong>Provincias Unidas en Sud América</strong>. Este proceso combinó factores
+            internos (tensiones sociales y económicas) y externos (crisis europea e ideas ilustradas), y se expresó en
+            cambios institucionales, campañas militares y construcción de símbolos patrios.
+          </p>
+        </div>
+      </section>
+
+      <!-- Antecedentes internacionales -->
+      <section id="antecedentes" class="content-section">
+        <h2 class="section-title">🌍 Antecedentes internacionales</h2>
+        <div class="section-content">
+          <ul>
+            <li><strong>Ilustración (s. XVIII):</strong> libertad, soberanía del pueblo, división de poderes.</li>
+            <li><strong>Independencia de EE. UU. (1776)</strong> y <strong>Revolución Francesa (1789)</strong>: modelos políticos republicanos.</li>
+            <li><strong>Invasiones napoleónicas a España (1808):</strong> abdicaciones de Bayona; crisis de legitimidad monárquica.</li>
+            <li><strong>Juntas en España:</strong> ciudades y provincias españolas se gobernaron en ausencia del rey; precedente clave para América.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Causas internas -->
+      <section id="causas" class="content-section">
+        <h2 class="section-title">⚙️ Causas internas en el Río de la Plata</h2>
+        <div class="section-content">
+          <ul>
+            <li><strong>Monopolio comercial</strong> que perjudicaba a productores locales; auge del contrabando por Buenos Aires.</li>
+            <li><strong>Tensiones criollos–peninsulares:</strong> riqueza local sin acceso pleno al poder político.</li>
+            <li><strong>Identidad porteña y regional:</strong> Buenos Aires vs. interior; puja por recursos y autoridad.</li>
+            <li><strong>Invasiones inglesas (1806–1807):</strong> milicias criollas ganan protagonismo militar y político.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Semana de Mayo -->
+      <section id="semana-mayo" class="content-section">
+        <h2 class="section-title">📅 Semana de Mayo (18–25 de 1810)</h2>
+        <div class="section-content">
+          <ol>
+            <li><strong>18/5:</strong> llega la noticia de la disolución de la Junta Central en España.</li>
+            <li><strong>22/5:</strong> <em>Cabildo Abierto</em>: se discute la legitimidad del virrey Cisneros.</li>
+            <li><strong>23–24/5:</strong> crisis política; se procura una salida consensuada.</li>
+            <li><strong>25/5:</strong> se forma la <strong>Primera Junta</strong> presidida por <strong>Cornelio Saavedra</strong>.</li>
+          </ol>
+          <div class="highlight-box">
+            <h4>👥 Primera Junta (25/5/1810)</h4>
+            <p>Saavedra (presidente), Moreno y Paso (secretarios), y vocales: Azcuénaga, Alberti, Matheu, Larrea, Belgrano y Castelli.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Juntas y expediciones -->
+      <section id="juntas-expediciones" class="content-section">
+        <h2 class="section-title">🗺️ Juntas, adhesiones y expediciones</h2>
+        <div class="section-content">
+          <p>
+            La Junta envió <strong>expediciones</strong> para lograr adhesiones en las provincias y disputar el poder
+            a las autoridades realistas. Se generó un mapa político cambiante, con apoyos y resistencias.
+          </p>
+          <ul>
+            <li><strong>Alto Perú:</strong> Castelli y luego Belgrano; avances y retrocesos (Tucumán y Salta, 1812–1813; derrotas en Vilcapugio y Ayohuma).</li>
+            <li><strong>Paraguay:</strong> derrota en Paraguarí y Tacuarí (1811); luego independencia paraguaya.</li>
+            <li><strong>Banda Oriental:</strong> <strong>Artigas</strong> lidera la resistencia; luego conflicto con Buenos Aires (federalismo).</li>
+            <li><strong>Interior cuyano:</strong> base del futuro <strong>Ejército de los Andes</strong> con San Martín.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Símbolos patrios -->
+      <section id="simbolos" class="content-section">
+        <h2 class="section-title">🇦🇷 Nacimiento de los símbolos patrios</h2>
+        <div class="section-content">
+          <ul>
+            <li><strong>Escarapela (1812):</strong> celeste y blanca adoptadas como distintivo.</li>
+            <li><strong>Bandera (1812):</strong> creada por <strong>Manuel Belgrano</strong> a orillas del Paraná; jurada en 1813.</li>
+            <li><strong>Himno (1813):</strong> letra de <strong>Vicente López y Planes</strong>, música de <strong>Blas Parera</strong>.</li>
+            <li><strong>Escudo (1813):</strong> símbolo de unión y libertad; manos entrelazadas, pica y gorro frigio.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Asamblea del Año XIII -->
+      <section id="asamblea13" class="content-section">
+        <h2 class="section-title">🏛️ Asamblea del Año XIII</h2>
+        <div class="section-content">
+          <p>
+            Intento de organizar institucionalmente las Provincias Unidas. Aunque no declaró la independencia, tomó decisiones clave.
+          </p>
+          <ul>
+            <li>Reconoció <strong>emblemas patrios</strong> (escudo, himno).</li>
+            <li>Aprobó <strong>medidas de libertad de vientres</strong> y prohibiciones al tráfico de esclavos.</li>
+            <li>Suprimió títulos de nobleza y abolió la Inquisición.</li>
+            <li>Ensayó fórmulas de gobierno central (Directorio).</li>
+          </ul>
+
+          <!-- Video Asamblea -->
+          <div class="video-box" style="margin-top: 18px;">
+            <iframe
+              src="https://www.youtube.com/embed/z1bE2g1dG-0"
+              title="Asamblea del Año XIII - Video explicativo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Luchas, líderes y ejércitos -->
+      <section id="campanas" class="content-section">
+        <h2 class="section-title">🛡️ Campañas, líderes y ejércitos</h2>
+        <div class="section-content">
+          <ul>
+            <li><strong>Belgrano</strong>: victorias en <em>Tucumán</em> y <em>Salta</em> (1812–1813); derrotas en el Alto Perú.</li>
+            <li><strong>San Martín</strong>: crea el <em>Regimiento de Granaderos a Caballo</em>; gobernador de Cuyo; plan continental.</li>
+            <li><strong>Güemes</strong>: <em>Guerra Gaucha</em> en Salta y Jujuy, defensa del norte con milicias locales.</li>
+            <li><strong>Artigas</strong>: líder federal en la Banda Oriental y el Litoral; <em>Liga de los Pueblos Libres</em>.</li>
+          </ul>
+
+          <!-- Video Revolución de Mayo -->
+          <div class="video-box" style="margin-top: 18px;">
+            <iframe
+              src="https://www.youtube.com/embed/6C8oLw0k7aE"
+              title="Revolución de Mayo - Video explicativo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Congreso de Tucumán -->
+      <section id="tucuman" class="content-section">
+        <h2 class="section-title">📜 Congreso de Tucumán (1816)</h2>
+        <div class="section-content">
+          <p>
+            Reunido en San Miguel de Tucumán, el Congreso declaró la <strong>Independencia</strong> de las Provincias Unidas
+            el <strong>9 de julio de 1816</strong>. Fue un acto político clave, que afirmó la soberanía ante España y el mundo.
+          </p>
+          <ul>
+            <li>Representación de varias provincias del antiguo virreinato (con ausencias por conflictos internos).</li>
+            <li>Debates sobre forma de gobierno (monarquía constitucional vs. república).</li>
+            <li>En 1817 se ratifica que la independencia es de “España y de toda otra dominación extranjera”.</li>
+          </ul>
+
+          <!-- Video Independencia -->
+          <div class="video-box" style="margin-top: 18px;">
+            <iframe
+              src="https://www.youtube.com/embed/0u1x7n2a8Z8"
+              title="Congreso de Tucumán e Independencia - Video explicativo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cruce de los Andes -->
+      <section id="andes" class="content-section">
+        <h2 class="section-title">⛰️ Cruce de los Andes y campaña libertadora</h2>
+        <div class="section-content">
+          <p>
+            En 1817, <strong>San Martín</strong> y el <strong>Ejército de los Andes</strong> cruzaron la cordillera desde Cuyo para
+            liberar Chile (batallas de <em>Chacabuco</em> y <em>Maipú</em>) y proyectar la independencia del Perú.
+            Fue una operación militar y logística sin precedentes en América.
+          </p>
+          <ul>
+            <li>Organización cuyana: fabricación de pertrechos, inteligencia, alianzas.</li>
+            <li>Estrategia: golpear el poder virreinal desde el Pacífico, no por el Alto Perú.</li>
+            <li>Proyección continental: independencia de Chile (1818) y expedición al Perú (1820).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Economía y sociedad en guerra -->
+      <section id="economia-sociedad" class="content-section">
+        <h2 class="section-title">💰 Economía y sociedad en proceso revolucionario</h2>
+        <div class="section-content">
+          <ul>
+            <li><strong>Puertos y comercio:</strong> Buenos Aires gana centralidad; tensiones con economías del interior.</li>
+            <li><strong>Movilización social:</strong> milicias, gauchos, apoyo popular y participación de mujeres en logística y redes.</li>
+            <li><strong>Medidas sociales:</strong> libertad de vientres, abolición de tormentos y de título de nobleza.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Conflictos internos -->
+      <section id="conflictos" class="content-section">
+        <h2 class="section-title">⚡ Conflictos internos y desafíos</h2>
+        <div class="section-content">
+          <ul>
+            <li><strong>Centralismo vs. Federalismo:</strong> Buenos Aires (poder portuario) vs. provincias (autonomía).</li>
+            <li><strong>Guerras civiles tempranas:</strong> tensiones con la Liga de los Pueblos Libres (Artigas).</li>
+            <li><strong>Crisis del Directorio:</strong> dificultad para sostener la guerra y coordinar un proyecto común.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Conclusión -->
+      <section id="conclusion" class="content-section">
+        <h2 class="section-title">🧭 Conclusión</h2>
+        <div class="section-content">
+          <p>
+            La Revolución de Mayo abrió un ciclo de transformaciones políticas que culminó en la independencia y
+            en el diseño de un proyecto continental de liberación. Al mismo tiempo, afloraron tensiones regionales y
+            debates sobre la organización del Estado que marcarían la historia argentina durante décadas.
+          </p>
+        </div>
+      </section>
+
+      <!-- Resumen -->
+      <section id="resumen" class="content-section">
+        <h2 class="section-title">📋 Resumen de la unidad</h2>
+        <div class="section-content">
+          <ul>
+            <li>Crisis de la monarquía española → legitimidad en discusión → juntas en España y América.</li>
+            <li>Semana de Mayo: Primera Junta y quiebre del orden virreinal.</li>
+            <li>Campañas militares: Belgrano, San Martín, Güemes, Artigas; mapa político en disputa.</li>
+            <li>Asamblea del Año XIII: símbolos patrios y reformas; no declara la independencia.</li>
+            <li>Congreso de Tucumán (1816): independencia de España y de toda dominación extranjera.</li>
+            <li>Plan continental y Cruce de los Andes: proyección sudamericana.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Práctica rápida -->
+      <section id="practica" class="content-section">
+        <h2 class="section-title">🧩 Práctica rápida</h2>
+        <div class="section-content">
+          <ol>
+            <li>Explicá por qué la crisis de 1808 en España afectó la legitimidad del Virreinato del Río de la Plata.</li>
+            <li>Enumerá los pasos clave de la Semana de Mayo y su desenlace institucional.</li>
+            <li>Compará los proyectos de Buenos Aires y la Liga de los Pueblos Libres (Artigas).</li>
+            <li>¿Qué medidas sociales e institucionales impulsó la Asamblea del Año XIII?</li>
+            <li>Argumentá por qué el Cruce de los Andes fue decisivo para el plan continental de San Martín.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Navegación inferior -->
+      <div class="navigation-buttons">
+        <a href="./unidad_1.html" class="nav-button secondary">← Unidad 1</a>
+        <a href="./unidad_3.html" class="nav-button">Unidad 3 →</a>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">Unidad 2</div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#introduccion">Introducción</a></li>
+        <li class="nav-item"><a href="#antecedentes">Antecedentes internacionales</a></li>
+        <li class="nav-item"><a href="#causas">Causas internas</a></li>
+        <li class="nav-item"><a href="#semana-mayo">Semana de Mayo</a></li>
+        <li class="nav-item"><a href="#juntas-expediciones">Juntas y expediciones</a></li>
+        <li class="nav-item"><a href="#simbolos">Símbolos patrios</a></li>
+        <li class="nav-item"><a href="#asamblea13">Asamblea del Año XIII</a></li>
+        <li class="nav-item"><a href="#campanas">Campañas y líderes</a></li>
+        <li class="nav-item"><a href="#tucuman">Congreso de Tucumán</a></li>
+        <li class="nav-item"><a href="#andes">Cruce de los Andes</a></li>
+        <li class="nav-item"><a href="#economia-sociedad">Economía y sociedad</a></li>
+        <li class="nav-item"><a href="#conflictos">Conflictos internos</a></li>
+        <li class="nav-item"><a href="#conclusion">Conclusión</a></li>
+        <li class="nav-item"><a href="#resumen">Resumen</a></li>
+        <li class="nav-item"><a href="#practica">Práctica</a></li>
+      </ul>
+    </aside>
+  </div>
+
+    <script>
+        // Smooth scroll y active nav
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav-item a');
+
+        // Intersection Observer para el sidebar
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Smooth scroll al hacer click
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+          <script>
+  // 🔹 Barra de progreso scroll
+  const progressBar = document.querySelector('.scroll-progress-bar');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = `${scrollPercent}%`;
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 🔹 Agregar checkbox de estudio a cada sección
+  document.querySelectorAll('.content-section').forEach(section => {
+    const id = section.id;
+    const checkDiv = document.createElement('div');
+    checkDiv.className = 'study-check';
+    checkDiv.innerHTML = `
+      <input type="checkbox" class="study-checkbox" id="check-${id}">
+      <label for="check-${id}">Estudiado</label>
+    `;
+    const content = section.querySelector('.section-content');
+    if (content) content.prepend(checkDiv);
+  });
+
+  // 🔹 Sincronizar checkbox con sidebar + localStorage
+  document.querySelectorAll('.study-checkbox').forEach(checkbox => {
+    const id = checkbox.id.replace('check-', '');
+    const key = `tema_estudiado_${id}`;
+    const section = document.getElementById(id);
+    const navLink = document.querySelector(`.sidebar a[href="#${id}"]`);
+    const saved = localStorage.getItem(key);
+
+    // Restaurar estado guardado
+    if (saved === 'true') {
+      checkbox.checked = true;
+      section.classList.add('section-studied');
+      if (navLink) navLink.classList.add('studied');
+    }
+
+    // Escuchar cambios
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(key, checkbox.checked);
+      if (checkbox.checked) {
+        section.classList.add('section-studied');
+        if (navLink) navLink.classList.add('studied');
+      } else {
+        section.classList.remove('section-studied');
+        if (navLink) navLink.classList.remove('studied');
+      }
+    });
+  });
+});
+</script>
+<!-- 🔢 MathJax para renderizar fórmulas -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+  svg: { fontCache: 'global' },
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+
+</body>
+</html>

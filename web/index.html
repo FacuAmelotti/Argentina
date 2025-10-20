@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argentina</title>
+    <link rel="icon" type="image/png" href="./src/img/arg.png">
+
+    <link rel="stylesheet" href="./pages/css/base.css">
+    <style>
+        /* Estilos específicos del index */
+        .hero-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 0 40px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 8rem);
+            font-weight: 100;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 40px;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 750px;
+            margin: 0 auto 60px;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 1.1s both;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .feature-card:hover::before {
+            left: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 100;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 100;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* ===== FOOTER ===== */
+.site-footer {
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    font-weight: 300;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-author,
+.footer-university {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-logo {
+    width: 70px;
+    height: auto;
+    filter: brightness(0.9);
+}
+
+.footer-year {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 6px;
+}
+
+.footer-author p,
+.footer-university p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.footer-author strong,
+.footer-university strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 30px 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Efecto de gradientes animados de fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 25% 25%, rgba(120,119,198,0.15), transparent 50%),
+              radial-gradient(circle at 80% 60%, rgba(255,255,255,0.08), transparent 50%);
+  background-size: 300% 300%;
+  animation: moveGradient 20s ease-in-out infinite;
+  z-index: -2;
+}
+@keyframes moveGradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+
+
+.feature-card {
+  transform: perspective(600px) rotateX(0) rotateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.feature-card:hover {
+  transform: perspective(600px) rotateX(4deg) rotateY(4deg) translateY(-8px);
+  box-shadow: 0 25px 50px rgba(255,255,255,0.08);
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.btn-primary:hover::before {
+  transform: scale(1);
+}
+.stat-number {
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+  transition: text-shadow 0.3s ease;
+}
+.stat-number:hover {
+  text-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+
+    </style>
+
+    
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- Fondo animado -->
+  <div class="animated-bg"></div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="./src/img/arg.png" alt="Logo Argentina">Argentina
+      </a>
+      <ul class="nav-menu">
+        <li><a href="./pages/historia.html" class="nav-link">Historia</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Argentina</h1>
+      <p class="hero-subtitle">Tierra de historia, pasión y diversidad.</p>
+      <p class="hero-description">
+        Bienvenido a un recorrido por la historia y la cultura argentina.  
+        Desde los pueblos originarios hasta la actualidad, explorá los hechos, los personajes y las tradiciones que dieron forma a nuestra identidad como nación.
+      </p>
+      <div class="cta-buttons">
+        <a href="./pages/historia.html" class="btn btn-primary">Comenzar el recorrido</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="section" id="intro">
+    <div class="content text-center">
+      <h2 class="section-title">¿Por qué conocer la historia argentina?</h2>
+      <p style="max-width: 900px; margin: 0 auto; color: rgba(255,255,255,0.7); line-height:1.8;">
+        Conocer la historia argentina nos permite entender quiénes somos, de dónde venimos y cómo evolucionó nuestra identidad como pueblo.  
+        Cada etapa —desde la independencia hasta las transformaciones sociales y culturales— refleja la lucha, los valores y la creatividad de millones de argentinos.
+      </p>
+      <br>
+      <p style="max-width: 850px; margin: 0 auto; color: rgba(255,255,255,0.6); line-height:1.8;">
+        En este sitio encontrarás contenidos didácticos sobre los hechos más importantes, los símbolos patrios, las costumbres, la música, la gastronomía y las regiones que hacen de Argentina un país único en el mundo.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features-section">
+    <h2 class="section-title">¿Qué aprenderás aquí?</h2>
+    <div class="features-grid">
+      <div class="feature-card" id="feature-historia">
+        <div class="feature-icon">📜</div>
+        <h3 class="feature-title">Historia Nacional</h3>
+        <p class="feature-description">
+          Desde la época colonial hasta la actualidad: los eventos, procesos y protagonistas que construyeron la Argentina moderna.
+        </p>
+      </div>
+
+      <div class="feature-card" id="feature-cultura">
+        <div class="feature-icon">🎭</div>
+        <h3 class="feature-title">Cultura y Tradiciones</h3>
+        <p class="feature-description">
+          Gastronomía, música, costumbres y celebraciones que reflejan la identidad de cada región del país.
+        </p>
+      </div>
+
+      <div class="feature-card" id="feature-geografia">
+        <div class="feature-icon">🌄</div>
+        <h3 class="feature-title">Geografía y Regiones</h3>
+        <p class="feature-description">
+          Conocé la diversidad natural del país: sus paisajes, climas, ecosistemas y maravillas únicas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="about" class="stats-section">
+    <h2 class="section-title">Explorá Argentina en números</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">+200</div>
+        <div class="stat-label">Años de historia</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24</div>
+        <div class="stat-label">Provincias</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+45M</div>
+        <div class="stat-label">Habitantes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-author">
+        <img src="./src/img/Facu2.png" alt="Facundo Amelotti" class="footer-photo">
+        <a style="text-decoration: none; color: rgb(138, 138, 138);" href="https://www.linkedin.com/in/facundoamelotti/">
+          Desarrollado por <strong>Facundo Ezequiel Amelotti</strong>
+        </a>
+      </div>
+      <div class="footer-year">© 2025</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 10;
+      const y = (e.clientY / window.innerHeight - 0.5) * 10;
+      document.querySelector(".hero-content").style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    document.getElementById("feature-historia").addEventListener("click", () => {
+      window.location.href = "./pages/historia.html";
+    });
+    document.getElementById("feature-cultura").addEventListener("click", () => {
+      window.location.href = "./pages/cultura.html";
+    });
+    document.getElementById("feature-geografia").addEventListener("click", () => {
+      window.location.href = "./pages/geografia.html";
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
+  </script>
+</body>
+
+</html>

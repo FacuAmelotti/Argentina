@@ -1,0 +1,399 @@
+{
+  "personajes": [
+    {
+      "id": "sanmartin",
+      "nombre": "José de San Martín",
+      "epoca": "independencia",
+      "imagen": "../src/img/personajes/SanMartin.jpg",
+      "descripcion_corta": "El Libertador del Sur. Con una mente estratégica y una convicción inquebrantable, liberó a tres naciones y cambió el destino de América.",
+      "biografia": "José de San Martín (1778–1850) fue mucho más que un militar brillante: fue un pensador político, un estratega paciente y un ejemplo de humildad y coherencia. Nacido en Yapeyú, en el actual territorio de Corrientes, pasó gran parte de su vida formándose en España como soldado profesional, donde aprendió las tácticas que más tarde aplicaría en las guerras por la independencia. Lo interesante es que San Martín no vuelve a América buscando gloria personal, sino porque siente que su deber es liberar su tierra. Su visión era continental: sabía que la independencia no se podía asegurar si cada país luchaba por separado. Por eso organizó una de las hazañas más impresionantes de la historia: el cruce de los Andes, una operación militar y logística sin precedentes. Con un ejército formado por criollos, gauchos, esclavos liberados y hasta chilenos exiliados, atravesó montañas imposibles y venció en batallas claves como Chacabuco y Maipú. Liberó Chile y luego Perú, pero cuando se cruzó con Simón Bolívar, eligió dar un paso al costado. No quería poder, quería libertad. Terminó sus días exiliado en Francia, lejos de la patria que ayudó a crear, pero con la paz de haber cumplido su misión. Su figura, más allá de los bronces, representa la idea de servir a una causa mayor que uno mismo.",
+      "tags": ["Libertador", "Independencia", "Estrategia", "Humildad", "Visión Continental"]
+    },
+    {
+      "id": "belgrano",
+      "nombre": "Manuel Belgrano",
+      "epoca": "independencia",
+      "imagen": "../src/img/personajes/Belgrano.jpg",
+      "descripcion_corta": "Creador de la bandera y pensador adelantado a su tiempo. Defendió la educación, la industria nacional y el rol de la mujer en la sociedad.",
+      "biografia": "Manuel Belgrano (1770–1820) fue uno de esos genios que no encajan en una sola definición. Fue abogado, economista, periodista, militar y, sobre todo, un pensador moderno en una época donde casi nadie lo era. Estudió en Europa y volvió a Buenos Aires con una idea muy clara: el progreso de una nación depende de la educación y del trabajo. Creó escuelas, impulsó la agricultura y el comercio, y hablaba de igualdad de derechos en tiempos donde eso era revolucionario. Pero el destino lo puso también en el campo de batalla, y aunque no era militar, asumió el desafío con una convicción tremenda. Lideró los Ejércitos del Norte y ganó batallas heroicas como Tucumán y Salta. En medio de todo eso, creó nuestra bandera, un símbolo que nació sin pompa ni ceremonia, pero con el corazón de un pueblo que quería ser libre. Belgrano murió pobre, olvidado, sin recibir los honores que merecía. Sin embargo, su legado es enorme: fue el primero en hablar de educación gratuita, de industria nacional, de la igualdad entre hombres y mujeres, y de un país independiente basado en el conocimiento. Fue un soñador práctico: alguien que no solo pensaba en el futuro, sino que lo intentaba construir cada día.",
+      "tags": ["Educación", "Bandera", "Economía Nacional", "Igualdad", "Patria"]
+    },
+  {
+    "id": "moreno",
+    "nombre": "Mariano Moreno",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/MMoreno.jpg",
+    "descripcion_corta": "Intelectual brillante y revolucionario de la Primera Junta. Luchó por una independencia profunda basada en la educación y la libertad de pensamiento.",
+    "biografia": "Mariano Moreno (1778–1811) fue uno de los cerebros más lúcidos y adelantados de la Revolución de Mayo. Abogado formado en Chuquisaca, entendió que la independencia no era solo una cuestión militar, sino un cambio cultural, educativo y político profundo. Fue secretario de la Primera Junta y el impulsor del periódico 'La Gaceta de Buenos Aires', con el que difundió las ideas de libertad, igualdad y soberanía del pueblo. Era un lector apasionado de los pensadores franceses y creía que América debía romper de verdad con el sistema colonial, no solo cambiar de gobernantes. Fue un revolucionario con una visión moderna: quería un país con educación, libertad de prensa y justicia social. Su paso por la historia fue breve pero intenso: murió en altamar, rumbo a Inglaterra, con apenas 32 años. Sin embargo, dejó una marca imborrable. Representa al intelectual comprometido con la acción, el que entiende que las ideas también son un arma poderosa.",
+    "tags": ["Revolución de Mayo", "Educación", "Prensa Libre", "Pensamiento Ilustrado", "Independencia"]
+  },
+  {
+    "id": "saavedra",
+    "nombre": "Cornelio Saavedra",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Saavedra.jpg",
+    "descripcion_corta": "Militar y político, primer presidente de la Primera Junta. Su liderazgo marcó los comienzos de la organización política del nuevo Estado.",
+    "biografia": "Cornelio Saavedra (1759–1829) fue un militar porteño que tuvo un papel clave en los primeros pasos de la independencia argentina. Participó activamente en la defensa de Buenos Aires durante las Invasiones Inglesas y ganó prestigio popular por su liderazgo. En 1810 fue elegido presidente de la Primera Junta, el primer gobierno patrio. A diferencia de Mariano Moreno, Saavedra representaba un pensamiento más moderado: creía que los cambios debían hacerse con prudencia y sin romper totalmente con España de inmediato. Ese contraste entre el 'ala morenista' y el 'ala saavedrista' fue el primer gran debate político de la nueva nación. Aunque luego fue desplazado y cayó en desgracia, su figura muestra que la independencia no fue un proceso uniforme, sino una construcción con distintas miradas. Saavedra fue un hombre práctico, más militar que ideólogo, pero consciente de la necesidad de orden y legitimidad en un tiempo de caos.",
+    "tags": ["Primera Junta", "Moderación", "Revolución de Mayo", "Política", "Historia Argentina"]
+  },
+  {
+    "id": "guemes",
+    "nombre": "Martín Miguel de Güemes",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Guemes.jpg",
+    "descripcion_corta": "El héroe del norte argentino. Con su ejército gaucho defendió la frontera y aseguró la independencia con ingenio y coraje.",
+    "biografia": "Martín Miguel de Güemes (1785–1821) fue un líder militar salteño que personifica el espíritu popular de la independencia. Mientras San Martín preparaba su campaña libertadora, Güemes se encargaba de mantener a raya a los realistas en el norte del país. Con su ejército de gauchos, hombres del pueblo, campesinos y jinetes, organizó una guerra de resistencia llamada la 'Guerra Gaucha'. No tenía grandes recursos ni armas modernas, pero usó la inteligencia, el conocimiento del terreno y la unión del pueblo como su mayor fortaleza. Güemes fue gobernador de Salta y defendió la causa revolucionaria incluso contra las propias elites que lo subestimaban. Murió peleando, herido en combate, pero se negó a rendirse. Su figura representa al héroe cercano, al líder que luchó desde el barro y no desde los palacios. Gracias a su tenacidad, el norte argentino no volvió a caer bajo dominio español.",
+    "tags": ["Guerra Gaucha", "Patriotismo", "Liderazgo Popular", "Salta", "Resistencia"]
+  },
+  {
+    "id": "castelli",
+    "nombre": "Juan José Castelli",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Castelli.jpg",
+    "descripcion_corta": "El orador de la Revolución de Mayo. Luchó por la libertad, la igualdad y la educación del pueblo.",
+    "biografia": "Juan José Castelli (1764–1812) fue uno de los revolucionarios más intelectuales y apasionados de la Revolución de Mayo. Abogado formado en Chuquisaca, fue primo de Mariano Moreno y compartía su espíritu ilustrado y su fe en la razón. En la Primera Junta fue el encargado de difundir las ideas de libertad y justicia social en todo el territorio. Cuando fue enviado al Alto Perú, aplicó medidas que en su tiempo eran casi impensadas: abolió la esclavitud, eliminó los tributos indígenas y promovió la igualdad ante la ley. Fue un defensor inquebrantable del pueblo originario y de la educación pública. Aunque terminó siendo derrotado militarmente y perseguido políticamente, su visión fue la de un país verdaderamente libre, no solo de España, sino también de las cadenas de la ignorancia y la desigualdad. Murió enfermo y olvidado, pero su legado intelectual fue la semilla del pensamiento emancipador argentino.",
+    "tags": ["Revolución de Mayo", "Educación", "Derechos Humanos", "Ilustración", "Libertad"]
+  },
+  {
+    "id": "pueyrredon",
+    "nombre": "Juan Martín de Pueyrredón",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Pueyrredon.jpg",
+    "descripcion_corta": "Director Supremo y gran aliado de San Martín. Sin él, la campaña de los Andes no habría sido posible.",
+    "biografia": "Juan Martín de Pueyrredón (1777–1850) fue un político y militar clave en la consolidación de la independencia argentina. Participó en las Invasiones Inglesas y luego apoyó decididamente la Revolución de Mayo. En 1816 fue nombrado Director Supremo de las Provincias Unidas del Río de la Plata, y desde ese cargo organizó los recursos, la logística y la política para que el Ejército de los Andes, bajo el mando de San Martín, pudiera cruzar la cordillera y liberar Chile y Perú. Fue un hombre de acción más que de discurso, un organizador silencioso que entendía que sin planificación y apoyo logístico no hay revolución posible. Además, buscó consolidar un gobierno central fuerte que pudiera mantener la unidad nacional en medio de las tensiones entre provincias. Pueyrredón representa al político que hace, al que trabaja detrás de escena para que los grandes gestos libertadores sean posibles.",
+    "tags": ["Director Supremo", "San Martín", "Organización", "Independencia", "Gestión"]
+  },
+  {
+    "id": "artigas",
+    "nombre": "José Gervasio Artigas",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Artigas.jpg",
+    "descripcion_corta": "El Protector de los Pueblos Libres. Defendió el federalismo, la justicia social y la soberanía popular.",
+    "biografia": "José Gervasio Artigas (1764–1850) fue un líder militar y político del Río de la Plata, considerado el 'Padre del Federalismo'. Aunque nació en lo que hoy es Uruguay, su lucha y su pensamiento marcaron profundamente la historia argentina. Artigas entendió que la independencia debía incluir no solo la libertad frente a España, sino también la igualdad entre las provincias y los derechos de los pueblos del interior. Su proyecto político —la Liga de los Pueblos Libres— fue la primera experiencia federal de América del Sur, con principios de autonomía, reparto de tierras y justicia social. Mientras Buenos Aires buscaba centralizar el poder, Artigas defendía la soberanía de cada provincia. Fue traicionado, derrotado y exiliado, pero su legado es inmenso: un líder popular, adelantado a su tiempo, que pensó una patria más inclusiva, justa y solidaria. Hoy, sus ideas resuenan en los debates sobre federalismo y equidad.",
+    "tags": ["Federalismo", "Justicia Social", "Pueblos Libres", "Soberanía", "Independencia"]
+  },
+  {
+    "id": "dorrego",
+    "nombre": "Manuel Dorrego",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Dorrego.jpg",
+    "descripcion_corta": "Militar, político y periodista. Defendió el federalismo y pagó con su vida por sus convicciones.",
+    "biografia": "Manuel Dorrego (1787–1828) fue uno de los personajes más apasionados y trágicos de la historia argentina. Participó en las guerras de la independencia bajo las órdenes de Belgrano y San Martín, y luego se convirtió en un fuerte defensor del federalismo y de los derechos de las provincias. Creía que la independencia debía ser también social, que el pueblo debía tener voz y participación. Fue un político carismático, popular, de lenguaje simple y directo, que conectaba con la gente. Cuando fue gobernador de Buenos Aires, impulsó políticas más igualitarias y resistió las presiones de los sectores porteños centralistas. Su enfrentamiento con los unitarios terminó en tragedia: fue fusilado por orden de Juan Lavalle, sin juicio, en 1828. Dorrego murió como vivió: fiel a sus ideas y a su pueblo. Su muerte simboliza el costo que tuvo la política argentina por no saber dialogar entre las diferencias.",
+    "tags": ["Federalismo", "Justicia", "Patria", "Guerra Civil", "Política"]
+  },
+  {
+    "id": "laprida",
+    "nombre": "Francisco Narciso de Laprida",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Laprida.jpg",
+    "descripcion_corta": "Presidió el Congreso de Tucumán el 9 de julio de 1816. El hombre que pronunció la independencia argentina.",
+    "biografia": "Francisco Narciso de Laprida (1786–1829) fue un abogado y político sanjuanino que tuvo el honor de presidir el Congreso de Tucumán el día en que se declaró la independencia argentina, el 9 de julio de 1816. Su figura encarna el momento institucional más importante de la historia nacional. Era un hombre de formación ilustrada, comprometido con las ideas de libertad y soberanía, pero también consciente de la necesidad de construir un Estado ordenado y legítimo. Su participación fue clave para mantener la unidad de los representantes de las provincias, en un contexto lleno de tensiones. Después de la independencia, Laprida continuó participando en la vida política, pero terminó envuelto en las luchas internas y murió asesinado durante una persecución. Representa al hombre que puso la voz y el cuerpo para que la independencia no fuera solo una idea, sino una declaración formal ante el mundo.",
+    "tags": ["Congreso de Tucumán", "Independencia", "Unidad Nacional", "Política", "Soberanía"]
+  },
+  {
+  "id": "alberti",
+  "nombre": "Manuel Alberti",
+  "epoca": "independencia",
+  "imagen": "../src/img/personajes/Alberti.jpg",
+  "descripcion_corta": "Sacerdote patriota y miembro de la Primera Junta. Defendió la libertad con la palabra, la fe y la razón.",
+  "biografia": "Manuel Alberti (1763–1811) fue sacerdote, periodista y político, y uno de los miembros más singulares de la Primera Junta de Gobierno. En una época en la que la religión y la política parecían mundos separados, Alberti logró unir ambas esferas con coherencia y compromiso. Fue párroco de San Nicolás y un gran orador, querido por su comunidad. En 1810, tras la Revolución de Mayo, fue designado miembro de la Junta, donde se destacó por su moderación, su prudencia y su fuerte sentido moral. Participó en la fundación de 'La Gaceta de Buenos Aires', desde donde impulsó las ideas de libertad, educación y justicia. A pesar de su fe, Alberti fue un defensor de la razón y de la libertad de conciencia, algo poco común para su tiempo. Murió joven, con apenas 48 años, dejando el ejemplo de que la independencia también se construye con valores éticos y humanidad.",
+  "tags": ["Primera Junta", "Religión", "Educación", "Moral", "Revolución de Mayo"]
+},
+{
+  "id": "paso",
+  "nombre": "Juan José Paso",
+  "epoca": "independencia",
+  "imagen": "../src/img/personajes/Paso.jpg",
+  "descripcion_corta": "Abogado y político. Fue secretario del Congreso de Tucumán y firmó el Acta de la Independencia.",
+  "biografia": "Juan José Paso (1758–1833) fue un abogado, político y patriota que participó activamente en todos los procesos fundacionales de la Argentina. Integró la Primera Junta de Gobierno como secretario junto a Mariano Moreno, y fue uno de los más grandes defensores del concepto de soberanía popular. Era un hombre de palabra firme y pensamiento ilustrado, con una visión clara sobre la necesidad de construir instituciones sólidas. En 1816, fue secretario del Congreso de Tucumán y tuvo el honor de redactar y firmar el Acta de la Independencia. Paso representaba la racionalidad dentro del fervor revolucionario: creía en la ley, la organización y la educación como pilares del progreso. También fue un impulsor de la libertad de prensa y de la división de poderes. Su figura, a menudo opacada por los grandes nombres militares, fue esencial para que la independencia tuviera una base jurídica e institucional duradera.",
+  "tags": ["Congreso de Tucumán", "Primera Junta", "Soberanía", "Derecho", "Instituciones"]
+},
+{
+  "id": "deluca",
+  "nombre": "Esteban de Luca",
+  "epoca": "independencia",
+  "imagen": "../src/img/personajes/DeLuca.jpg",
+  "descripcion_corta": "Poeta patriota y militar. Unió la pluma y la espada al servicio de la independencia.",
+  "biografia": "Esteban de Luca (1786–1824) fue un poeta, militar e inventor argentino, símbolo de la unión entre arte y patria. Participó en las Invasiones Inglesas y fue un ferviente defensor de la independencia desde sus primeros días. Como poeta, fue uno de los primeros en transformar la gesta revolucionaria en inspiración literaria. Sus versos exaltaban el valor de los héroes patrios y buscaban despertar el espíritu nacional en un pueblo que todavía se estaba formando. Además, fue un innovador: desde el Parque de Artillería de Buenos Aires impulsó la fabricación de armas y pólvora, demostrando que la independencia también se defendía con ciencia y técnica. Murió joven, víctima de un naufragio, pero su vida corta fue intensa y comprometida. Esteban de Luca representa al artista patriota, aquel que lucha tanto con la palabra como con la acción.",
+  "tags": ["Poesía", "Patriotismo", "Invasiones Inglesas", "Arte", "Ciencia"]
+},
+{
+  "id": "viamonte",
+  "nombre": "Juan José Viamonte",
+  "epoca": "independencia",
+  "imagen": "../src/img/personajes/Viamonte.jpg",
+  "descripcion_corta": "Militar y político. Combatió en las Invasiones Inglesas y fue un defensor temprano del federalismo.",
+  "biografia": "Juan José Viamonte (1774–1843) fue un militar y político argentino que participó en algunos de los momentos más importantes de la historia temprana del país. Combatió con valentía durante las Invasiones Inglesas y fue un firme partidario de la Revolución de Mayo. Se unió al movimiento patriota desde sus inicios y acompañó a Belgrano en el Ejército del Norte. Más tarde, ya como político, defendió el federalismo y la autonomía de las provincias frente al poder central porteño. Fue gobernador de Buenos Aires y buscó reconciliar a los bandos enfrentados en tiempos de guerras civiles. Hombre de carácter fuerte pero espíritu conciliador, Viamonte entendió que la independencia no se sostenía solo con armas, sino también con justicia y unidad. Su figura es la de un patriota constante, fiel a la idea de una Argentina libre y soberana.",
+  "tags": ["Militar", "Federalismo", "Invasiones Inglesas", "Gobernador", "Unidad Nacional"]
+},
+  {
+    "id": "azurduy",
+    "nombre": "Juana Azurduy de Padilla",
+    "epoca": "independencia",
+    "imagen": "../src/img/personajes/Azurduy.jpg",
+    "descripcion_corta": "Heroína de las guerras de independencia del Alto Perú. Una mujer valiente que rompió todos los moldes de su época.",
+    "biografia": "Juana Azurduy (1780–1862) fue una mujer que desafió todos los límites de su tiempo. Nació en Chuquisaca (actual Bolivia) y, junto a su esposo Manuel Padilla, lideró la resistencia contra los realistas en el Alto Perú. Peleó a caballo, dirigió tropas, y llegó a ser reconocida con el grado de Teniente Coronel por el propio Belgrano. Su historia es la de una mujer que no aceptó el rol que la sociedad colonial imponía. Luchó por la libertad de su tierra, pero también por la dignidad de las mujeres y los pueblos originarios. Sufrió la pérdida de su esposo y sus hijos durante la guerra, pero nunca se rindió. Murió en la pobreza, olvidada por la historia oficial, y recién siglos después se empezó a valorar su coraje. Hoy su figura simboliza la fuerza, el amor por la libertad y la lucha de las mujeres por ser reconocidas en igualdad de condiciones. Juana Azurduy no fue una espectadora de la historia, fue protagonista.",
+    "tags": ["Heroína", "Mujer", "Alto Perú", "Coraje", "Independencia"]
+  },
+
+
+
+
+
+    {
+      "id": "sarmiento",
+      "nombre": "Domingo F. Sarmiento",
+      "epoca": "organizacion",
+      "imagen": "../src/img/personajes/Sarmiento.jpg",
+      "descripcion_corta": "Maestro, presidente y escritor. Revolucionó la educación y la modernización de la Argentina del siglo XIX.",
+      "biografia": "Domingo Faustino Sarmiento (1811–1888) fue una fuerza imparable de ideas. Hijo de una familia humilde de San Juan, entendió desde chico que el conocimiento era la llave para salir adelante. Se formó prácticamente por su cuenta, escribiendo, leyendo y debatiendo en una época en que estudiar era un privilegio. Como político, fue intenso, contradictorio y apasionado. Su objetivo era transformar una sociedad analfabeta en una nación moderna. Durante su presidencia fundó más de 800 escuelas, impulsó el ferrocarril, el telégrafo y la inmigración, porque creía que abrir el país al mundo era la forma de hacerlo crecer. Fue también un gran escritor: su obra 'Facundo' analiza el conflicto entre civilización y barbarie, pero más que eso, refleja su visión de una Argentina que necesitaba educación antes que todo. Claro que tuvo errores, como cualquier persona de su época, pero su influencia en la identidad nacional es incuestionable. Para Sarmiento, un libro era más poderoso que un arma. Su legado fue demostrar que un país se construye con maestros, no con caudillos.",
+      "tags": ["Educación Pública", "Modernización", "Presidente", "Escritor", "Cultura"]
+    },
+    {
+      "id": "urquiza",
+      "nombre": "Justo José de Urquiza",
+      "epoca": "organizacion",
+      "imagen": "../src/img/personajes/Urquiza.jpg",
+      "descripcion_corta": "Caudillo entrerriano y constructor de la unidad nacional. Impulsó la Constitución de 1853 y el fin de las guerras civiles.",
+      "biografia": "Justo José de Urquiza (1801–1870) fue uno de los personajes más complejos y decisivos del siglo XIX argentino. Gobernador de Entre Ríos, supo pasar de ser aliado de Rosas a enfrentarlo cuando entendió que el país necesitaba unidad y leyes, no caudillismos eternos. Su victoria en la batalla de Caseros, en 1852, marcó el final de una era. Pero su aporte más grande vino después: convocó al Congreso de Paraná, donde se sancionó la Constitución de 1853, base del sistema político argentino moderno. Urquiza fue un hombre de campo, práctico, que supo combinar poder militar con visión institucional. Quiso un país federal, donde las provincias no dependieran de un centro autoritario. Sin embargo, su figura fue polémica: algunos lo vieron como un traidor, otros como un estadista. Lo cierto es que su pragmatismo permitió pasar del caos al orden. Su vida terminó trágicamente, asesinado en su palacio, pero dejó una huella profunda: sin Urquiza, la Argentina moderna no habría nacido.",
+      "tags": ["Constitución", "Federalismo", "Unidad Nacional", "Liderazgo", "Historia Política"]
+    },
+    {
+  "id": "quiroga",
+  "nombre": "Juan Facundo Quiroga",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Quiroga.jpg",
+  "descripcion_corta": "Caudillo riojano conocido como 'El Tigre de los Llanos'. Símbolo del poder popular y del federalismo del interior.",
+  "biografia": "Juan Facundo Quiroga (1788–1835) fue un caudillo riojano que encarnó como pocos la fuerza del interior argentino en tiempos de guerras civiles. De carácter fuerte y liderazgo natural, se convirtió en una figura temida y respetada. Defendía la autonomía de las provincias frente al centralismo porteño, y su figura representó para muchos la voz de los sectores populares que no se sentían parte del poder de Buenos Aires. Sin embargo, su método era el del caudillo: autoridad personal, fidelidad, castigos y lealtades. Su enfrentamiento con los unitarios lo convirtió en un actor clave del siglo XIX. Murió asesinado en Barranca Yaco, en un crimen que aún genera debate, y su muerte fue el detonante que consolidó el poder de Rosas. Sarmiento lo tomó como símbolo en su obra 'Facundo' para reflexionar sobre el dilema argentino entre civilización y barbarie. Quiroga fue, en definitiva, la encarnación del caudillo: un hombre entre el pueblo y el poder, entre el coraje y el desborde.",
+  "tags": ["Federalismo", "Caudillo", "Guerra Civil", "Historia Argentina", "Civilización y Barbarie"]
+}
+,
+{
+  "id": "lavalle",
+  "nombre": "Juan Lavalle",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Lavalle.jpg",
+  "descripcion_corta": "Militar y político unitario. Su enfrentamiento con Dorrego marcó el inicio de las guerras civiles argentinas.",
+  "biografia": "Juan Lavalle (1797–1841) fue un militar valiente y contradictorio, protagonista de los años más turbulentos de la historia argentina. Participó en la guerra de independencia bajo el mando de San Martín y fue reconocido por su coraje. Pero en el caos posterior a la independencia, su ambición política lo llevó a enfrentarse con Manuel Dorrego, gobernador de Buenos Aires y defensor del federalismo. Lavalle lo derrocó y mandó fusilar sin juicio, un hecho que lo persiguió toda su vida. Ese episodio desató una cadena de guerras civiles que dividieron al país durante décadas. Exiliado y perseguido por Rosas, Lavalle terminó muriendo en Jujuy, intentando cruzar a Bolivia. Su historia muestra cómo la falta de diálogo entre unitarios y federales terminó costándole caro a la patria. Fue un héroe en el campo de batalla, pero un trágico en la política. Lavalle representa el costo humano de la intolerancia y el fanatismo político.",
+  "tags": ["Unitarios", "Guerra Civil", "Dorrego", "Militar", "Historia Argentina"]
+}
+,
+{
+  "id": "alsina",
+  "nombre": "Adolfo Alsina",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Alsina.jpg",
+  "descripcion_corta": "Político y vicepresidente de Sarmiento. Defendió una expansión nacional con límites éticos frente a Roca.",
+  "biografia": "Adolfo Alsina (1829–1877) fue abogado, político y uno de los dirigentes más lúcidos de la segunda mitad del siglo XIX. Vicepresidente durante el gobierno de Sarmiento y luego ministro de Guerra bajo la presidencia de Avellaneda, fue una figura central en el debate sobre la expansión del Estado argentino hacia el sur. Alsina propuso una política de defensa y negociación con los pueblos originarios, basada en la construcción de fortines y en una línea de fronteras conocida como 'la zanja de Alsina', una gran obra de ingeniería que buscaba evitar enfrentamientos innecesarios. Su idea era clara: civilizar sin exterminar. Chocó con la visión militarista de Roca, que años después ejecutaría la Campaña del Desierto. Alsina representa una postura intermedia, humanista y racional, dentro de un contexto donde el progreso muchas veces se impuso por la fuerza. Su legado es el intento de construir una Argentina moderna sin perder la humanidad.",
+  "tags": ["Política", "Fronteras", "Humanismo", "Modernización", "Pueblos Originarios"]
+}
+,
+    {
+  "id": "rosas",
+  "nombre": "Juan Manuel de Rosas",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Rosas.jpg",
+  "descripcion_corta": "Gobernador de Buenos Aires y figura central del siglo XIX. Su gobierno marcó una época de orden, autoridad y conflicto político.",
+  "biografia": "Juan Manuel de Rosas (1793–1877) fue una de las figuras más complejas y debatidas de la historia argentina. Estanciero, militar y político, gobernó Buenos Aires entre 1829 y 1832, y luego desde 1835 hasta 1852, ejerciendo un poder casi absoluto. En una época marcada por el caos, las guerras civiles y la falta de unidad, Rosas logró imponer orden, estabilidad económica y control político, aunque a costa de una fuerte concentración del poder y represión hacia sus opositores. Su lema era 'Federación o muerte', pero su gobierno centralizó el poder porteño más que ningún otro. Implementó un control total de la prensa, persiguió a los unitarios y utilizó la figura del Restaurador de las Leyes como símbolo de autoridad. A la vez, defendió la soberanía nacional frente a bloqueos extranjeros, consolidó el territorio y mantuvo la independencia política de la Confederación Argentina. Derrotado en la batalla de Caseros por Urquiza, se exilió en Inglaterra, donde murió en 1877. Rosas representa las contradicciones de la Argentina del siglo XIX: entre orden y libertad, entre la patria y el poder. Fue un líder temido, admirado y odiado a la vez, cuya figura sigue despertando debate hasta hoy.",
+  "tags": ["Gobernador", "Federalismo", "Orden", "Autoridad", "Conflicto Político", "Historia Argentina"]
+},
+  {
+    "id": "mitre",
+    "nombre": "Bartolomé Mitre",
+    "epoca": "organizacion",
+    "imagen": "../src/img/personajes/Mitre.jpg",
+    "descripcion_corta": "Militar, político, periodista e historiador. Primer presidente de la Argentina unificada.",
+    "biografia": "Bartolomé Mitre (1821–1906) fue una de las figuras más influyentes de la Argentina del siglo XIX. Militar, escritor, periodista y político, Mitre fue el primer presidente de la Argentina unificada, desde 1862 hasta 1868. Participó activamente en las guerras civiles, defendiendo el ideal unitario y la centralización del poder. Como presidente, buscó consolidar la unidad nacional tras décadas de enfrentamientos internos, promoviendo la creación de instituciones sólidas, el desarrollo del ferrocarril, la educación y la integración económica. Fundó el diario La Nación, uno de los más importantes del país, y escribió obras históricas como 'Historia de Belgrano' y 'Historia de San Martín', que moldearon la visión liberal de la historia argentina. Aunque fue criticado por su mirada centralista, Mitre representa la etapa en la que la Argentina se organizó políticamente, sentando las bases del Estado moderno.",
+    "tags": ["Presidente", "Unificación", "Educación", "Historia", "Liberalismo"]
+  },
+  {
+    "id": "avellaneda",
+    "nombre": "Nicolás Avellaneda",
+    "epoca": "organizacion",
+    "imagen": "../src/img/personajes/Avellaneda.jpg",
+    "descripcion_corta": "Abogado, periodista y presidente. Promovió la educación y la inmigración en la Argentina moderna.",
+    "biografia": "Nicolás Avellaneda (1837–1885) fue abogado, periodista, político y uno de los presidentes más jóvenes de la historia argentina, asumiendo el cargo a los 37 años. De origen tucumano, representó la voz del interior en un país que todavía giraba en torno a Buenos Aires. Como presidente (1874–1880), impulsó la educación pública y universitaria, fomentó la inmigración y promovió leyes que estimularon la producción agrícola. También enfrentó una grave crisis económica internacional con una gestión prudente que priorizó el equilibrio fiscal, simbolizada en su famosa frase: 'Hay que gobernar en la pobreza con dignidad'. Avellaneda fue además un hombre de cultura, profesor y periodista, y creía profundamente en el poder transformador de la educación como herramienta de progreso social. Su legado es el de un país que empieza a pensarse con instituciones estables, con leyes, universidades y un horizonte de crecimiento basado en el conocimiento.",
+    "tags": ["Presidente", "Educación", "Economía", "Inmigración", "Progreso"]
+  },
+  {
+    "id": "alberdi",
+    "nombre": "Juan Bautista Alberdi",
+    "epoca": "organizacion",
+    "imagen": "../src/img/personajes/Alberdi.jpg",
+    "descripcion_corta": "Jurista, economista y pensador. Su obra 'Bases' inspiró la Constitución Argentina de 1853.",
+    "biografia": "Juan Bautista Alberdi (1810–1884) fue uno de los intelectuales más brillantes y visionarios de la historia argentina. Nació en Tucumán y formó parte de la Generación del ’37, un grupo de jóvenes que soñaban con una nación moderna, libre y civilizada. Su obra más influyente, 'Bases y puntos de partida para la organización política de la República Argentina', fue el texto que inspiró directamente la Constitución Nacional de 1853. Alberdi propuso un modelo de país abierto al mundo, donde gobernar debía ser sinónimo de poblar, producir y educar. Defendió la inmigración como motor del progreso y la ley como herramienta de equilibrio entre libertad y orden. Vivió muchos años en el exilio, enfrentado políticamente a Mitre, pero su pensamiento trascendió las disputas de su tiempo. Alberdi fue el arquitecto intelectual de la Argentina moderna: un país pensado desde la razón, la inclusión y la educación.",
+    "tags": ["Constitución", "Pensador", "Bases", "Gobernar es poblar", "Derecho"]
+  },
+  {
+    "id": "echeverria",
+    "nombre": "Esteban Echeverría",
+    "epoca": "organizacion",
+    "imagen": "../src/img/personajes/Echeverria.jpg",
+    "descripcion_corta": "Escritor, poeta y pensador liberal. Inspiró la Generación del 37 y el pensamiento moderno argentino.",
+    "biografia": "Esteban Echeverría (1805–1851) fue poeta, escritor y uno de los precursores del pensamiento político argentino. Formó parte de la Generación del ’37, un grupo de intelectuales que se reunían en el Salón Literario para imaginar un país libre y moderno, en contraposición al autoritarismo de Rosas. Su obra más emblemática, 'El Matadero', fue una dura crítica a la violencia y la barbarie del régimen rosista. En su famoso 'Dogma Socialista', planteó una visión adelantada a su tiempo: un equilibrio entre libertad, igualdad y fraternidad. Fue uno de los primeros en pensar que la cultura debía ser la base de la política, y que el arte y la educación eran armas contra la tiranía y la ignorancia. Echeverría no solo fue un poeta romántico, sino un revolucionario intelectual: el que transformó la pasión en pensamiento y el pensamiento en ideales que todavía hoy definen la identidad argentina.",
+    "tags": ["Literatura", "Pensamiento", "Generación del 37", "Libertad", "Cultura"]
+  },
+  {
+    "id": "rivadavia",
+    "nombre": "Bernardino Rivadavia",
+    "epoca": "organizacion",
+    "imagen": "../src/img/personajes/Rivadavia.jpg",
+    "descripcion_corta": "Primer presidente argentino. Impulsó la educación, la ciencia y las instituciones modernas.",
+    "biografia": "Bernardino Rivadavia (1780–1845) fue el primer presidente de las Provincias Unidas del Río de la Plata (1826–1827) y uno de los pioneros en intentar modernizar el país bajo los principios del liberalismo ilustrado. Desde joven fue un ferviente defensor del conocimiento y el progreso. Fundó la Universidad de Buenos Aires, el Museo de Ciencias Naturales y la Sociedad de Beneficencia, buscando crear una base institucional para la educación y la ciencia. También impulsó leyes para ordenar la economía, fomentar la industria y centralizar el poder en Buenos Aires. Su estilo de gobierno fue autoritario y generó fuertes resistencias en las provincias, lo que terminó provocando su renuncia. Sin embargo, su influencia fue enorme: Rivadavia fue el primer político que intentó aplicar un modelo de país moderno, con Estado, educación y cultura. En él se ve el inicio del sueño de una Argentina racional, ilustrada y progresista.",
+    "tags": ["Primer Presidente", "Educación", "Ciencia", "Instituciones", "Liberalismo"]
+  },
+  {
+    "id": "roca",
+    "nombre": "Julio Argentino Roca",
+    "epoca": "organizacion",
+    "imagen": "../src/img/personajes/Roca.jpg",
+    "descripcion_corta": "Militar y presidente. Con la 'Campaña del Desierto' consolidó el Estado nacional argentino.",
+    "biografia": "Julio Argentino Roca (1843–1914) fue militar, político y dos veces presidente de la Nación (1880–1886 y 1898–1904). Representa el cierre de la etapa de la Organización Nacional y el inicio del Estado argentino moderno. Condujo la llamada 'Campaña del Desierto', una acción militar que expandió el territorio nacional hacia el sur, consolidando la soberanía del Estado sobre la Patagonia, aunque a costa de los pueblos originarios, lo que hoy genera un profundo debate histórico. Durante su presidencia impulsó la educación pública, la construcción de ferrocarriles, la inmigración europea y la consolidación del orden institucional. Su lema 'Paz y administración' reflejaba su idea de país: estabilidad política, crecimiento económico y expansión territorial. Roca fue una figura compleja: símbolo del progreso y del poder, pero también del costo humano de la modernización. Su gobierno marcó el paso definitivo hacia la Argentina del siglo XX.",
+    "tags": ["Presidente", "Campaña del Desierto", "Modernización", "Estado Nacional", "Paz y Administración"]
+  },
+{
+  "id": "rawson",
+  "nombre": "Guillermo Rawson",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Rawson.jpg",
+  "descripcion_corta": "Médico, sanitarista y político. Introdujo la salud pública moderna y fue cofundador de la Cruz Roja Argentina.",
+  "biografia": "Guillermo Rawson (1821–1890) fue médico, político y uno de los grandes reformadores sociales de la Argentina del siglo XIX. Nacido en San Juan, fue un hombre de ciencia en tiempos de guerras y pasiones políticas. Como ministro del Interior durante la presidencia de Mitre, impulsó políticas de higiene, urbanismo y salud pública que marcaron el inicio de una Argentina moderna y organizada. Fue el creador de la primera red de saneamiento de Buenos Aires, promovió la vacunación y la creación de hospitales. Además, fue cofundador de la Cruz Roja Argentina, convencido de que la ciencia debía estar al servicio del bien común. Su enfoque fue siempre racional y humanista: creía que el progreso verdadero debía medirse por la calidad de vida del pueblo. Rawson representa la cara científica de la Organización Nacional: el paso de las espadas a los libros, de la política de poder a la política del conocimiento.",
+  "tags": ["Salud Pública", "Ciencia", "Educación", "Reforma Social", "Humanismo"]
+}
+,{
+  "id": "rawson",
+  "nombre": "Guillermo Rawson",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Rawson.jpg",
+  "descripcion_corta": "Médico, sanitarista y político. Introdujo la salud pública moderna y fue cofundador de la Cruz Roja Argentina.",
+  "biografia": "Guillermo Rawson (1821–1890) fue médico, político y uno de los grandes reformadores sociales de la Argentina del siglo XIX. Nacido en San Juan, fue un hombre de ciencia en tiempos de guerras y pasiones políticas. Como ministro del Interior durante la presidencia de Mitre, impulsó políticas de higiene, urbanismo y salud pública que marcaron el inicio de una Argentina moderna y organizada. Fue el creador de la primera red de saneamiento de Buenos Aires, promovió la vacunación y la creación de hospitales. Además, fue cofundador de la Cruz Roja Argentina, convencido de que la ciencia debía estar al servicio del bien común. Su enfoque fue siempre racional y humanista: creía que el progreso verdadero debía medirse por la calidad de vida del pueblo. Rawson representa la cara científica de la Organización Nacional: el paso de las espadas a los libros, de la política de poder a la política del conocimiento.",
+  "tags": ["Salud Pública", "Ciencia", "Educación", "Reforma Social", "Humanismo"]
+}
+,
+{
+  "id": "hernandez",
+  "nombre": "José Hernández",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Hernandez.jpg",
+  "descripcion_corta": "Poeta, periodista y político. Autor de 'Martín Fierro', la obra que dio voz al gaucho y a la identidad nacional.",
+  "biografia": "José Hernández (1834–1886) fue un poeta, periodista y político argentino que logró lo impensado: transformar al gaucho —antes marginado y perseguido— en símbolo de la nación. Su obra 'El gaucho Martín Fierro' es mucho más que un poema: es una epopeya popular que refleja la injusticia, la libertad y el espíritu del pueblo argentino. A través del personaje de Fierro, Hernández denunció el abuso del poder, la miseria del campo y la pérdida de la identidad nacional frente a la modernización forzada. Políticamente, defendió el federalismo y los derechos del interior frente al centralismo porteño. Fue diputado, periodista combativo y defensor de la educación popular. Su literatura no fue solo arte: fue política, fue pedagogía, fue memoria. Hernández representa al intelectual que entiende al pueblo desde adentro, que no escribe desde un escritorio sino desde la tierra. Su legado es el alma misma del ser argentino.",
+  "tags": ["Literatura", "Gaucho", "Identidad Nacional", "Federalismo", "Martín Fierro"]
+},
+{
+  "id": "alem",
+  "nombre": "Leandro N. Alem",
+  "epoca": "organizacion",
+  "imagen": "../src/img/personajes/Alem.jpg",
+  "descripcion_corta": "Fundador de la Unión Cívica Radical. Símbolo del idealismo, la ética y la lucha contra la corrupción política.",
+  "biografia": "Leandro N. Alem (1842–1896) fue abogado, político y uno de los fundadores de la Unión Cívica Radical. Su vida estuvo marcada por la pasión por la justicia y la ética en la política. Luchó contra los abusos del poder y la corrupción del régimen conservador de fines del siglo XIX. Fue diputado y líder de las revoluciones cívicas de 1890 y 1893, buscando instaurar un sistema verdaderamente democrático. Pero Alem no fue un hombre de pactos fáciles: prefería perder con honor antes que ganar con traición. Su frase 'Que se rompa pero que no se doble' resume su carácter incorruptible. Fue mentor de Hipólito Yrigoyen, su sobrino, quien más tarde llevaría sus ideales al poder. Alem representa la conciencia moral de la política argentina: el que enseña que la honestidad, aunque duela, es el único camino duradero. Su muerte, por decisión propia, fue un acto de desesperación y coherencia ante un país que no supo escucharlo.",
+  "tags": ["Radicalismo", "Democracia", "Ética", "Revolución del 90", "Honestidad"]
+},
+
+
+
+
+    {
+      "id": "evita",
+      "nombre": "Eva Perón",
+      "epoca": "sigloxx",
+      "imagen": "../src/img/personajes/Evita.jpg",
+      "descripcion_corta": "La abanderada de los humildes. Transformó la política argentina con su fuerza, empatía y sentido de justicia social.",
+      "biografia": "Eva Duarte de Perón (1919–1952) fue una de esas figuras que trascienden la política. Nació en la pobreza, soñó con un país más justo y, cuando llegó al poder junto a Juan Domingo Perón, convirtió ese sueño en acción. Evita no fue una figura decorativa: fue la voz de los que nunca habían sido escuchados. Creó la Fundación Eva Perón, que construyó hospitales, escuelas, hogares y programas sociales que cambiaron la vida de millones. Impulsó el voto femenino, luchó por los derechos laborales y sociales, y desafió una estructura política que no estaba acostumbrada a ver a una mujer con tanto poder. Era carismática, directa y profundamente emocional. Su forma de hablar llegaba al corazón de la gente, especialmente de los trabajadores y las mujeres. Murió joven, con solo 33 años, pero su impacto fue tan fuerte que todavía hoy su nombre despierta pasiones. Evita representa la idea de que la política no tiene sentido si no mejora la vida de los demás.",
+      "tags": ["Justicia Social", "Derechos de la Mujer", "Empatía", "Peronismo", "Liderazgo Femenino"]
+    },
+    {
+      "id": "peron",
+      "nombre": "Juan Domingo Perón",
+      "epoca": "sigloxx",
+      "imagen": "../src/img/personajes/Peron.jpg",
+      "descripcion_corta": "Tres veces presidente y creador de un movimiento político que marcó la historia argentina hasta hoy.",
+      "biografia": "Juan Domingo Perón (1895–1974) fue militar, político y el arquitecto de uno de los movimientos sociales más duraderos de América Latina. Su figura es compleja y fascinante. Desde su experiencia en Europa aprendió que un país fuerte debía equilibrar justicia social, independencia económica y soberanía política. Cuando llegó al poder en 1946, aplicó esas ideas con un estilo único: impulsó leyes laborales, creó un sistema de seguridad social, fortaleció la industria nacional y colocó al trabajador en el centro de la política. Junto a Eva, construyó una relación directa con el pueblo, especialmente con los sectores populares que por primera vez se sintieron representados. Perón también fue un hábil estratega: comprendió la importancia de la comunicación y del carisma en la política moderna. Sin embargo, su gobierno tuvo luces y sombras, con tensiones, censuras y conflictos. Fue derrocado, exiliado y regresó décadas después para volver a ser presidente. Más allá de los debates, su legado es innegable: cambió para siempre la forma de entender la política argentina. Creó un movimiento que sigue vivo y que redefinió la idea de justicia social, comunidad organizada y participación popular.",
+      "tags": ["Presidente", "Justicia Social", "Peronismo", "Trabajo", "Soberanía Nacional"]
+    }
+    ,
+    {
+  "id": "frondizi",
+  "nombre": "Arturo Frondizi",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Frondizi.jpg",
+  "descripcion_corta": "Presidente desarrollista. Intentó modernizar la economía argentina apostando a la industria y la educación.",
+  "biografia": "Arturo Frondizi (1908–1995) fue abogado, periodista y presidente de la Nación entre 1958 y 1962. Su gobierno marcó un intento serio de modernización económica bajo una visión desarrollista: fomentar la industria, atraer inversiones y fortalecer la educación técnica. Frondizi entendía que la Argentina debía dejar de ser solo agroexportadora para convertirse en un país industrializado. Promovió la explotación petrolera, la construcción de rutas, fábricas y universidades. Pero su pragmatismo político —buscar acuerdos entre sectores opuestos— lo puso en el centro de la tormenta. Fue derrocado por los militares, víctima de la inestabilidad que dominó el siglo XX. Su legado es el de un político que quiso transformar el país desde la razón y la planificación, no desde el discurso.",
+  "tags": ["Presidente", "Desarrollismo", "Industria", "Educación", "Modernización"]
+},
+{
+  "id": "alfonsin",
+  "nombre": "Raúl Alfonsín",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Alfonsin.jpg",
+  "descripcion_corta": "Padre de la democracia moderna. Lideró la reconstrucción institucional tras la dictadura militar.",
+  "biografia": "Raúl Ricardo Alfonsín (1927–2009) fue abogado, político y el primer presidente de la Argentina recuperada tras la dictadura (1983–1989). Su figura representa la ética democrática, la defensa de los derechos humanos y el valor del diálogo. Impulsó el Juicio a las Juntas Militares, algo sin precedentes en América Latina, y promovió una nueva cultura política basada en el respeto y la participación. Gobernó en tiempos difíciles, con crisis económica y presiones militares, pero nunca renunció a sus ideales republicanos. Su frase 'Con la democracia se come, se cura y se educa' sintetiza su visión de país: una democracia que no fuera solo un sistema político, sino una forma de vida. Alfonsín fue el presidente que devolvió la esperanza después del miedo.",
+  "tags": ["Democracia", "Derechos Humanos", "Juicio a las Juntas", "Presidente", "Radicalismo"]
+},
+{
+  "id": "yrigoyen",
+  "nombre": "Hipólito Yrigoyen",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Yrigoyen.jpg",
+  "descripcion_corta": "Primer presidente elegido por voto secreto y popular. Líder del radicalismo y símbolo de la democracia naciente.",
+  "biografia": "Hipólito Yrigoyen (1852–1933) fue el primer presidente argentino elegido por voto secreto, universal y obligatorio, tras la Ley Sáenz Peña de 1912. Su llegada al poder en 1916 marcó un cambio profundo: por primera vez, el pueblo —y no las elites— decidía el rumbo del país. Conocido como 'el Peludo', Yrigoyen fue un político austero, reservado y profundamente moral. Gobernó con la idea de que la política debía servir al pueblo, no servirse de él. Su gobierno impulsó derechos laborales, la expansión educativa y una mayor participación del Estado en la economía. Representó la entrada de las clases medias y populares en la vida política. Fue derrocado en 1930, pero dejó una huella imborrable: la democracia como herramienta de justicia social. Su figura fue el primer intento real de equilibrar poder y ética en la historia argentina moderna.",
+  "tags": ["Presidente", "Democracia", "Radicalismo", "Voto Universal", "Justicia Social"]
+},
+{
+  "id": "favaloro",
+  "nombre": "René Favaloro",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Favaloro.jpg",
+  "descripcion_corta": "Médico y educador. Revolucionó la medicina mundial con el bypass coronario y su ejemplo ético.",
+  "biografia": "René Favaloro (1923–2000) fue médico, científico y docente. Su humildad y ética profesional lo convirtieron en un ejemplo para generaciones. Desde joven entendió que la medicina no era solo ciencia, sino servicio. Inventó la técnica del bypass coronario en Estados Unidos, salvando millones de vidas en el mundo. Pero eligió volver a la Argentina para trabajar por un sistema de salud más justo y educativo. Fundó la Fundación Favaloro, desde donde promovió la investigación, la formación médica y la atención digna para todos. Su muerte fue un golpe al país, pero también una advertencia sobre la falta de apoyo a la ciencia y la ética en la gestión pública. Favaloro representa el ideal del profesional comprometido con la humanidad antes que con el poder.",
+  "tags": ["Medicina", "Ciencia", "Educación", "Ética", "Salud Pública"]
+},
+{
+  "id": "borges",
+  "nombre": "Jorge Luis Borges",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Borges.jpg",
+  "descripcion_corta": "Escritor universal. Transformó la literatura argentina en un laberinto infinito de ideas.",
+  "biografia": "Jorge Luis Borges (1899–1986) fue escritor, poeta y ensayista. Su obra traspasó todas las fronteras y lo convirtió en uno de los autores más influyentes del siglo XX. A través de cuentos como 'El Aleph', 'Ficciones' y 'La biblioteca de Babel', Borges exploró el tiempo, los sueños, la identidad y el infinito. Fue bibliotecario, profesor y director de la Biblioteca Nacional, pero sobre todo fue un amante del lenguaje. Su estilo claro y profundo llevó la literatura argentina a una dimensión filosófica y universal. Nunca recibió el Premio Nobel, aunque su influencia literaria es mayor que la de muchos que sí lo ganaron. Borges representa el poder del pensamiento, la imaginación y la palabra como las armas más poderosas del ser humano.",
+  "tags": ["Literatura", "Cultura", "Filosofía", "Poesía", "Universalidad"]
+},
+{
+  "id": "cortazar",
+  "nombre": "Julio Cortázar",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Cortazar.jpg",
+  "descripcion_corta": "Escritor genial y revolucionario del lenguaje. Transformó la literatura en un juego de libertad y pensamiento.",
+  "biografia": "Julio Cortázar (1914–1984) fue uno de los escritores más originales e influyentes del siglo XX. Nació en Bruselas pero creció en Buenos Aires, donde desarrolló su amor por los libros, el jazz y la imaginación. Fue maestro, traductor y un eterno curioso de la realidad. Su obra 'Rayuela' rompió las reglas de la novela tradicional: no se leía de principio a fin, sino como un juego, como una búsqueda interior. Cortázar creía que la literatura debía sacudir al lector, hacerlo pensar y sentir. Con cuentos como 'Casa tomada', 'La noche boca arriba' o 'Final del juego', mezcló lo cotidiano con lo fantástico, lo humano con lo filosófico. Vivió gran parte de su vida en París, pero siempre escribió con el alma en Buenos Aires y en Latinoamérica. Fue un intelectual comprometido con la libertad y con las causas sociales. Cortázar representa la mente libre, el arte como rebeldía y la palabra como puente hacia lo infinito.",
+  "tags": ["Literatura", "Cultura", "Filosofía", "Rayuela", "Creatividad"]
+},
+{
+  "id": "cheguevara",
+  "nombre": "Ernesto 'Che' Guevara",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Guevara.jpg",
+  "descripcion_corta": "Revolucionario, médico y símbolo mundial de la rebeldía. Su vida fue una lucha por la justicia y la igualdad.",
+  "biografia": "Ernesto 'Che' Guevara (1928–1967) nació en Rosario y estudió medicina en Buenos Aires, pero su destino fue mucho más grande que una profesión. Mientras viajaba por Latinoamérica, vio la pobreza y la desigualdad que sufrían los pueblos y decidió dedicar su vida a combatirlas. Se unió a Fidel Castro en la Revolución Cubana, donde fue una figura clave tanto militar como política. El Che creía que la revolución debía ser continental y que la justicia no debía tener fronteras. Su imagen, inmortalizada en una foto de Alberto Korda, se convirtió en un símbolo global de la rebeldía, la libertad y la lucha contra la opresión. Más allá de la política, su vida fue una búsqueda constante de coherencia entre el pensamiento y la acción. Murió en Bolivia, fusilado, pero su espíritu sigue vivo como emblema del idealismo y el compromiso con los demás.",
+  "tags": ["Revolución", "Justicia Social", "Idealismo", "Libertad", "América Latina"]
+},
+{
+  "id": "gardel",
+  "nombre": "Carlos Gardel",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Gardel.jpg",
+  "descripcion_corta": "El Zorzal Criollo. Con su voz y su carisma, llevó el tango argentino al corazón del mundo.",
+  "biografia": "Carlos Gardel (1890–1935) fue más que un cantante: fue un fenómeno cultural. Su voz, su elegancia y su presencia escénica lo convirtieron en el máximo ícono del tango y de la identidad argentina. Nacido en Toulouse o en Tacuarembó (según la versión que se adopte), creció en Buenos Aires, donde el tango nacía en los arrabales. Grabó cientos de canciones, entre ellas 'Mi Buenos Aires querido', 'Volver' y 'El día que me quieras', que lo inmortalizaron. También fue actor de cine, llevando el tango a la pantalla grande en América y Europa. Gardel representaba la mezcla perfecta de talento, humildad y magnetismo. Su muerte trágica en un accidente aéreo en Medellín lo convirtió en leyenda. Hoy, su voz sigue viva y su figura representa la melancolía, la pasión y la elegancia del alma argentina. Gardel no solo cantó tangos: cantó la identidad de un pueblo.",
+  "tags": ["Tango", "Cultura Popular", "Música", "Identidad", "Leyenda"]
+},
+{
+  "id": "maradona",
+  "nombre": "Diego Armando Maradona",
+  "epoca": "sigloxx",
+  "imagen": "../src/img/personajes/Maradona.jpg",
+  "descripcion_corta": "El ídolo eterno. Un genio del fútbol y un símbolo del pueblo argentino en su máxima expresión.",
+  "biografia": "Diego Armando Maradona (1960–2020) fue mucho más que un futbolista: fue un fenómeno cultural, un mito viviente. Nacido en Villa Fiorito, en la pobreza, llegó a ser el mejor jugador del mundo gracias a su talento descomunal, su pasión y su carácter inquebrantable. Convirtió el fútbol en arte y emoción. En el Mundial de México 1986 alcanzó la cima, liderando a la Selección Argentina al título con goles que quedaron grabados para siempre: 'La Mano de Dios' y 'El Gol del Siglo'. Pero Maradona también representó la contradicción humana: genio y rebelde, amado y cuestionado, siempre auténtico. Luchó contra los poderosos, habló sin filtro y defendió al pueblo en cada palabra. Su vida fue una montaña rusa, pero su legado es eterno. Maradona no solo jugó al fútbol: encarnó la alegría, la rebeldía y el espíritu argentino en su forma más pura.",
+  "tags": ["Fútbol", "Cultura Popular", "Ídolo", "Rebeldía", "Identidad Argentina"]
+}
+
+
+
+  ]
+}

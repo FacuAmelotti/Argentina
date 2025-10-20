@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personajes Históricos - Argentina</title>
+  <link rel="icon" type="image/png" href="../src/img/arg.png">
+  <link rel="stylesheet" href="./css/base.css">
+<style>
+/* === CONFIGURACIÓN GLOBAL === */
+.tools-container {
+  min-height: 100vh;
+  padding: 120px 40px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tools-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.tools-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff, #a8b5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(170, 180, 255, 0.3);
+}
+
+.tools-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* === GRID === */
+/* === GRID DE PERSONAJES === */
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ✅ Centra las tarjetas horizontalmente */
+  align-items: stretch;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === TARJETAS DE PERSONAJES === */
+.tool-card {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tool-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tool-info {
+  padding: 25px 20px;
+}
+
+.tool-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.tool-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.tool-btn {
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(135deg, #ffffff, #bfc3ff);
+  color: #000;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(180, 180, 255, 0.25);
+}
+
+.tool-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffffff, #9ea8ff);
+  box-shadow: 0 8px 25px rgba(150, 160, 255, 0.35);
+}
+
+/* Efecto hover general */
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(180, 180, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tools-grid {
+    justify-content: center;
+    gap: 25px;
+  }
+  .tool-card {
+    max-width: 90%;
+  }
+}
+
+
+/* === ICONO === */
+.tool-icon {
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #ffffff, #c3d0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* === INFO === */
+.tool-info {
+  flex: 1;
+  text-align: center;
+}
+
+.tool-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.tool-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* === TAGS === */
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tool-tag {
+  font-size: 0.85rem;
+  padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.tool-tag:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* === ACCIONES === */
+.tool-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tool-btn {
+  padding: 12px 36px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, #ffffff, #bfc3ff);
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(180, 180, 255, 0.25);
+}
+
+.tool-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ffffff, #9ea8ff);
+  box-shadow: 0 10px 35px rgba(150, 160, 255, 0.35);
+}
+
+.tool-card.disabled .tool-btn {
+  pointer-events: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+}
+
+/* === ESTADOS === */
+.status-badge {
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.status-badge.available {
+  background: rgba(120, 255, 120, 0.15);
+  color: rgb(120, 255, 120);
+  border: 1px solid rgba(120, 255, 120, 0.3);
+}
+
+.status-badge.coming-soon {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === ANIMACIÓN DE ENTRADA === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tool-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.tool-card:nth-child(1) { animation-delay: 0.1s; }
+.tool-card:nth-child(2) { animation-delay: 0.25s; }
+.tool-card:nth-child(3) { animation-delay: 0.4s; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .tools-container { padding: 100px 25px 60px; }
+  .tool-card { padding: 40px 25px; }
+}
+
+@media (max-width: 600px) {
+  .tools-title { font-size: 2.8rem; }
+  .tools-grid { gap: 30px; }
+  .tool-btn { width: 100%; text-align: center; }
+}
+</style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    /* ===========================
+   🔹 LÍNEA DE TIEMPO NAVBAR
+   =========================== */
+.timeline-nav {
+  position: sticky;
+  top: 70px; /* justo debajo del nav principal */
+  z-index: 950;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: sticky;
+}
+
+/* 🔸 Línea luminosa detrás */
+.timeline-nav::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(180,180,255,0.2), rgba(255,255,255,0.5), rgba(180,180,255,0.2));
+  opacity: 0.4;
+  border-radius: 3px;
+  z-index: 0;
+}
+
+/* 🔹 Botones de época */
+.timeline-btn {
+  position: relative;
+  z-index: 1;
+  background: rgb(31, 31, 31);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  border-radius: 50px;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: 'Work Sans', sans-serif;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+/* ✨ Hover */
+.timeline-btn:hover {
+  background: rgb(27, 38, 48);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(180,180,255,0.25);
+}
+
+/* 💫 Activo */
+.timeline-btn.active {
+  background: linear-gradient(135deg, #ffffff, #aebcff);
+  color: #000;
+  box-shadow: 0 0 25px rgba(170,180,255,0.4);
+  font-weight: 600;
+  transform: scale(1.03);
+}
+
+/* 🌙 Adaptación móvil */
+@media (max-width: 768px) {
+  .timeline-nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 14px 0 20px;
+  }
+  .timeline-nav::before {
+    display: none;
+  }
+  .timeline-btn {
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+  <!-- Fondo animado -->
+  <div class="animated-bg"></div>
+  <div class="floating-elements">
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+  </div>
+
+  <!-- NAVBAR PRINCIPAL -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <img src="../src/img/arg.png" alt="Logo Argentina">Personajes Historicos
+      </a>
+      <ul class="nav-menu">
+        <li><a href="./historia.html" class="nav-link">Temario</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🔹 LÍNEA DE TIEMPO STICKY (INTEGRADA AL NAV) -->
+  <div class="timeline-nav">
+
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+<div class="tools-container">
+  <div class="tools-header">
+    <h1 class="tools-title">Personajes Históricos</h1>
+    <p class="tools-subtitle">Explorá las figuras que marcaron la historia argentina</p>
+  </div>
+
+  <div id="personajes-grid" class="tools-grid"></div>
+</div>
+
+<script>
+  fetch('../src/json/personajes.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.querySelector('.tools-container');
+      const timeline = document.querySelector('.timeline-nav');
+
+      // Agrupar personajes por época
+      const grupos = {};
+      data.personajes.forEach(p => {
+        if (!grupos[p.epoca]) grupos[p.epoca] = [];
+        grupos[p.epoca].push(p);
+      });
+
+      // Crear botones en la línea del tiempo
+      Object.keys(grupos).forEach((epoca, i) => {
+        const nombreVisible =
+          epoca === 'independencia' ? 'Independencia' :
+          epoca === 'organizacion' ? 'Organización Nacional' :
+          epoca === 'sigloxx' ? 'Siglo XX' : epoca;
+
+        const btn = document.createElement('button');
+        btn.classList.add('timeline-btn');
+        if (i === 0) btn.classList.add('active');
+        btn.textContent = nombreVisible;
+        btn.dataset.target = `#${epoca}`;
+        timeline.appendChild(btn);
+      });
+
+      // Crear secciones
+      Object.entries(grupos).forEach(([epoca, personajes]) => {
+        const section = document.createElement('section');
+        section.id = epoca;
+        section.style.marginTop = '120px';
+
+        const titulo =
+          epoca === 'independencia' ? 'Época de la Independencia (1810–1824)' :
+          epoca === 'organizacion' ? 'Época de la Organización Nacional (1850–1880)' :
+          epoca === 'sigloxx' ? 'Siglo XX y Contemporáneos' :
+          epoca;
+
+        section.innerHTML = `
+          <h2 style="text-align:center; margin-bottom:40px; color:#aebcff;">${titulo}</h2>
+          <div class="tools-grid"></div>
+        `;
+
+        const grid = section.querySelector('.tools-grid');
+        personajes.forEach(p => {
+          const card = document.createElement('div');
+          card.classList.add('tool-card');
+          card.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <div class="tool-info">
+              <h2>${p.nombre}</h2>
+              <p class="tool-description">${p.descripcion_corta}</p>
+              <a href="./personaje.html?id=${p.id}" class="tool-btn">Ver más</a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+
+        container.appendChild(section);
+      });
+
+      // 🔹 Interactividad de la línea de tiempo
+      const buttons = document.querySelectorAll('.timeline-btn');
+      const sections = document.querySelectorAll('section');
+      const OFFSET = 200;
+
+      // Click suave
+      buttons.forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const target = document.querySelector(btn.dataset.target);
+          const y = target.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        });
+      });
+
+      // Activación automática por scroll
+      window.addEventListener('scroll', () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - OFFSET;
+          if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+        });
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.dataset.target === `#${current}`) btn.classList.add('active');
+        });
+      });
+    })
+    .catch(err => console.error('Error cargando personajes:', err));
+</script>
+
+
+<script>
+  // Scroll suave + activación dinámica con offset
+  const buttons = document.querySelectorAll('.timeline-btn');
+  const sections = document.querySelectorAll('section');
+  const OFFSET = 200; // 🔹 altura aprox del nav + timeline
+
+  // Click suave con corrección
+  buttons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('.timeline-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+
+      const target = document.querySelector(btn.getAttribute('data-target'));
+      const y = target.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
+
+  // Activación automática por scroll
+  window.addEventListener('scroll', () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - OFFSET;
+      if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-target') === `#${current}`) btn.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

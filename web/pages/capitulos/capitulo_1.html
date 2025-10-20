@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 1: Época Colonial (Siglos XVI–XVIII)</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="icon" type="image/png" href="../../src/img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        
+/* Layout principal */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 60px 20px;
+            min-height: 100vh;
+        }
+
+
+        /* Contenido principal */
+        .content-wrapper {
+            max-width: 800px;
+        }
+
+        .page-header {
+            margin-bottom: 60px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #ffffff;
+        }
+
+        .breadcrumb-separator {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* Secciones de contenido */
+        .content-section {
+            margin-bottom: 60px;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            font-size: 2.5rem;
+            opacity: 0.8;
+        }
+
+        .section-content {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            margin-top: 20px;
+        }
+
+        .section-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .section-content strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Listas */
+        .content-section ul,
+        .content-section ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .content-section li {
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Ejemplos */
+        .example-box {
+            background: rgba(120, 119, 198, 0.1);
+            border-left: 3px solid rgba(120, 119, 198, 0.5);
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .example-title {
+            font-weight: 600;
+            color: rgba(120, 119, 198, 1);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Fórmulas */
+        .formula-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Destacados */
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+
+        .highlight-box h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Grid de conceptos */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .concept-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .concept-card h4 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .concept-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Botones de navegación */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-button {
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: #000000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-button.secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .highlight-box h4 {
+          color: rgb(120,255,150);
+          text-shadow: 0 0 8px rgba(120,255,150,0.3);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 100px 30px 40px;
+            }
+
+            .sidebar {
+                position: static;
+                top: auto;
+            }
+
+            .content-wrapper {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                padding: 100px 20px 40px;
+            }
+
+            .section-content {
+                padding: 25px 20px;
+            }
+
+            .concepts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+
+
+        /* Tabla */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+    <style>
+.section-icon {
+  font-size: 2.2rem;
+  opacity: 0.9;
+  line-height: 1;
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif !important;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));
+}
+
+
+</style>
+</head>
+
+<body>
+  <!-- Fondo animado -->
+  <div class="animated-bg"></div>
+  <div class="floating-elements">
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+    <div class="floating-dot"></div>
+  </div>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="" class="logo">Historia Argentina - Unidad 1</a>
+      <ul class="nav-menu">
+        <li><a href="../historia.html" class="nav-link">Temario</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Layout principal -->
+  <div class="main-layout">
+
+    <!-- Contenido principal -->
+    <main class="content-wrapper">
+      <header class="page-header">
+        <nav class="breadcrumb">
+          <a href="../../index.html">Inicio</a>
+          <span class="breadcrumb-separator">›</span>
+          <a href="../historia.html">Temario</a>
+          <span class="breadcrumb-separator">›</span>
+          <span>Unidad 1</span>
+        </nav>
+        <div class="scroll-progress-bar"></div>
+        <h1 class="page-title">Época Colonial (Siglos XVI–XVIII)</h1>
+        <p class="page-description">
+          Desde la llegada de los conquistadores al territorio del Río de la Plata hasta los inicios del siglo XIX: formación de ciudades, estructura social, economía y vida cotidiana bajo el dominio español.
+        </p>
+      </header>
+
+      <!-- 🔹 Introducción -->
+      <section id="introduccion" class="content-section">
+        <h2 class="section-title">📜 Introducción histórica</h2>
+        <div class="section-content">
+          <p>
+            Entre los siglos XVI y XVIII se desarrolló en el actual territorio argentino el proceso de conquista, colonización y organización virreinal bajo el dominio de la Corona española.  
+            Fue una etapa clave donde se establecieron las bases sociales, económicas y culturales que influirían profundamente en la futura Nación Argentina.
+          </p>
+          <p>
+            La colonización no fue homogénea: mientras en el norte se integraron regiones mineras del Alto Perú, el litoral se convirtió en zona agrícola y comercial, y la región pampeana se mantuvo más aislada hasta el siglo XVIII.
+          </p>
+        </div>
+      </section>
+
+      <!-- 🔹 Conquista y fundaciones -->
+      <section id="conquista" class="content-section">
+        <h2 class="section-title">⚔️ Conquista y fundación de ciudades</h2>
+        <div class="section-content">
+          <p>
+            Las primeras expediciones españolas al Río de la Plata comenzaron en 1516 con <strong>Juan Díaz de Solís</strong>, aunque sin éxito.  
+            La fundación permanente de Buenos Aires se concretó en <strong>1580 por Juan de Garay</strong>, consolidando la presencia española en la región.
+          </p>
+          <p>
+            Durante el siglo XVI se fundaron otras ciudades importantes:
+          </p>
+          <ul>
+            <li><strong>Santiago del Estero (1553)</strong> – primera ciudad estable del actual territorio argentino.</li>
+            <li><strong>Córdoba (1573)</strong> – centro del interior y futura sede universitaria.</li>
+            <li><strong>Tucumán, Salta, Jujuy</strong> – articulaban la comunicación con el Alto Perú.</li>
+            <li><strong>Santa Fe (1573) y Corrientes (1588)</strong> – conectaban el litoral con Asunción y Buenos Aires.</li>
+          </ul>
+          <p>
+            Estas fundaciones respondieron a la necesidad de control territorial, evangelización y aprovechamiento de los recursos naturales.
+          </p>
+        </div>
+      </section>
+
+      <!-- 🔹 Organización del Virreinato -->
+      <section id="virreinato" class="content-section">
+        <h2 class="section-title">🏛️ El Virreinato del Río de la Plata</h2>
+        <div class="section-content">
+          <p>
+            En 1776, la monarquía borbónica creó el <strong>Virreinato del Río de la Plata</strong>, separándolo del del Perú.  
+            Su capital fue Buenos Aires, y su territorio incluía parte de los actuales Argentina, Bolivia, Paraguay y Uruguay.
+          </p>
+          <p>
+            El virreinato tenía fines estratégicos y económicos: controlar el comercio, reforzar la defensa del sur del imperio y frenar el contrabando portugués.
+          </p>
+          <div class="highlight-box">
+            <h4>👑 Virreyes destacados</h4>
+            <ul>
+              <li><strong>Pedro de Cevallos (1776–1778)</strong> – primer virrey; aseguró territorios del sur.</li>
+              <li><strong>Juan José de Vértiz (1778–1784)</strong> – promovió la educación y la cultura.</li>
+              <li><strong>Vicerreinado hasta 1810</strong> – su caída marcó el inicio de la Revolución de Mayo.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔹 Sociedad colonial -->
+      <section id="sociedad" class="content-section">
+        <h2 class="section-title">👥 Sociedad colonial</h2>
+        <div class="section-content">
+          <p>
+            La sociedad colonial era <strong>jerárquica y estamental</strong>, es decir, dividida según origen y posición social.  
+            El lugar de una persona estaba determinado por su nacimiento, raza y riqueza.
+          </p>
+          <ul>
+            <li><strong>Peninsulares:</strong> nacidos en España, ocupaban los cargos más altos.</li>
+            <li><strong>Criollos:</strong> hijos de españoles nacidos en América; ricos pero sin poder político.</li>
+            <li><strong>Mestizos:</strong> mezcla de europeos e indígenas, con derechos limitados.</li>
+            <li><strong>Indígenas:</strong> sometidos a trabajo forzoso en encomiendas.</li>
+            <li><strong>Afrodescendientes:</strong> traídos como esclavos, principalmente en zonas urbanas y rurales.</li>
+          </ul>
+          <div class="highlight-box">
+            <h4>💡 Estructura social y tensiones</h4>
+            <p>
+              Las diferencias entre peninsulares y criollos fueron el origen de los conflictos que estallarían en el siglo XIX.  
+              Los criollos, más educados y con poder económico, comenzaron a cuestionar el dominio político español.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔹 Economía y comercio -->
+      <section id="economia" class="content-section">
+        <h2 class="section-title">💰 Economía y comercio</h2>
+        <div class="section-content">
+          <p>
+            La economía colonial se basaba en la <strong>agricultura, ganadería y minería</strong>, aunque en el territorio del Río de la Plata predominaba la producción agroganadera.
+          </p>
+          <ul>
+            <li>En el norte: producción agrícola y comercio con el Alto Perú.</li>
+            <li>En el litoral: ganadería, cuero y tasajo (carne salada) como productos de exportación.</li>
+            <li>En el oeste: viñedos, trigo y harina en Cuyo.</li>
+          </ul>
+          <p>
+            El comercio estaba controlado por la <strong>Casa de Contratación de Sevilla</strong>, que monopolizaba el intercambio con América.  
+            Esto generó un fuerte <strong>contrabando</strong>, especialmente en el puerto de Buenos Aires, que se volvió clave para la economía local.
+          </p>
+        </div>
+      </section>
+
+      <!-- 🔹 Iglesia, educación y cultura -->
+      <section id="iglesia" class="content-section">
+        <h2 class="section-title">⛪ Iglesia y cultura</h2>
+        <div class="section-content">
+          <p>
+            La Iglesia Católica tuvo un papel central en la vida colonial: administraba educación, censos, hospitales y festividades religiosas.  
+            Además, fue la principal institución que unificó la vida cultural y moral de la sociedad.
+          </p>
+          <ul>
+            <li>Las órdenes religiosas (jesuitas, franciscanos, dominicos) establecieron colegios y misiones.</li>
+            <li>En 1613 se fundó la <strong>Universidad de Córdoba</strong>, la más antigua del país.</li>
+            <li>La educación estaba reservada a hombres y a las clases altas.</li>
+          </ul>
+          <div class="highlight-box">
+            <h4>🎓 Legado cultural</h4>
+            <p>
+              La cultura colonial combinó elementos europeos, indígenas y africanos, dando origen a una identidad mestiza.  
+              Las fiestas religiosas, la música y la arquitectura barroca fueron expresiones típicas de la época.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔹 Reformas borbónicas -->
+      <section id="reformas" class="content-section">
+        <h2 class="section-title">⚙️ Reformas borbónicas</h2>
+        <div class="section-content">
+          <p>
+            En el siglo XVIII, los reyes borbones aplicaron reformas para modernizar el imperio.  
+            Buscaban <strong>mayor control político, eficiencia económica y fortalecimiento militar</strong>.
+          </p>
+          <ul>
+            <li>Creación del <strong>Virreinato del Río de la Plata</strong>.</li>
+            <li>Reorganización del comercio (Reglamento de Libre Comercio de 1778).</li>
+            <li>Reformas administrativas: intendencias, nuevos impuestos y control centralizado.</li>
+          </ul>
+          <div class="highlight-box">
+            <h4>📈 Consecuencias</h4>
+            <p>
+              Las reformas dinamizaron la economía y favorecieron a Buenos Aires, pero generaron tensiones con el interior y con los criollos, quienes empezaron a reclamar mayor autonomía.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔹 Vida cotidiana -->
+      <section id="vida" class="content-section">
+        <h2 class="section-title">🏠 Vida cotidiana en el período colonial</h2>
+        <div class="section-content">
+          <p>
+            La vida diaria estaba profundamente marcada por las costumbres españolas y la religión.  
+            Las casas eran sencillas, con patios interiores, y las ciudades se organizaban alrededor de la plaza principal.
+          </p>
+          <ul>
+            <li>El mate, el poncho y las festividades populares ya formaban parte de la cultura criolla.</li>
+            <li>El trabajo estaba vinculado a la tierra, la servidumbre o los talleres artesanales.</li>
+            <li>Las mujeres tenían un rol doméstico, aunque algunas participaron activamente en la educación y la economía familiar.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 🔹 Hacia la independencia -->
+      <section id="independencia" class="content-section">
+        <h2 class="section-title">🔥 Camino hacia la independencia</h2>
+        <div class="section-content">
+          <p>
+            Hacia fines del siglo XVIII y principios del XIX, el monopolio comercial, las desigualdades sociales y las ideas ilustradas de libertad comenzaron a influir en los criollos.
+          </p>
+          <p>
+            Los hechos internacionales como la <strong>Revolución Francesa (1789)</strong> y la <strong>invasión napoleónica a España (1808)</strong> debilitaron la autoridad real.  
+            En este contexto, las élites criollas de Buenos Aires empezaron a organizarse para reclamar el poder local, preparando el terreno para la <strong>Revolución de Mayo de 1810</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- 🔹 Conclusión -->
+      <section id="conclusion" class="content-section">
+        <h2 class="section-title">📖 Conclusión</h2>
+        <div class="section-content">
+          <p>
+            La Época Colonial fue el período donde se sentaron las bases económicas, culturales y sociales de la futura Argentina.  
+            De la mano de las ciudades fundadas, la influencia de la Iglesia, la estructura estamental y las tensiones entre criollos y peninsulares, se fue gestando lentamente el deseo de independencia.
+          </p>
+          <p>
+            Comprender esta etapa permite entender por qué la Revolución de Mayo no fue un hecho aislado, sino el resultado de siglos de transformación, mestizaje y búsqueda de identidad propia.
+          </p>
+        </div>
+      </section>
+
+      <!-- 🔹 Resumen -->
+      <section id="resumen" class="content-section">
+        <h2 class="section-title">📋 Resumen de la unidad</h2>
+        <div class="section-content">
+          <ul>
+            <li>La conquista española dio origen a las primeras ciudades del actual territorio argentino.</li>
+            <li>El Virreinato del Río de la Plata fue creado en 1776 para fortalecer el control imperial.</li>
+            <li>La sociedad colonial era jerárquica y desigual, con criollos relegados del poder político.</li>
+            <li>La economía se basaba en la ganadería y el comercio, con fuerte contrabando.</li>
+            <li>Las Reformas Borbónicas modernizaron el imperio pero aumentaron las tensiones internas.</li>
+            <li>Las ideas ilustradas y las crisis europeas impulsaron el camino hacia la independencia.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 🔹 Práctica rápida -->
+      <section id="practica" class="content-section">
+        <h2 class="section-title">🧩 Práctica rápida</h2>
+        <div class="section-content">
+          <ol>
+            <li>¿Qué motivó la creación del Virreinato del Río de la Plata en 1776?</li>
+            <li>¿Cómo se organizaba la sociedad colonial y qué tensiones generaba?</li>
+            <li>¿Qué consecuencias tuvieron las Reformas Borbónicas?</li>
+            <li>¿Por qué Buenos Aires adquirió mayor importancia económica en el siglo XVIII?</li>
+            <li>¿Qué influencia tuvieron las ideas ilustradas en los criollos?</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Navegación -->
+      <div class="navigation-buttons">
+        <a href="../historia.html" class="nav-button secondary">← Volver al Temario</a>
+        <a href="./unidad_2.html" class="nav-button">Unidad 2 →</a>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">Unidad 1</div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#introduccion">Introducción</a></li>
+        <li class="nav-item"><a href="#conquista">Conquista y fundaciones</a></li>
+        <li class="nav-item"><a href="#virreinato">Virreinato</a></li>
+        <li class="nav-item"><a href="#sociedad">Sociedad</a></li>
+        <li class="nav-item"><a href="#economia">Economía</a></li>
+        <li class="nav-item"><a href="#iglesia">Iglesia y cultura</a></li>
+        <li class="nav-item"><a href="#reformas">Reformas borbónicas</a></li>
+        <li class="nav-item"><a href="#vida">Vida cotidiana</a></li>
+        <li class="nav-item"><a href="#independencia">Camino a la independencia</a></li>
+        <li class="nav-item"><a href="#conclusion">Conclusión</a></li>
+        <li class="nav-item"><a href="#resumen">Resumen</a></li>
+        <li class="nav-item"><a href="#practica">Práctica</a></li>
+      </ul>
+    </aside>
+  </div>
+
+
+    <script>
+        // Smooth scroll y active nav
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav-item a');
+
+        // Intersection Observer para el sidebar
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Smooth scroll al hacer click
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+          <script>
+  // 🔹 Barra de progreso scroll
+  const progressBar = document.querySelector('.scroll-progress-bar');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = `${scrollPercent}%`;
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 🔹 Agregar checkbox de estudio a cada sección
+  document.querySelectorAll('.content-section').forEach(section => {
+    const id = section.id;
+    const checkDiv = document.createElement('div');
+    checkDiv.className = 'study-check';
+    checkDiv.innerHTML = `
+      <input type="checkbox" class="study-checkbox" id="check-${id}">
+      <label for="check-${id}">Estudiado</label>
+    `;
+    const content = section.querySelector('.section-content');
+    if (content) content.prepend(checkDiv);
+  });
+
+  // 🔹 Sincronizar checkbox con sidebar + localStorage
+  document.querySelectorAll('.study-checkbox').forEach(checkbox => {
+    const id = checkbox.id.replace('check-', '');
+    const key = `tema_estudiado_${id}`;
+    const section = document.getElementById(id);
+    const navLink = document.querySelector(`.sidebar a[href="#${id}"]`);
+    const saved = localStorage.getItem(key);
+
+    // Restaurar estado guardado
+    if (saved === 'true') {
+      checkbox.checked = true;
+      section.classList.add('section-studied');
+      if (navLink) navLink.classList.add('studied');
+    }
+
+    // Escuchar cambios
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem(key, checkbox.checked);
+      if (checkbox.checked) {
+        section.classList.add('section-studied');
+        if (navLink) navLink.classList.add('studied');
+      } else {
+        section.classList.remove('section-studied');
+        if (navLink) navLink.classList.remove('studied');
+      }
+    });
+  });
+});
+</script>
+<!-- 🔢 MathJax para renderizar fórmulas -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+  svg: { fontCache: 'global' },
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+
+</body>
+</html>
