@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapas Históricos - Revolución Nacional</title>
+  <link rel="icon" type="image/png" href="../src/img/arg.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css">
+  <style>
+    /* ===========================
+   RESET Y BASE
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  background: #0f1116;
+  color: #f1f1f1;
+}
+
+/* ===========================
+   FONDO ANIMADO SUTIL
+   =========================== */
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 30% 20%, #1a2536 0%, #0f1116 80%);
+  background-size: 200% 200%;
+  animation: bgShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #00aaff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #d7d7d7;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #00aaff;
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+   =========================== */
+.mapa-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  margin-top: 70px;
+  height: auto; /* 👈 antes era 100vh */
+}
+
+
+/* ===========================
+   PANEL LATERAL (Línea del tiempo)
+   =========================== */
+.panel-epocas {
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 25px;
+  overflow-y: auto;
+}
+
+.titulo-panel {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  color: #00aaff;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.lista-epocas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lista-epocas li {
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #d7d7d7;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lista-epocas li:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lista-epocas li.active {
+  background: #00aaff;
+  color: white;
+  font-weight: 600;
+}
+
+/* ===========================
+   MAPA PRINCIPAL
+   =========================== */
+.mapa-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.mapa-info {
+  max-width: 720px;
+  margin-bottom: 35px;
+}
+
+.mapa-info h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: #00aaff;
+  margin-bottom: 12px;
+}
+
+.mapa-info p {
+  color: #c8c8c8;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Imagen del mapa */
+.mapa-imagen {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+
+.mapa-imagen:hover {
+  transform: scale(1.01);
+}
+
+.mapa-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+/* ===========================
+   MODAL
+   =========================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(15, 17, 22, 0.8);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 35px 40px;
+  width: 480px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.1);
+}
+
+.modal-card h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #00aaff;
+  margin-bottom: 12px;
+}
+
+.modal-card p {
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+.btn-cerrar {
+  margin-top: 25px;
+  padding: 10px 24px;
+  background: #00aaff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-cerrar:hover {
+  background: #0095dd;
+}
+
+.mapa-imagen img {
+  width: auto;
+  height: calc(100vh - 180px); /* 🔧 ajusta según el padding que tengas */
+  object-fit: contain; /* mantiene proporciones */
+}
+
+
+/* ===========================
+   SCROLLBAR
+   =========================== */
+.panel-epocas::-webkit-scrollbar {
+  width: 6px;
+}
+.panel-epocas::-webkit-scrollbar-thumb {
+  background: rgba(0,170,255,0.5);
+  border-radius: 10px;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 900px) {
+  .mapa-container {
+    grid-template-columns: 1fr;
+  }
+  .panel-epocas {
+    display: none;
+  }
+  .mapa-principal {
+    padding: 20px;
+  }
+  .mapa-info h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===========================
+   NAVBAR (alineado correctamente)
+   =========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ✅ separa izquierda y derecha */
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* ✅ logo izquierda / links derecha */
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #00aaff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #d7d7d7;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #00aaff;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Fondo animado (similar pero más sobrio) -->
+  <div class="animated-bg"></div>
+
+  <!-- 🔹 Navbar superior -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">🗺️ Mapas Históricos</a>
+      <ul class="nav-menu">
+        <li><a href="../pages/historia.html" class="nav-link">Salir</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🔹 Contenedor principal -->
+  <main class="mapa-container">
+    <aside class="panel-epocas">
+      <h2 class="titulo-panel">Línea del Tiempo</h2>
+      <ul class="lista-epocas">
+        <li data-epoca="1810">Revolución de Mayo (1810)</li>
+        <li data-epoca="1816">Independencia (1816)</li>
+        <li data-epoca="1835">Confederación (1835)</li>
+        <li data-epoca="1880">Organización Nacional (1880)</li>
+        <li data-epoca="1945">Industrialización (1945)</li>
+        <li data-epoca="1983">Retorno a la Democracia (1983)</li>
+        <li data-epoca="Actual">Argentina Contemporánea</li>
+      </ul>
+    </aside>
+
+    <!-- 🔹 Área del mapa dinámico -->
+    <section class="mapa-principal">
+      <div class="mapa-info">
+        <h1 id="mapTitle">Mapa de la Revolución de Mayo (1810)</h1>
+        <p id="mapDesc">
+           </p>
+      </div>
+
+      <!-- Imagen dinámica del mapa -->
+      <div class="mapa-imagen">
+        <img id="mapImage" src="../src/img/mapas/1810.png" alt="Mapa histórico de 1810">
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔹 Modal informativo -->
+  <div class="modal" id="aboutModal">
+    <div class="modal-card">
+      <h2>Acerca del Proyecto</h2>
+      <p>
+        Este módulo forma parte del universo <b>Revolución Nacional</b> y tiene como objetivo mostrar 
+        la evolución del territorio argentino a lo largo de los siglos, integrando historia, geografía y tecnología interactiva.
+      </p>
+      <button id="closeAbout" class="btn-cerrar">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- 🔹 Script funcional -->
+  <script>
+    const dataEpocas = {
+      "1810": {
+        title: "Mapa de la Revolución de Mayo (1810)",
+        desc: "Comienza el proceso de independencia. Se representa el territorio del Virreinato del Río de la Plata.",
+        img: "../src/img/mapas/1810.jpg"
+      },
+      "1816": {
+        title: "Mapa de la Independencia (1816)",
+        desc: "Tras la declaración en Tucumán, se consolida la unión de las provincias libres.",
+        img: "../src/img/mapas/1816.jpg"
+      },
+      "1835": {
+        title: "Mapa de la Confederación Argentina (1835)",
+        desc: "Época de tensiones internas entre unitarios y federales. Buenos Aires aún separada del resto.",
+        img: "../src/img/mapas/1835.jpg"
+      },
+      "1880": {
+        title: "Mapa de la Organización Nacional (1880)",
+        desc: "Argentina unificada bajo un gobierno nacional. Se incorporan nuevos territorios al sur y oeste.",
+        img: "../src/img/mapas/1880.jpg"
+      },
+      "1945": {
+        title: "Mapa de la Industrialización (1945)",
+        desc: "Inicio de un proceso de desarrollo urbano e industrial. Las fronteras se estabilizan.",
+        img: "../src/img/mapas/1945.jpg"
+      },
+      "1983": {
+        title: "Mapa del Retorno Democrático (1983)",
+        desc: "Tras la dictadura, el país recupera la democracia. Provincias y límites modernos.",
+        img: "../src/img/mapas/1983.jpg"
+      },
+      "Actual": {
+        title: "Mapa de la Argentina Contemporánea",
+        desc: "Argentina actual, con todas sus provincias y límites reconocidos internacionalmente.",
+        img: "../src/img/mapas/actual.jpg"
+      }
+    };
+
+    const lista = document.querySelectorAll(".lista-epocas li");
+    const mapTitle = document.getElementById("mapTitle");
+    const mapDesc = document.getElementById("mapDesc");
+    const mapImage = document.getElementById("mapImage");
+
+    lista.forEach(li => {
+      li.addEventListener("click", () => {
+        const epoca = li.getAttribute("data-epoca");
+        const data = dataEpocas[epoca];
+        mapTitle.textContent = data.title;
+        mapDesc.textContent = data.desc;
+        mapImage.src = data.img;
+
+        lista.forEach(el => el.classList.remove("active"));
+        li.classList.add("active");
+      });
+    });
+
+    // Modal Acerca de
+    const aboutModal = document.getElementById("aboutModal");
+    document.getElementById("btnAcerca").onclick = () => aboutModal.classList.add("active");
+    document.getElementById("closeAbout").onclick = () => aboutModal.classList.remove("active");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+[33m82b56d3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33maa684a7[m HEAD@{1}: checkout: moving from 504a5f76e23811c5dc8a4631b3748e393c20fc7d to main
+[33m504a5f7[m HEAD@{2}: commit: New features 20/10 1
+[33mf5fd0b4[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{3}: commit: features fix
+[33me5d9567[m HEAD@{4}: reset: moving to HEAD~1
+[33mc656536[m HEAD@{5}: pull origin main --rebase (start): checkout c656536cfc9d2a33ee4bfc6eb58e0e58d98b34b3
+[33maa684a7[m HEAD@{6}: commit: features
+[33m82b56d3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{7}: reset: moving to HEAD~1
+[33me5d9567[m HEAD@{8}: reset: moving to HEAD~1
+[33mc656536[m HEAD@{9}: commit: Muevo sitio a la raíz para desplegar en GitHub Pages
+[33me5d9567[m HEAD@{10}: Branch: renamed refs/heads/master to refs/heads/main
+[33me5d9567[m HEAD@{12}: commit: Subo mi proyecto ArgWeb completo
+[33m82b56d3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{13}: pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
+[33m1a75580[m HEAD@{14}: commit (initial): Primer commit del sitio ArgWeb
