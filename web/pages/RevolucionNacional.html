@@ -1726,7 +1726,7 @@ html, body {
   <!-- 🎵 Panel de música -->
   <div class="music-panel-inline">
     <button id="btnPlayMusic">⏯️</button>
-    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.15">
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.45">
   </div>
 </ul>
 
@@ -3323,9 +3323,9 @@ $("#btnHelp").onclick = () => {
 // ===========================
 // AUDIO SYSTEM
 // ===========================
-const music = new Audio("../src/audio/gameBattle/song.mp3");
+const music = new Audio("../src/audio/gameBattle/game.mp3");
 music.loop = true;
-music.volume = 0.15;
+music.volume = 0.45;
 
 const sfx = {
   heal: new Audio("../src/audio/gameBattle/heal.mp3"),
@@ -3342,26 +3342,45 @@ const sfx = {
 };
 
 // 🔊 Aplicar volumen inicial del slider a todos los sonidos
+// 🔊 Aplicar volumen inicial del slider a todos los sonidos
 const initialVol = parseFloat($("#volumeControl").value);
 music.volume = initialVol;
 Object.values(sfx).forEach(a => (a.volume = initialVol));
 
+// 🔹 Actualiza el icono inicial según el volumen
+updateMusicButton();
 
+function updateMusicButton() {
+  if (music.paused) {
+    $("#btnPlayMusic").textContent = "▶️";
+  } else if (music.volume === 0) {
+    $("#btnPlayMusic").textContent = "🔇";
+  } else {
+    $("#btnPlayMusic").textContent = "🔊";
+  }
+}
+
+// 🎵 Botón Play / Pause / Mute visual
 $("#btnPlayMusic").onclick = () => {
   if (music.paused) {
     music.play();
-    $("#btnPlayMusic").textContent = "⏸️";
   } else {
     music.pause();
-    $("#btnPlayMusic").textContent = "▶️";
   }
+  updateMusicButton();
 };
 
+// 🎚️ Control de volumen con detección de mute
 $("#volumeControl").oninput = e => {
   const v = parseFloat(e.target.value);
   music.volume = v;
   Object.values(sfx).forEach(a => (a.volume = v));
+  updateMusicButton();
 };
+
+// 🧠 Si el volumen arranca en 0, mostrar mute
+if (initialVol === 0) updateMusicButton();
+
 
 
     // ============================================

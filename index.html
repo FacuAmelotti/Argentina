@@ -88,7 +88,7 @@
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0%;
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
@@ -96,7 +96,7 @@
         }
 
         .feature-card:hover::before {
-            left: 100%;
+           transform: scale(1.1rem);
         }
 
         .feature-card:hover {
@@ -332,10 +332,707 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
+/* =========================================================
+   🇦🇷 ESTILO ARGENTINO ELEGANTE Y MINIMALISTA
+   ========================================================= */
 
+/* --- Variables de color inspiradas en Argentina --- */
+:root {
+  --celeste-argentino: #75aadb;
+  --celeste-claro: #a8d5ff;
+  --celeste-brillante: #6ec9ff;
+  --blanco-puro: #ffffff;
+  --oro-sol: #f9d71c;
+  --oro-suave: #ffd83d;
+  --gris-pampa: #e8e8e8;
+  --negro-noche: #0a0a12;
+  --acento-tango: #c41e3a;
+}
+
+/* --- Fondo con degradados celeste/blanco sutiles --- */
+body {
+  background: linear-gradient(180deg, #0a0a12 0%, #0d0f1a 50%, #0a0a12 100%);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 15% 20%, rgba(117, 170, 219, 0.08), transparent 50%),
+    radial-gradient(ellipse at 85% 75%, rgba(255, 255, 255, 0.04), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(249, 215, 28, 0.03), transparent 70%);
+  animation: argentinaPulse 20s ease-in-out infinite alternate;
+  z-index: -2;
+  pointer-events: none;
+}
+
+@keyframes argentinaPulse {
+  0% { 
+    background-position: 0% 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% { 
+    background-position: 100% 100%;
+    opacity: 0.8;
+  }
+}
+
+/* --- Patrón sutil de fileteado porteño --- */
+.animated-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 100px,
+      rgba(117, 170, 219, 0.015) 100px,
+      rgba(117, 170, 219, 0.015) 102px
+    );
+  z-index: -1;
+  opacity: 0.5;
+  animation: scrollPattern 60s linear infinite;
+}
+
+@keyframes scrollPattern {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+/* --- Navbar con identidad argentina --- */
+.navbar {
+  background: rgba(10, 10, 18, 0.85);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--celeste-argentino) 20%, 
+    var(--blanco-puro) 50%, 
+    var(--celeste-argentino) 80%, 
+    transparent 100%
+  ) 1;
+  box-shadow: 0 4px 30px rgba(117, 170, 219, 0.1);
+  backdrop-filter: blur(25px);
+}
+
+.logo {
+  background: linear-gradient(135deg, 
+    var(--celeste-brillante) 0%, 
+    var(--blanco-puro) 50%, 
+    var(--celeste-claro) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(117, 170, 219, 0.3));
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 15px rgba(117, 170, 219, 0.5));
+  transform: scale(1.02);
+}
+
+.nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--celeste-argentino), 
+    var(--blanco-puro), 
+    transparent
+  );
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--celeste-claro);
+  text-shadow: 0 0 10px rgba(117, 170, 219, 0.4);
+}
+
+.nav-link:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* --- Hero con alma de bandera --- */
+.hero-container {
+  position: relative;
+  background: 
+    linear-gradient(180deg, 
+      rgba(117, 170, 219, 0.03) 0%, 
+      rgba(10, 10, 18, 0.8) 40%,
+      rgba(10, 10, 18, 0.95) 100%
+    );
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(117, 170, 219, 0.12) 0%,
+    transparent 50%
+  );
+  animation: heroGlow 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes heroGlow {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  background: linear-gradient(135deg, 
+    var(--celeste-brillante) 0%,
+    var(--blanco-puro) 25%,
+    var(--blanco-puro) 75%,
+    var(--celeste-argentino) 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleShimmer 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(117, 170, 219, 0.3));
+  font-weight: 200;
+  letter-spacing: -0.04em;
+}
+
+@keyframes titleShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-subtitle {
+  color: var(--celeste-claro);
+  text-shadow: 0 0 15px rgba(117, 170, 219, 0.3);
+  font-weight: 300;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+/* --- Botón principal estilo bandera argentina --- */
+.btn-primary {
+  background: linear-gradient(90deg, 
+    var(--celeste-argentino) 0%,
+    var(--blanco-puro) 50%,
+    var(--celeste-argentino) 100%
+  );
+  background-size: 200% 100%;
+  color: #001f3f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  box-shadow: 
+    0 4px 20px rgba(117, 170, 219, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0;
+  box-shadow: 
+    0 8px 30px rgba(117, 170, 219, 0.5),
+    0 0 20px rgba(117, 170, 219, 0.3);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid var(--celeste-argentino);
+  color: var(--celeste-claro);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 15px rgba(117, 170, 219, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(117, 170, 219, 0.1);
+  border-color: var(--celeste-brillante);
+  box-shadow: 0 0 25px rgba(117, 170, 219, 0.3);
+  color: var(--blanco-puro);
+  transform: translateY(-2px);
+}
+
+/* --- Títulos de sección con acento dorado --- */
+.section-title {
+  background: linear-gradient(135deg, 
+    var(--celeste-brillante) 0%,
+    var(--blanco-puro) 35%,
+    var(--blanco-puro) 65%,
+    var(--celeste-argentino) 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sectionTitleGlow 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(117, 170, 219, 0.2));
+  position: relative;
+  font-weight: 200;
+}
+
+@keyframes sectionTitleGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--celeste-argentino), 
+    var(--blanco-puro), 
+    var(--celeste-argentino), 
+    transparent
+  );
+  border-radius: 2px;
+}
+
+/* --- Feature cards con toque argentino --- */
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(117, 170, 219, 0.15);
+  box-shadow: 
+    0 4px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(117, 170, 219, 0.08) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+  animation: cardPulse 2s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(117, 170, 219, 0.35);
+  box-shadow: 
+    0 8px 40px rgba(117, 170, 219, 0.2),
+    0 0 30px rgba(117, 170, 219, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-12px) scale(1.02);
+}
+
+.feature-icon {
+  font-size: 56px;
+  filter: drop-shadow(0 0 12px rgba(117, 170, 219, 0.4));
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  filter: drop-shadow(0 0 20px rgba(117, 170, 219, 0.8));
+  transform: scale(1.1) rotateY(15deg);
+}
+
+.feature-title {
+  color: var(--celeste-claro);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(117, 170, 219, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-title {
+  color: var(--blanco-puro);
+  text-shadow: 0 0 15px rgba(117, 170, 219, 0.5);
+}
+
+.feature-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+/* --- Estadísticas con brillo celeste/dorado --- */
+.stats-section {
+  background: linear-gradient(180deg, 
+    rgba(10, 10, 18, 0.6) 0%,
+    rgba(15, 20, 35, 0.8) 50%,
+    rgba(10, 10, 18, 0.6) 100%
+  );
+  position: relative;
+  border-top: 1px solid rgba(117, 170, 219, 0.1);
+  border-bottom: 1px solid rgba(117, 170, 219, 0.1);
+}
+
+.stats-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(117, 170, 219, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.stat-number {
+  background: linear-gradient(135deg, 
+    var(--celeste-brillante) 0%,
+    var(--blanco-puro) 50%,
+    var(--celeste-argentino) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(117, 170, 219, 0.5));
+  font-weight: 200;
+  font-size: 56px;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.stat-item:hover .stat-number {
+  filter: drop-shadow(0 0 30px rgba(117, 170, 219, 0.8));
+  transform: scale(1.15);
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* --- Footer con degradado de bandera --- */
+.site-footer {
+  background: linear-gradient(180deg, 
+    rgba(10, 10, 18, 0.5) 0%,
+    rgba(10, 10, 18, 0.9) 100%
+  );
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--celeste-argentino) 35%, 
+    var(--blanco-puro) 50%, 
+    var(--celeste-argentino) 65%, 
+    transparent 100%
+  ) 1;
+  box-shadow: 0 -4px 30px rgba(117, 170, 219, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+.footer-author strong {
+  background: linear-gradient(135deg, 
+    var(--celeste-brillante) 0%, 
+    var(--blanco-puro) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.footer-photo {
+  border: 2px solid rgba(117, 170, 219, 0.3);
+  box-shadow: 0 0 20px rgba(117, 170, 219, 0.2);
+  transition: all 0.3s ease;
+}
+
+.footer-photo:hover {
+  border-color: var(--celeste-brillante);
+  box-shadow: 0 0 30px rgba(117, 170, 219, 0.5);
+  transform: scale(1.05);
+}
+
+.footer-year {
+  color: rgba(117, 170, 219, 0.5);
+  font-weight: 300;
+}
+
+/* --- Scrollbar celeste argentina --- */
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(10, 10, 18, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, 
+    var(--celeste-argentino), 
+    var(--oro-sol), 
+    var(--celeste-argentino)
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(117, 170, 219, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 20px rgba(249, 215, 28, 0.6);
+}
+
+/* --- Animación de entrada suave --- */
+.section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Efectos de brillo en hover para interactividad --- */
+.feature-card, .stat-item, .btn {
+  position: relative;
+}
+
+.feature-card::after,
+.stat-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(117, 170, 219, 0.1), 
+    rgba(249, 215, 28, 0.1), 
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.feature-card:hover::after,
+.stat-item:hover::after {
+  transform: scale(1.1rem);
+}
+
+/* --- Responsive refinado --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+  }
+  
+  .feature-card {
+    padding: 35px 25px;
+  }
+  
+  .stat-number {
+    font-size: 40px;
+  }
+}
+
+/* --- Animación de partículas sutiles (sol de mayo) --- */
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, 
+    rgba(117, 170, 219, 0.06) 0%, 
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: sunGlow 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes sunGlow {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: translateX(-50%) scale(1);
+  }
+  50% { 
+    opacity: 0.7; 
+    transform: translateX(-50%) scale(1.2);
+  }
+}
 
     </style>
 
+<style>
+  /* =========================================================
+   🎵 Panel de Música - Argentina
+   ========================================================= */
+.music-panel {
+  position: fixed;
+  top: 98px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+  z-index: 999;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.music-panel:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.music-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.music-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+}
+
+.music-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 46px;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #6ec9ff, #ffffff);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-left: 2px;
+}
+
+.music-slider:hover {
+  box-shadow: 0 0 8px rgba(110, 201, 255, 0.5);
+}
+
+/* Handle del slider */
+.music-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #6ec9ff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.music-slider::-webkit-slider-thumb:hover {
+  background: #6ec9ff;
+}
+
+#music-light {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(117,170,219,0.5) 0%, rgba(249,215,28,0.25) 40%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1; /* debajo del nav, pero visible */
+  mix-blend-mode: screen;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+</style>
     
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -355,8 +1052,17 @@ h1, h2, h3, h4, h5, h6 {
         <li><a href="./web/pages/historia.html" class="nav-link">Historia</a></li>
       </ul>
     </div>
-  </nav>
 
+    <div class="music-panel">
+  <img id="music-toggle" src="./web/src/img/sound_on.png" alt="Music Control" class="music-icon">
+  <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.4" class="music-slider">
+  <audio id="bg-music" loop autoplay>
+    <source src="./web/src/audio/mainTango.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+  </nav>
+  <div id="music-light"></div>
   <!-- HERO -->
   <div class="hero-container">
     <div class="hero-content">
@@ -387,35 +1093,29 @@ h1, h2, h3, h4, h5, h6 {
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section id="features" class="features-section">
-    <h2 class="section-title">¿Qué aprenderás aquí?</h2>
-    <div class="features-grid">
-      <div class="feature-card" id="feature-historia">
-        <div class="feature-icon">📜</div>
-        <h3 class="feature-title">Historia Nacional</h3>
-        <p class="feature-description">
-          Desde la época colonial hasta la actualidad: los eventos, procesos y protagonistas que construyeron la Argentina moderna.
-        </p>
-      </div>
-
-      <div class="feature-card" id="feature-cultura">
-        <div class="feature-icon">🎭</div>
-        <h3 class="feature-title">Cultura y Tradiciones</h3>
-        <p class="feature-description">
-          Gastronomía, música, costumbres y celebraciones que reflejan la identidad de cada región del país.
-        </p>
-      </div>
-
-      <div class="feature-card" id="feature-geografia">
-        <div class="feature-icon">🌄</div>
-        <h3 class="feature-title">Geografía y Regiones</h3>
-        <p class="feature-description">
-          Conocé la diversidad natural del país: sus paisajes, climas, ecosistemas y maravillas únicas.
-        </p>
-      </div>
+<!-- FEATURES -->
+<section id="features" class="features-section">
+  <h2 class="section-title">¿Qué aprenderás aquí?</h2>  
+  <div class="features-grid">
+    
+    <div class="feature-card" id="feature-historia">
+      <div class="feature-icon">📜</div>
+      <h3 class="feature-title">Historia Nacional</h3>
+      <p class="feature-description">
+        Descubrí los momentos clave que dieron forma a nuestra nación: desde los pueblos originarios y la Revolución de Mayo, hasta los desafíos y conquistas del presente argentino.
+      </p>
     </div>
-  </section>
+
+    <div class="feature-card" id="feature-personajes">
+      <div class="feature-icon">🎭</div>
+      <h3 class="feature-title">Personajes Históricos</h3>
+      <p class="feature-description">
+        Conocé a las figuras que marcaron el rumbo del país: líderes, artistas, científicos y héroes que dejaron huella en la historia y la cultura argentina.
+      </p>
+    </div>
+
+  </div>
+</section>
 
   <!-- STATS -->
   <section id="about" class="stats-section">
@@ -460,11 +1160,8 @@ h1, h2, h3, h4, h5, h6 {
     document.getElementById("feature-historia").addEventListener("click", () => {
       window.location.href = "./web/pages/historia.html";
     });
-    document.getElementById("feature-cultura").addEventListener("click", () => {
-      window.location.href = "./web/pages/cultura.html";
-    });
-    document.getElementById("feature-geografia").addEventListener("click", () => {
-      window.location.href = "./web/pages/geografia.html";
+    document.getElementById("feature-personajes").addEventListener("click", () => {
+      window.location.href = "./web/pages/personajes.html";
     });
 
     const observer = new IntersectionObserver((entries) => {
@@ -474,6 +1171,96 @@ h1, h2, h3, h4, h5, h6 {
     }, { threshold: 0.2 });
     document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
   </script>
+
+
+  <!-- musica -->
+<script>
+  const music = document.getElementById('bg-music');
+const toggle = document.getElementById('music-toggle');
+const slider = document.getElementById('music-volume');
+
+// 🔹 Cargar volumen guardado o usar valor inicial
+const savedVolume = localStorage.getItem('musicVolume');
+const initialVolume = savedVolume !== null ? parseFloat(savedVolume) : parseFloat(slider.value);
+music.volume = initialVolume;
+slider.value = initialVolume;
+let lastVolume = initialVolume || 0.4;
+
+// 🔹 Actualizar ícono según volumen
+function updateIcon() {
+  if (music.volume === 0) {
+    toggle.src = './web/src/img/sound_off.png';
+  } else {
+    toggle.src = './web/src/img/sound_on.png';
+  }
+}
+
+// 🔹 Guardar el volumen cada vez que se cambia
+slider.addEventListener('input', () => {
+  music.volume = parseFloat(slider.value);
+  if (music.volume === 0) {
+    toggle.src = './web/src/img/sound_off.png';
+  } else {
+    toggle.src = './web/src/img/sound_on.png';
+    lastVolume = music.volume;
+  }
+  localStorage.setItem('musicVolume', music.volume);
+});
+
+// 🔹 Botón mute / unmute
+toggle.addEventListener('click', () => {
+  if (music.volume > 0) {
+    lastVolume = music.volume;
+    music.volume = 0;
+    slider.value = 0;
+  } else {
+    music.volume = lastVolume || 0.4;
+    slider.value = music.volume;
+  }
+  updateIcon();
+  localStorage.setItem('musicVolume', music.volume);
+});
+
+// 🔹 Ajustar icono al cargar
+window.addEventListener('DOMContentLoaded', updateIcon);
+
+// 🔹 Autoplay (requiere interacción)
+document.addEventListener('click', () => {
+  if (music.paused) music.play().catch(() => {});
+}, { once: true });
+
+// 🔹 Luz reactiva
+const light = document.getElementById("music-light");
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const source = audioCtx.createMediaElementSource(music);
+const analyser = audioCtx.createAnalyser();
+analyser.fftSize = 256;
+const dataArray = new Uint8Array(analyser.frequencyBinCount);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+function animateLight() {
+  analyser.getByteFrequencyData(dataArray);
+  const avg = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
+  const intensity = avg / 255;
+  const scale = 1 + intensity * 1.2;
+  const opacity = 0.15 + intensity * 0.85;
+  light.style.transform = `translateX(-50%) scale(${scale})`;
+  light.style.opacity = opacity;
+  requestAnimationFrame(animateLight);
+}
+
+document.addEventListener('click', async () => {
+  if (audioCtx.state === 'suspended') await audioCtx.resume();
+  if (music.paused) await music.play().catch(() => {});
+  animateLight();
+}, { once: true });
+
+window.addEventListener('load', () => {
+  if (!music.paused) animateLight();
+});
+
+</script>
 </body>
 
 </html>

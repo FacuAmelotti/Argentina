@@ -416,7 +416,99 @@
 
 
 </style>
+<style>
+  /* =========================================================
+   🎵 Panel de Música - Argentina
+   ========================================================= */
+.music-panel {
+  position: fixed;
+  top: 138px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+  z-index: 999;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
 
+.music-panel:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.music-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.music-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+}
+
+.music-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 46px;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #6ec9ff, #ffffff);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-left: 2px;
+}
+
+.music-slider:hover {
+  box-shadow: 0 0 8px rgba(110, 201, 255, 0.5);
+}
+
+/* Handle del slider */
+.music-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #6ec9ff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.music-slider::-webkit-slider-thumb:hover {
+  background: #6ec9ff;
+}
+
+#music-light {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(117,170,219,0.5) 0%, rgba(249,215,28,0.25) 40%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1; /* debajo del nav, pero visible */
+  mix-blend-mode: screen;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+</style>
+    
 </head>
 <body>
 
@@ -454,6 +546,16 @@
         <a href="#unidad7">7) Argentina Contemporánea</a>
       </div>
     </div>
+
+        <div class="music-panel">
+  <img id="music-toggle" src="../src/img/sound_on.png" alt="Music Control" class="music-icon">
+  <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.4" class="music-slider">
+  <audio id="bg-music" loop autoplay>
+    <source src="../src/audio/main.mp3" type="audio/mpeg">
+  </audio>
+        </div>
+        
+
   </nav>
 
   <!-- Contenido principal -->
@@ -686,5 +788,93 @@
   });
   </script>
 
+  <!-- musica -->
+<script>
+  const music = document.getElementById('bg-music');
+const toggle = document.getElementById('music-toggle');
+const slider = document.getElementById('music-volume');
+
+// 🔹 Cargar volumen guardado o usar valor inicial
+const savedVolume = localStorage.getItem('musicVolume');
+const initialVolume = savedVolume !== null ? parseFloat(savedVolume) : parseFloat(slider.value);
+music.volume = initialVolume;
+slider.value = initialVolume;
+let lastVolume = initialVolume || 0.4;
+
+// 🔹 Actualizar ícono según volumen
+function updateIcon() {
+  if (music.volume === 0) {
+    toggle.src = '../src/img/sound_off.png';
+  } else {
+    toggle.src = '../src/img/sound_on.png';
+  }
+}
+
+// 🔹 Guardar el volumen cada vez que se cambia
+slider.addEventListener('input', () => {
+  music.volume = parseFloat(slider.value);
+  if (music.volume === 0) {
+    toggle.src = '../src/img/sound_off.png';
+  } else {
+    toggle.src = '../src/img/sound_on.png';
+    lastVolume = music.volume;
+  }
+  localStorage.setItem('musicVolume', music.volume);
+});
+
+// 🔹 Botón mute / unmute
+toggle.addEventListener('click', () => {
+  if (music.volume > 0) {
+    lastVolume = music.volume;
+    music.volume = 0;
+    slider.value = 0;
+  } else {
+    music.volume = lastVolume || 0.4;
+    slider.value = music.volume;
+  }
+  updateIcon();
+  localStorage.setItem('musicVolume', music.volume);
+});
+
+// 🔹 Ajustar icono al cargar
+window.addEventListener('DOMContentLoaded', updateIcon);
+
+// 🔹 Autoplay (requiere interacción)
+document.addEventListener('click', () => {
+  if (music.paused) music.play().catch(() => {});
+}, { once: true });
+
+// 🔹 Luz reactiva
+const light = document.getElementById("music-light");
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const source = audioCtx.createMediaElementSource(music);
+const analyser = audioCtx.createAnalyser();
+analyser.fftSize = 256;
+const dataArray = new Uint8Array(analyser.frequencyBinCount);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+function animateLight() {
+  analyser.getByteFrequencyData(dataArray);
+  const avg = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
+  const intensity = avg / 255;
+  const scale = 1 + intensity * 1.2;
+  const opacity = 0.15 + intensity * 0.85;
+  light.style.transform = `translateX(-50%) scale(${scale})`;
+  light.style.opacity = opacity;
+  requestAnimationFrame(animateLight);
+}
+
+document.addEventListener('click', async () => {
+  if (audioCtx.state === 'suspended') await audioCtx.resume();
+  if (music.paused) await music.play().catch(() => {});
+  animateLight();
+}, { once: true });
+
+window.addEventListener('load', () => {
+  if (!music.paused) animateLight();
+});
+
+</script>
 </body>
 </html>
