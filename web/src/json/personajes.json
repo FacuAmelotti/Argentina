@@ -1,5 +1,54 @@
 {
   "personajes": [
+    {
+  "id": "colon",
+  "nombre": "Cristóbal Colón",
+  "epoca": "precolonial",
+  "imagen": "../src/img/personajes/Colon.jpg",
+  "descripcion_corta": "El navegante genovés que cambió la historia al conectar dos mundos en 1492.",
+  "biografia": "Cristóbal Colón (1451–1506) fue un navegante genovés al servicio de los Reyes Católicos que realizó cuatro viajes al Nuevo Mundo. Su llegada a América marcó el inicio del contacto entre Europa y los pueblos originarios del continente, dando comienzo a una etapa de exploración, conquista y transformación cultural sin precedentes.",
+  "tags": ["Descubrimiento", "Exploración", "Europa"]
+},
+{
+  "id": "solis",
+  "nombre": "Juan Díaz de Solís",
+  "epoca": "precolonial",
+  "imagen": "../src/img/personajes/Solis.jpg",
+  "descripcion_corta": "Primer europeo en llegar al Río de la Plata, abriendo las puertas del territorio argentino a la exploración europea.",
+  "biografia": "Juan Díaz de Solís (1470–1516) fue un explorador español que, en 1516, se internó en el estuario del Río de la Plata, convirtiéndose en el primer europeo en pisar el actual territorio argentino. Su expedición terminó trágicamente al ser atacado por pueblos originarios en las costas uruguayas.",
+  "tags": ["Exploración", "Río de la Plata", "Conquista"]
+},
+{
+  "id": "mendoza",
+  "nombre": "Pedro de Mendoza",
+  "epoca": "precolonial",
+  "imagen": "../src/img/personajes/Mendoza.jpg",
+  "descripcion_corta": "Fundador de Buenos Aires en 1536, encabezó la primera colonización española en el Río de la Plata.",
+  "biografia": "Pedro de Mendoza (1487–1537) fue un adelantado español que fundó el primer asentamiento de Buenos Aires en 1536. A pesar de los conflictos con los pueblos originarios y las dificultades de abastecimiento, su expedición sentó las bases de la futura presencia española en el territorio.",
+  "tags": ["Fundación", "Buenos Aires", "Conquista"]
+},
+{
+  "id": "garay",
+  "nombre": "Juan de Garay",
+  "epoca": "precolonial",
+  "imagen": "../src/img/personajes/Garay.jpg",
+  "descripcion_corta": "Refundó Buenos Aires en 1580, consolidando la presencia española en el Río de la Plata.",
+  "biografia": "Juan de Garay (1528–1583) fue un conquistador y colonizador español que refundó Buenos Aires en 1580. Promovió la organización urbana, la distribución de tierras y la expansión del dominio español sobre el territorio rioplatense.",
+  "tags": ["Fundación", "Colonial", "Buenos Aires"]
+},
+{
+  "id": "calfucura",
+  "nombre": "Calfucurá",
+  "epoca": "precolonial",
+  "imagen": "../src/img/personajes/Calfucura.jpg",
+  "descripcion_corta": "Cacique mapuche símbolo de la resistencia indígena frente al avance criollo y europeo.",
+  "biografia": "Calfucurá (1778–1873) fue un líder mapuche que unificó a diversas tribus en la región pampeana, enfrentándose a las campañas militares argentinas y defendiendo los territorios indígenas. Su figura representa la resistencia cultural y política de los pueblos originarios.",
+  "tags": ["Pueblos Originarios", "Resistencia", "Mapuches"]
+},
+
+
+
+
       {
         "id": "sanmartin",
         "nombre": "José de San Martín",

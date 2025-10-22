@@ -14,7 +14,7 @@ function initSubpageAnim() {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+            
         transition: opacity 0.6s ease-out;
     `;
     

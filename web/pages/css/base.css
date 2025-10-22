@@ -857,3 +857,137 @@ h1, h2, h3, h4 {
   width: 32%;
   top: -12px;
 }
+
+
+
+.reflex {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+  padding: 40px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reflex::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 200, 0.15), transparent 70%);
+  animation: goldPulse 6s infinite linear;
+  z-index: 0;
+  pointer-events: none; 
+}
+
+@keyframes goldPulse {
+  0% { transform: rotate(0deg); opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { transform: rotate(360deg); opacity: 0.5; }
+}
+
+.reflex:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.reflex p, .reflex ul li {
+  position: relative;
+  z-index: 1;
+  color: #fff9d6;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.reflex h3 {
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+
+.reflex a.nav-button {
+  background: linear-gradient(135deg, #FFD700, #FFF3B0);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.reflex a.nav-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+.personajes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.personaje-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px;
+}
+
+.personaje-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(170, 180, 255, 0.2);
+}
+
+.personaje-card img {
+  width: 100%;
+  height: 180px; /* 🔹 más chica (antes 300px) */
+  object-fit: cover; /* 🔹 mantiene proporción y rellena todo */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px 10px 0 0; /* opcional: bordes suaves arriba */
+  display: block;
+  object-position: center 30%; /* ajusta el foco de recorte */
+
+}
+
+
+.personaje-info {
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.personaje-info h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.personaje-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.personaje-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ffffff, #bfc3ff);
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.personaje-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #9ea8ff);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 25px rgba(150, 160, 255, 0.4);
+}

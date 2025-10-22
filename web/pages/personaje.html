@@ -717,9 +717,10 @@ body {
       <a href="../index.html" class="logo">
         <img src="../src/img/arg.png" alt="Logo Argentina">Personaje Historico
       </a>
-      <ul class="nav-menu">
-        <li><a href="./personajes.html" class="nav-link">Volver</a></li>
-      </ul>
+<ul class="nav-menu">
+  <li><button id="back-btn" class="nav-link">Volver</button></li>
+</ul>
+
     </div>
                 <div class="music-panel">
   <img id="music-toggle" src="../src/img/sound_on.png" alt="Music Control" class="music-icon">
@@ -925,7 +926,7 @@ document.addEventListener('click', async (e) => {
         title.style.color = info.color || '#ffffff';
       } else {
         title.textContent = tagName;
-        desc.textContent = 'No hay información disponible para este tag.';
+        desc.textContent = 'Aun no hay información disponible para este tag.';
         title.style.color = '#ffffff';
       }
 
@@ -941,6 +942,19 @@ document.getElementById('tag-panel-close').addEventListener('click', () => {
   document.getElementById('tag-panel').classList.remove('open');
 });
 
+
 </script>
+
+<script>
+  // Botón "Volver" dinámico
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (document.referrer && document.referrer !== window.location.href) {
+      history.back();
+    } else {
+      window.location.href = './personajes.html'; // fallback si se abre directo
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -591,9 +591,11 @@
       // Crear botones en la línea del tiempo
       Object.keys(grupos).forEach((epoca, i) => {
         const nombreVisible =
-          epoca === 'independencia' ? 'Independencia' :
-          epoca === 'organizacion' ? 'Organización Nacional' :
-          epoca === 'sigloxx' ? 'Siglo XX' : epoca;
+        epoca === 'precolonial' ? 'Precolombina y Conquista (1492–1600)' :
+        epoca === 'independencia' ? 'Independencia (1810–1824)' :
+        epoca === 'organizacion' ? 'Organización Nacional (1850–1880)' :
+        epoca === 'sigloxx' ? 'Siglo XX y Contemporáneos' : epoca;
+
 
         const btn = document.createElement('button');
         btn.classList.add('timeline-btn');
@@ -610,6 +612,7 @@
         section.style.marginTop = '120px';
 
         const titulo =
+        epoca === 'precolonial' ? 'Precolombina y Conquista (1492–1600)' :
           epoca === 'independencia' ? 'Época de la Independencia (1810–1824)' :
           epoca === 'organizacion' ? 'Época de la Organización Nacional (1850–1880)' :
           epoca === 'sigloxx' ? 'Siglo XX y Contemporáneos' :
@@ -830,7 +833,7 @@ document.addEventListener('click', async (e) => {
         title.style.color = info.color || '#ffffff';
       } else {
         title.textContent = tagName;
-        desc.textContent = 'No hay información disponible para este tag.';
+        desc.textContent = 'Aun no hay información disponible para este tag.';
         title.style.color = '#ffffff';
       }
 
