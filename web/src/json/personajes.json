@@ -1,14 +1,22 @@
 {
   "personajes": [
-    {
-      "id": "sanmartin",
-      "nombre": "José de San Martín",
-      "epoca": "independencia",
-      "imagen": "../src/img/personajes/SanMartin.jpg",
-      "descripcion_corta": "El Libertador del Sur. Con una mente estratégica y una convicción inquebrantable, liberó a tres naciones y cambió el destino de América.",
-      "biografia": "José de San Martín (1778–1850) fue mucho más que un militar brillante: fue un pensador político, un estratega paciente y un ejemplo de humildad y coherencia. Nacido en Yapeyú, en el actual territorio de Corrientes, pasó gran parte de su vida formándose en España como soldado profesional, donde aprendió las tácticas que más tarde aplicaría en las guerras por la independencia. Lo interesante es que San Martín no vuelve a América buscando gloria personal, sino porque siente que su deber es liberar su tierra. Su visión era continental: sabía que la independencia no se podía asegurar si cada país luchaba por separado. Por eso organizó una de las hazañas más impresionantes de la historia: el cruce de los Andes, una operación militar y logística sin precedentes. Con un ejército formado por criollos, gauchos, esclavos liberados y hasta chilenos exiliados, atravesó montañas imposibles y venció en batallas claves como Chacabuco y Maipú. Liberó Chile y luego Perú, pero cuando se cruzó con Simón Bolívar, eligió dar un paso al costado. No quería poder, quería libertad. Terminó sus días exiliado en Francia, lejos de la patria que ayudó a crear, pero con la paz de haber cumplido su misión. Su figura, más allá de los bronces, representa la idea de servir a una causa mayor que uno mismo.",
-      "tags": ["Libertador", "Independencia", "Estrategia", "Humildad", "Visión Continental"]
-    },
+      {
+        "id": "sanmartin",
+        "nombre": "José de San Martín",
+        "epoca": "independencia",
+        "imagen": "../src/img/personajes/SanMartin.jpg",
+        "descripcion_corta": "El Libertador del Sur. Con una mente estratégica y una convicción inquebrantable, liberó a tres naciones y cambió el destino de América.",
+        "biografia": "José de San Martín (1778–1850) fue mucho más que un militar brillante: fue un pensador político, un estratega paciente y un ejemplo de humildad y coherencia. Nacido en Yapeyú, en el actual territorio de Corrientes, pasó gran parte de su vida formándose en España como soldado profesional, donde aprendió las tácticas que más tarde aplicaría en las guerras por la independencia. Lo interesante es que San Martín no vuelve a América buscando gloria personal, sino porque siente que su deber es liberar su tierra. Su visión era continental: sabía que la independencia no se podía asegurar si cada país luchaba por separado. Por eso organizó una de las hazañas más impresionantes de la historia: el cruce de los Andes, una operación militar y logística sin precedentes. Con un ejército formado por criollos, gauchos, esclavos liberados y hasta chilenos exiliados, atravesó montañas imposibles y venció en batallas claves como Chacabuco y Maipú. Liberó Chile y luego Perú, pero cuando se cruzó con Simón Bolívar, eligió dar un paso al costado. No quería poder, quería libertad. Terminó sus días exiliado en Francia, lejos de la patria que ayudó a crear, pero con la paz de haber cumplido su misión. Su figura, más allá de los bronces, representa la idea de servir a una causa mayor que uno mismo.",
+        "tags": [
+          "Libertador",
+          "Independencia",
+          "Estratega",
+          "Militar",
+          "Patriota",
+          "Humildad"
+        ]
+
+      },
     {
       "id": "belgrano",
       "nombre": "Manuel Belgrano",
@@ -16,7 +24,13 @@
       "imagen": "../src/img/personajes/Belgrano.jpg",
       "descripcion_corta": "Creador de la bandera y pensador adelantado a su tiempo. Defendió la educación, la industria nacional y el rol de la mujer en la sociedad.",
       "biografia": "Manuel Belgrano (1770–1820) fue uno de esos genios que no encajan en una sola definición. Fue abogado, economista, periodista, militar y, sobre todo, un pensador moderno en una época donde casi nadie lo era. Estudió en Europa y volvió a Buenos Aires con una idea muy clara: el progreso de una nación depende de la educación y del trabajo. Creó escuelas, impulsó la agricultura y el comercio, y hablaba de igualdad de derechos en tiempos donde eso era revolucionario. Pero el destino lo puso también en el campo de batalla, y aunque no era militar, asumió el desafío con una convicción tremenda. Lideró los Ejércitos del Norte y ganó batallas heroicas como Tucumán y Salta. En medio de todo eso, creó nuestra bandera, un símbolo que nació sin pompa ni ceremonia, pero con el corazón de un pueblo que quería ser libre. Belgrano murió pobre, olvidado, sin recibir los honores que merecía. Sin embargo, su legado es enorme: fue el primero en hablar de educación gratuita, de industria nacional, de la igualdad entre hombres y mujeres, y de un país independiente basado en el conocimiento. Fue un soñador práctico: alguien que no solo pensaba en el futuro, sino que lo intentaba construir cada día.",
-      "tags": ["Educación", "Bandera", "Economía Nacional", "Igualdad", "Patria"]
+      "tags": [
+        "Educación",
+        "Bandera",
+        "Patriota",
+        "Independencia",
+        "Progreso"
+      ]
     },
   {
     "id": "moreno",
@@ -25,7 +39,17 @@
     "imagen": "../src/img/personajes/MMoreno.jpg",
     "descripcion_corta": "Intelectual brillante y revolucionario de la Primera Junta. Luchó por una independencia profunda basada en la educación y la libertad de pensamiento.",
     "biografia": "Mariano Moreno (1778–1811) fue uno de los cerebros más lúcidos y adelantados de la Revolución de Mayo. Abogado formado en Chuquisaca, entendió que la independencia no era solo una cuestión militar, sino un cambio cultural, educativo y político profundo. Fue secretario de la Primera Junta y el impulsor del periódico 'La Gaceta de Buenos Aires', con el que difundió las ideas de libertad, igualdad y soberanía del pueblo. Era un lector apasionado de los pensadores franceses y creía que América debía romper de verdad con el sistema colonial, no solo cambiar de gobernantes. Fue un revolucionario con una visión moderna: quería un país con educación, libertad de prensa y justicia social. Su paso por la historia fue breve pero intenso: murió en altamar, rumbo a Inglaterra, con apenas 32 años. Sin embargo, dejó una marca imborrable. Representa al intelectual comprometido con la acción, el que entiende que las ideas también son un arma poderosa.",
-    "tags": ["Revolución de Mayo", "Educación", "Prensa Libre", "Pensamiento Ilustrado", "Independencia"]
+    "tags": [
+  "Revolución de Mayo",
+  "Ilustrado",
+  "Periodista",
+  "Patriota",
+  "Reformista",
+  "Libertad de Prensa",
+  "Pensamiento Liberal",
+  "Primera Junta"
+]
+
   },
   {
     "id": "saavedra",
@@ -34,7 +58,15 @@
     "imagen": "../src/img/personajes/Saavedra.jpg",
     "descripcion_corta": "Militar y político, primer presidente de la Primera Junta. Su liderazgo marcó los comienzos de la organización política del nuevo Estado.",
     "biografia": "Cornelio Saavedra (1759–1829) fue un militar porteño que tuvo un papel clave en los primeros pasos de la independencia argentina. Participó activamente en la defensa de Buenos Aires durante las Invasiones Inglesas y ganó prestigio popular por su liderazgo. En 1810 fue elegido presidente de la Primera Junta, el primer gobierno patrio. A diferencia de Mariano Moreno, Saavedra representaba un pensamiento más moderado: creía que los cambios debían hacerse con prudencia y sin romper totalmente con España de inmediato. Ese contraste entre el 'ala morenista' y el 'ala saavedrista' fue el primer gran debate político de la nueva nación. Aunque luego fue desplazado y cayó en desgracia, su figura muestra que la independencia no fue un proceso uniforme, sino una construcción con distintas miradas. Saavedra fue un hombre práctico, más militar que ideólogo, pero consciente de la necesidad de orden y legitimidad en un tiempo de caos.",
-    "tags": ["Primera Junta", "Moderación", "Revolución de Mayo", "Política", "Historia Argentina"]
+  "tags": [
+  "Revolución de Mayo",
+  "Primera Junta",
+  "Militar",
+  "Moderado",
+  "Política",
+  "Gobierno Provisional",
+  "Buenos Aires"
+]
   },
   {
     "id": "guemes",
@@ -43,7 +75,16 @@
     "imagen": "../src/img/personajes/Guemes.jpg",
     "descripcion_corta": "El héroe del norte argentino. Con su ejército gaucho defendió la frontera y aseguró la independencia con ingenio y coraje.",
     "biografia": "Martín Miguel de Güemes (1785–1821) fue un líder militar salteño que personifica el espíritu popular de la independencia. Mientras San Martín preparaba su campaña libertadora, Güemes se encargaba de mantener a raya a los realistas en el norte del país. Con su ejército de gauchos, hombres del pueblo, campesinos y jinetes, organizó una guerra de resistencia llamada la 'Guerra Gaucha'. No tenía grandes recursos ni armas modernas, pero usó la inteligencia, el conocimiento del terreno y la unión del pueblo como su mayor fortaleza. Güemes fue gobernador de Salta y defendió la causa revolucionaria incluso contra las propias elites que lo subestimaban. Murió peleando, herido en combate, pero se negó a rendirse. Su figura representa al héroe cercano, al líder que luchó desde el barro y no desde los palacios. Gracias a su tenacidad, el norte argentino no volvió a caer bajo dominio español.",
-    "tags": ["Guerra Gaucha", "Patriotismo", "Liderazgo Popular", "Salta", "Resistencia"]
+    "tags": [
+  "Independencia",
+  "Guerra Gaucha",
+  "Salta",
+  "Defensa del Norte",
+  "Patriota",
+  "Estratega",
+  "Gaucho",
+  "Libertador"
+]
   },
   {
     "id": "castelli",
@@ -52,7 +93,16 @@
     "imagen": "../src/img/personajes/Castelli.jpg",
     "descripcion_corta": "El orador de la Revolución de Mayo. Luchó por la libertad, la igualdad y la educación del pueblo.",
     "biografia": "Juan José Castelli (1764–1812) fue uno de los revolucionarios más intelectuales y apasionados de la Revolución de Mayo. Abogado formado en Chuquisaca, fue primo de Mariano Moreno y compartía su espíritu ilustrado y su fe en la razón. En la Primera Junta fue el encargado de difundir las ideas de libertad y justicia social en todo el territorio. Cuando fue enviado al Alto Perú, aplicó medidas que en su tiempo eran casi impensadas: abolió la esclavitud, eliminó los tributos indígenas y promovió la igualdad ante la ley. Fue un defensor inquebrantable del pueblo originario y de la educación pública. Aunque terminó siendo derrotado militarmente y perseguido políticamente, su visión fue la de un país verdaderamente libre, no solo de España, sino también de las cadenas de la ignorancia y la desigualdad. Murió enfermo y olvidado, pero su legado intelectual fue la semilla del pensamiento emancipador argentino.",
-    "tags": ["Revolución de Mayo", "Educación", "Derechos Humanos", "Ilustración", "Libertad"]
+    "tags": [
+  "Revolución de Mayo",
+  "Ilustrado",
+  "Orador de la Revolución",
+  "Liberalismo",
+  "Reformista",
+  "Educación",
+  "Libertad de los Pueblos",
+  "Patriota"
+]
   },
   {
     "id": "pueyrredon",
@@ -70,7 +120,16 @@
     "imagen": "../src/img/personajes/Artigas.jpg",
     "descripcion_corta": "El Protector de los Pueblos Libres. Defendió el federalismo, la justicia social y la soberanía popular.",
     "biografia": "José Gervasio Artigas (1764–1850) fue un líder militar y político del Río de la Plata, considerado el 'Padre del Federalismo'. Aunque nació en lo que hoy es Uruguay, su lucha y su pensamiento marcaron profundamente la historia argentina. Artigas entendió que la independencia debía incluir no solo la libertad frente a España, sino también la igualdad entre las provincias y los derechos de los pueblos del interior. Su proyecto político —la Liga de los Pueblos Libres— fue la primera experiencia federal de América del Sur, con principios de autonomía, reparto de tierras y justicia social. Mientras Buenos Aires buscaba centralizar el poder, Artigas defendía la soberanía de cada provincia. Fue traicionado, derrotado y exiliado, pero su legado es inmenso: un líder popular, adelantado a su tiempo, que pensó una patria más inclusiva, justa y solidaria. Hoy, sus ideas resuenan en los debates sobre federalismo y equidad.",
-    "tags": ["Federalismo", "Justicia Social", "Pueblos Libres", "Soberanía", "Independencia"]
+    "tags": [
+  "Independencia",
+  "Director Supremo",
+  "Apoyo a San Martín",
+  "Política",
+  "Economía",
+  "Buenos Aires",
+  "Patriota",
+  "Organización Nacional"
+]
   },
   {
     "id": "dorrego",

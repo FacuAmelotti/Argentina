@@ -477,15 +477,20 @@ body::before {
 }
 
 /* --- Hero con alma de bandera --- */
-.hero-container {
+.hero-container, .features-section {
   position: relative;
   background: 
-    linear-gradient(180deg, 
-      rgba(117, 170, 219, 0.03) 0%, 
-      rgba(10, 10, 18, 0.8) 40%,
-      rgba(10, 10, 18, 0.95) 100%
+    linear-gradient(
+      180deg, 
+      rgba(117, 170, 219, 0.13) 0%, 
+      rgba(10, 10, 18, 0.16) 40%,
+      rgba(10, 10, 18, 0.18) 50%,
+      rgba(10, 10, 18, 0.16) 60%,
+      rgba(117, 170, 219, 0.13) 100%
     );
+
 }
+
 
 .hero-container::before {
   content: "";
@@ -1042,11 +1047,13 @@ body::before {
   <!-- Fondo animado -->
   <div class="animated-bg"></div>
 
+  <div class="flag-bg"></div>
+
   <!-- NAV -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <img src="./web/src/img/arg.png" alt="Logo Argentina">Argentina
+        <img src="./web/src/img/arg.png" alt="Logo Argentina">
       </a>
       <ul class="nav-menu">
         <li><a href="./web/pages/historia.html" class="nav-link">Historia</a></li>
@@ -1067,6 +1074,7 @@ body::before {
   <div class="hero-container">
     <div class="hero-content">
       <h1 class="hero-title">Argentina</h1>
+        <h2 class="flag-underline"></h2>
       <p class="hero-subtitle">Tierra de historia, pasión y diversidad.</p>
       <p class="hero-description">
         Bienvenido a un recorrido por la historia y la cultura argentina.  
@@ -1078,20 +1086,21 @@ body::before {
     </div>
   </div>
 
-  <!-- INTRO -->
-  <section class="section" id="intro">
-    <div class="content text-center">
-      <h2 class="section-title">¿Por qué conocer la historia argentina?</h2>
-      <p style="max-width: 900px; margin: 0 auto; color: rgba(255,255,255,0.7); line-height:1.8;">
-        Conocer la historia argentina nos permite entender quiénes somos, de dónde venimos y cómo evolucionó nuestra identidad como pueblo.  
-        Cada etapa —desde la independencia hasta las transformaciones sociales y culturales— refleja la lucha, los valores y la creatividad de millones de argentinos.
-      </p>
-      <br>
-      <p style="max-width: 850px; margin: 0 auto; color: rgba(255,255,255,0.6); line-height:1.8;">
-        En este sitio encontrarás contenidos didácticos sobre los hechos más importantes, los símbolos patrios, las costumbres, la música, la gastronomía y las regiones que hacen de Argentina un país único en el mundo.
-      </p>
-    </div>
-  </section>
+<section class="hero-container" id="intro">
+  <div class="content text-center">
+    <h2 class="section-title">¿Por qué conocer la historia argentina?</h2>
+    <p style="max-width: 900px; margin: 0 auto; color: rgba(255,255,255,0.75); line-height:1.9; font-size:1.05rem;">
+      Conocer nuestra historia es descubrir el alma de Argentina: un viaje que une pasado y presente, forjado por el coraje, los sueños y la diversidad de su gente.  
+      Desde los pueblos originarios y las luchas por la independencia, hasta las expresiones culturales que nos representan hoy, cada capítulo refleja la pasión de un país en constante movimiento.
+    </p>
+    <br>
+    <p style="max-width: 850px; margin: 0 auto; color: rgba(255,255,255,0.6); line-height:1.9; font-size:1.03rem;">
+      Aquí encontrarás un recorrido visual y emocional por los hitos que dieron forma a nuestra identidad:  
+      los símbolos patrios, la música, las costumbres, la gastronomía y las regiones que hacen de Argentina un territorio lleno de historia, arte y corazón.
+    </p>
+  </div>
+</section>
+
 
 <!-- FEATURES -->
 <section id="features" class="features-section">
@@ -1115,6 +1124,7 @@ body::before {
     </div>
 
   </div>
+
 </section>
 
   <!-- STATS -->
@@ -1259,6 +1269,7 @@ document.addEventListener('click', async () => {
 window.addEventListener('load', () => {
   if (!music.paused) animateLight();
 });
+
 
 </script>
 </body>

@@ -1,0 +1,94 @@
+{
+  "tags": [
+    {
+      "nombre": "Revolución de Mayo",
+      "color": "#ffd54f",
+      "descripcion": "La Revolución de Mayo (1810) fue el proceso político y social que marcó el inicio de la independencia argentina. Comenzó con la destitución del virrey Baltasar Hidalgo de Cisneros el 25 de mayo, impulsada por los criollos del Cabildo de Buenos Aires. Fue el resultado de años de tensiones entre el poder colonial español y las ideas de libertad e ilustración que llegaban desde Europa. Su principal legado fue la creación de la Primera Junta, el primer gobierno patrio, y el comienzo del largo camino hacia la soberanía nacional."
+    },
+    {
+      "nombre": "Independencia",
+      "color": "#a8b5ff",
+      "descripcion": "La Independencia fue el proceso mediante el cual las Provincias Unidas del Río de la Plata rompieron definitivamente los lazos con España. Declarada el 9 de julio de 1816 en Tucumán, simbolizó el nacimiento político de una nueva nación. Más allá del acto formal, fue una lucha militar, ideológica y cultural que involucró a miles de personas de diferentes regiones y clases sociales. Consolidó la idea de libertad, soberanía y autodeterminación de los pueblos."
+    },
+    {
+      "nombre": "Federalismo",
+      "color": "#66bb6a",
+      "descripcion": "El federalismo es una forma de organización política que propone la autonomía de las provincias dentro de un Estado nacional. En Argentina surgió como reacción al centralismo porteño, defendido por figuras como Artigas, Güemes y Dorrego. Su objetivo era que cada provincia tuviera voz propia en las decisiones políticas, económicas y sociales. Las guerras civiles del siglo XIX enfrentaron a federalistas y unitarios, marcando profundamente la historia del país."
+    },
+    {
+      "nombre": "Liberalismo",
+      "color": "#81c784",
+      "descripcion": "El liberalismo fue una corriente de pensamiento inspirada en las ideas de la Ilustración. Promovía la libertad individual, la igualdad ante la ley, la propiedad privada y la limitación del poder del Estado. En el Río de la Plata influyó en intelectuales como Mariano Moreno y Castelli, quienes veían en la educación y la razón las bases del progreso. Más tarde, inspiró las constituciones y las reformas políticas del siglo XIX."
+    },
+    {
+      "nombre": "Primera Junta",
+      "color": "#b39ddb",
+      "descripcion": "La Primera Junta de Gobierno fue el primer órgano político autónomo del virreinato del Río de la Plata, creado el 25 de mayo de 1810 tras la Revolución de Mayo. Estaba compuesta por nueve miembros —entre ellos Saavedra, Moreno, Alberti y Paso— y marcó el inicio del autogobierno criollo. Representó un cambio histórico: por primera vez, el pueblo asumía la soberanía en lugar del rey de España."
+    },
+    {
+      "nombre": "Congreso de Tucumán",
+      "color": "#ba68c8",
+      "descripcion": "El Congreso de Tucumán fue la asamblea soberana que, el 9 de julio de 1816, proclamó la independencia de las Provincias Unidas del Río de la Plata. Reunió a representantes de casi todas las provincias del actual territorio argentino y de la actual Bolivia. Fue un acto político y simbólico que consolidó la existencia de un nuevo Estado libre, marcando uno de los momentos más trascendentes de la historia nacional."
+    },
+    {
+      "nombre": "Guerra Gaucha",
+      "color": "#c58b45",
+      "descripcion": "La Guerra Gaucha fue el conjunto de combates librados entre 1814 y 1821 en el norte argentino, liderados por Martín Miguel de Güemes. Con tácticas de guerrilla, los gauchos defendieron las provincias del norte de las incursiones realistas provenientes del Alto Perú. Fue una guerra popular, con participación campesina, que aseguró la independencia sin depender de ejércitos profesionales."
+    },
+    {
+      "nombre": "Patriota",
+      "color": "#fff176",
+      "descripcion": "El término 'Patriota' designa a quienes lucharon por la libertad y la independencia del país. En los tiempos de la Revolución e Independencia, ser patriota significaba poner la causa común por encima de los intereses personales. Los patriotas fueron los arquitectos de una nación nueva, desde los líderes militares y políticos hasta los ciudadanos anónimos que contribuyeron con su esfuerzo y sacrificio."
+    },
+    {
+      "nombre": "Educación",
+      "color": "#4fc3f7",
+      "descripcion": "La educación fue uno de los pilares del pensamiento ilustrado que inspiró a figuras como Belgrano y Moreno. Se consideraba la herramienta más poderosa para formar ciudadanos libres, racionales y capaces de construir una república. Desde las primeras escuelas patrias hasta los proyectos de universidades nacionales, la educación fue sinónimo de progreso y libertad."
+    },
+    {
+      "nombre": "Bandera",
+      "color": "#90caf9",
+      "descripcion": "La bandera argentina fue creada por Manuel Belgrano en 1812, a orillas del río Paraná, como símbolo de unidad e identidad nacional. Los colores celeste y blanco representaban la independencia y la pureza de los ideales patrios. Desde entonces, se transformó en el emblema más poderoso del sentimiento nacional."
+    },
+    {
+      "nombre": "Libertador",
+      "color": "#a1887f",
+      "descripcion": "El título de 'Libertador' se otorgó a figuras como José de San Martín y Simón Bolívar, quienes lideraron campañas militares que liberaron a varios países del dominio español. Representa al héroe que lucha no por ambición personal, sino por la libertad de los pueblos oprimidos."
+    },
+    {
+      "nombre": "Gaucho",
+      "color": "#d7ccc8",
+      "descripcion": "El gaucho fue el habitante de las llanuras del Río de la Plata, símbolo de libertad, coraje y amor por la tierra. Durante las guerras de independencia, se convirtió en un protagonista fundamental, especialmente en la defensa del norte bajo el mando de Güemes. Su figura es hoy parte esencial de la identidad argentina."
+    },
+    {
+      "nombre": "Federalismo",
+      "color": "#66bb6a",
+      "descripcion": "El federalismo defendía la idea de que cada provincia debía gobernarse a sí misma dentro de un sistema nacional común. Fue impulsado por líderes como Artigas y Dorrego, y enfrentó al centralismo unitario de Buenos Aires. Sus principios aún marcan el funcionamiento político de la Argentina moderna."
+    },
+    {
+      "nombre": "Unitario",
+      "color": "#9fa8da",
+      "descripcion": "El unitarismo fue una corriente política del siglo XIX que promovía un gobierno central fuerte en Buenos Aires, con poder sobre las provincias. Surgió en oposición al federalismo y fue defendido por figuras como Rivadavia y, en menor medida, los herederos del pensamiento morenista. El enfrentamiento entre unitarios y federales marcó décadas de guerras civiles en el país."
+    },
+    {
+      "nombre": "Justicia",
+      "color": "#ffb74d",
+      "descripcion": "La justicia fue uno de los ideales fundacionales de la revolución. Se entendía como la búsqueda de igualdad ante la ley, respeto por los derechos humanos y fin de los privilegios heredados del sistema colonial."
+    },
+    {
+      "nombre": "Política",
+      "color": "#ffcc80",
+      "descripcion": "La política durante la independencia argentina fue un campo de intensos debates sobre el poder, la representación y la forma de gobierno. Desde las primeras juntas hasta el Congreso de Tucumán, se discutió cómo organizar un Estado soberano que conciliara libertad y orden."
+    },
+    {
+      "nombre": "Economía",
+      "color": "#ffd54f",
+      "descripcion": "La economía fue un desafío permanente durante el proceso revolucionario. El financiamiento de los ejércitos, la creación de industrias locales y el comercio libre fueron temas que dividieron a los dirigentes. Pueyrredón, Belgrano y otros buscaron equilibrar el desarrollo económico con la independencia política."
+    },
+    {
+      "nombre": "Patriotismo",
+      "color": "#ffe082",
+      "descripcion": "El patriotismo es el amor y la devoción por la patria. En los tiempos de la independencia, significaba sacrificar intereses personales por el bien común. Inspiró gestos heroicos y consolidó la identidad nacional."
+    }
+  ]
+}

@@ -461,6 +461,62 @@
 
 </style>
     
+<style>
+
+    .flag-underline::after {
+  width: 56%;
+  top: -12px;
+  margin-bottom: 15px;
+}
+  /* === PANEL DE INFORMACIÓN DE TAG === */
+#tag-panel {
+  position: fixed;
+  right: -420px;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: rgba(10, 10, 20, 0.9);
+  backdrop-filter: blur(15px);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.4);
+  transition: right 0.4s ease;
+  z-index: 1000;
+  color: white;
+  padding: 40px 30px;
+  overflow-y: auto;
+}
+
+#tag-panel.open {
+  right: 0;
+}
+
+#tag-panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+#tag-panel p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+}
+
+#tag-panel-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s;
+}
+
+#tag-panel-close:hover {
+  color: #ffffff;
+}
+
+</style>
 </head>
 <body>
 
@@ -503,11 +559,20 @@
 <div class="tools-container">
   <div class="tools-header">
     <h1 class="tools-title">Personajes Históricos</h1>
+            <h2 class="flag-underline"></h2>
     <p class="tools-subtitle">Explorá las figuras que marcaron la historia argentina</p>
   </div>
 
   <div id="personajes-grid" class="tools-grid"></div>
 </div>
+
+<!-- Panel lateral para info de tags -->
+<div id="tag-panel">
+  <span id="tag-panel-close">✕</span>
+  <h2 id="tag-title"></h2>
+  <p id="tag-description"></p>
+</div>
+
 
 <script>
   fetch('../src/json/personajes.json')
@@ -556,19 +621,33 @@
         `;
 
         const grid = section.querySelector('.tools-grid');
-        personajes.forEach(p => {
-          const card = document.createElement('div');
-          card.classList.add('tool-card');
-          card.innerHTML = `
-            <img src="${p.imagen}" alt="${p.nombre}">
-            <div class="tool-info">
-              <h2>${p.nombre}</h2>
-              <p class="tool-description">${p.descripcion_corta}</p>
-              <a href="./personaje.html?id=${p.id}" class="tool-btn">Ver más</a>
-            </div>
-          `;
-          grid.appendChild(card);
-        });
+personajes.forEach(p => {
+  const card = document.createElement('div');
+  card.classList.add('tool-card');
+  
+  // Crear contenedor base
+  card.innerHTML = `
+    <img src="${p.imagen}" alt="${p.nombre}">
+    <div class="tool-info">
+      <h2>${p.nombre}</h2>
+      <p class="tool-description">${p.descripcion_corta}</p>
+      <div class="tool-tags"></div> <!-- 🔹 Contenedor de tags -->
+      <a href="./personaje.html?id=${p.id}" class="tool-btn">Ver más</a>
+    </div>
+  `;
+
+  // Agregar los tags
+  const tagsContainer = card.querySelector('.tool-tags');
+  p.tags.forEach(tag => {
+    const span = document.createElement('span');
+    span.classList.add('tool-tag');
+    span.textContent = tag;
+    span.setAttribute('data-tag', tag);
+    tagsContainer.appendChild(span);
+  });
+
+  grid.appendChild(card);
+});
 
         container.appendChild(section);
       });
@@ -725,6 +804,46 @@ document.addEventListener('click', async () => {
 
 window.addEventListener('load', () => {
   if (!music.paused) animateLight();
+});
+</script>
+
+<!--TAGS-->
+<script>
+  // Funcionalidad de panel de tags
+document.addEventListener('click', async (e) => {
+  const tag = e.target.closest('.tool-tag');
+  const panel = document.getElementById('tag-panel');
+  const title = document.getElementById('tag-title');
+  const desc = document.getElementById('tag-description');
+
+  if (tag) {
+    const tagName = tag.textContent.trim();
+
+    try {
+      const res = await fetch('../src/json/tags.json');
+      const data = await res.json();
+      const info = data.tags.find(t => t.nombre.toLowerCase() === tagName.toLowerCase());
+
+      if (info) {
+        title.textContent = info.nombre;
+        desc.textContent = info.descripcion;
+        title.style.color = info.color || '#ffffff';
+      } else {
+        title.textContent = tagName;
+        desc.textContent = 'No hay información disponible para este tag.';
+        title.style.color = '#ffffff';
+      }
+
+      panel.classList.add('open');
+    } catch (err) {
+      console.error('Error cargando info del tag:', err);
+    }
+  }
+});
+
+// Cerrar panel
+document.getElementById('tag-panel-close').addEventListener('click', () => {
+  document.getElementById('tag-panel').classList.remove('open');
 });
 
 </script>

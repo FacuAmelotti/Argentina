@@ -771,3 +771,89 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.015em;
 }
+
+/* ===== COLORES PERSONALIZADOS DE TAGS ===== */
+.tool-tag[data-tag="Federal"] {
+  background: rgba(255, 90, 90, 0.15);
+  border-color: rgba(255, 90, 90, 0.4);
+  color: rgb(255, 120, 120);
+}
+
+.tool-tag[data-tag="Unitario"] {
+  background: rgba(100, 160, 255, 0.15);
+  border-color: rgba(100, 160, 255, 0.4);
+  color: rgb(130, 190, 255);
+}
+
+.tool-tag[data-tag="Justicialista"] {
+  background: rgba(255, 200, 90, 0.15);
+  border-color: rgba(255, 200, 90, 0.4);
+  color: rgb(255, 220, 120);
+}
+
+.tool-tag[data-tag="Radical"] {
+  background: rgba(160, 255, 160, 0.15);
+  border-color: rgba(160, 255, 160, 0.4);
+  color: rgb(180, 255, 180);
+}
+
+/* Otros estilos temáticos */
+.tool-tag[data-tag="Educación"] {
+  background: rgba(110, 201, 255, 0.15);
+  border-color: rgba(110, 201, 255, 0.4);
+  color: rgb(150, 220, 255);
+}
+
+.tool-tag[data-tag="Caudillo"] {
+  background: rgba(255, 150, 80, 0.15);
+  border-color: rgba(255, 150, 80, 0.4);
+  color: rgb(255, 180, 120);
+}
+/* 🇦🇷 Bandera flameante fija (sin desplazamiento) */
+.flag-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* detrás del contenido, sobre el fondo animado */
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #75aadb 0%,
+    #75aadb 33.3%,
+    #ffffff 33.3%,
+    #ffffff 66.6%,
+    #75aadb 66.6%,
+    #75aadb 100%
+  );
+  background-size: 100% 100%;
+  opacity: 0.32;
+  filter: brightness(1.05) blur(2px);
+  animation: waveFlag 6s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* 🌬️ Efecto de flameo sin mover el fondo */
+@keyframes waveFlag {
+  0% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+.flag-underline {
+  position: relative;
+}
+.flag-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* ✅ centra horizontalmente */
+  height: 6px;                        /* grosor del borde/bandera */
+  background: linear-gradient(90deg, #75aadb 0 33.33%, #ffffff 33.33% 66.66%, #75aadb 66.66% 100%);
+  border-radius: 3px;                     /* puntas suaves */
+  width: 32%;
+  top: -12px;
+}
