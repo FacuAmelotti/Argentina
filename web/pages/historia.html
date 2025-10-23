@@ -512,6 +512,95 @@
 }
 
 
+/* 🎵 Ajuste fino: posición correcta del panel de música */
+@media (min-width: 751px) {
+  .music-panel {
+    top: 15px;              /* un poco más abajo, alineado con navbar */
+    right: 80px;           /* margen más armónico con logo y menú */
+    transform: none;        /* evita que se mueva con el hover */
+  }
+}
+
+@media (min-width: 850px) {
+  .music-panel {
+    top: 150px;              /* debajo del logo en modo responsive */
+    right: 25px;
+    scale: 0.95;
+  }
+}
+
+
+/* =========================================================
+   🍔 Botón Hamburguesa + Sidebar responsive
+   ========================================================= */
+.menu-toggle {
+  position: fixed;
+  top: 22px;
+  right: 25px;
+  width: 32px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Mostrar hamburguesa en móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    margin: 20px 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+
 </style>
     
 </head>
@@ -538,6 +627,13 @@
         <li><a href="./../pages/mapa.html" class="nav-link">Mapa</a></li>
         <li><a href="./../pages/RevolucionNacional.html" class="nav-link">Mini Juego</a></li>
       </ul>
+
+      <!-- Botón Hamburguesa -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
     <div class="nav-subbar">
@@ -552,15 +648,34 @@
       </div>
     </div>
 
-        <div class="music-panel">
-  <img id="music-toggle" src="../src/img/sound_on.png" alt="Music Control" class="music-icon">
-  <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.4" class="music-slider">
-  <audio id="bg-music" loop autoplay>
-    <source src="../src/audio/main.mp3" type="audio/mpeg">
-  </audio>
-        </div>
-        
+    <div class="music-panel">
+      <img id="music-toggle" src="../src/img/sound_on.png" alt="Music Control" class="music-icon">
+      <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.4" class="music-slider">
+      <audio id="bg-music" loop autoplay>
+        <source src="../src/audio/main.mp3" type="audio/mpeg">
+      </audio>
+    </div>
 
+    <!-- Menú móvil lateral -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-section">
+        <h4>📜 Navegación</h4>
+        <a href="./../pages/personajes.html">Personajes</a>
+        <a href="./../pages/mapa.html">Mapa</a>
+        <a href="./../pages/RevolucionNacional.html">Mini Juego</a>
+      </div>
+
+      <div class="mobile-section">
+        <h4>🇦🇷 Unidades</h4>
+        <a href="#unidad1">1) Época Colonial</a>
+        <a href="#unidad2">2) Revolución de Mayo</a>
+        <a href="#unidad3">3) Independencia y Guerras</a>
+        <a href="#unidad4">4) Organización Nacional</a>
+        <a href="#unidad5">5) Siglo XX y Transformaciones</a>
+        <a href="#unidad6">6) Dictaduras y Democracia</a>
+        <a href="#unidad7">7) Argentina Contemporánea</a>
+      </div>
+    </div>
   </nav>
 
   <!-- Contenido principal -->
@@ -882,5 +997,29 @@ window.addEventListener('load', () => {
 });
 
 </script>
+
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Crea un overlay oscuro
+const overlay = document.createElement('div');
+overlay.className = 'menu-overlay';
+document.body.appendChild(overlay);
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  overlay.classList.remove('active');
+});
+</script>
+
 </body>
 </html>

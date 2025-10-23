@@ -991,3 +991,256 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
   box-shadow: 0 5px 25px rgba(150, 160, 255, 0.4);
 }
+
+/* =========================================================
+   📱 Menú Responsive (mantiene tu estilo original)
+   ========================================================= */
+@media (max-width: 850px) {
+  /* Oculta los menús originales */
+  .nav-menu,
+  .nav-subbar {
+    display: none !important;
+  }
+
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    width: 34px;
+    height: 28px;
+    position: absolute;
+    right: 25px;
+    top: 28px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    left: 0;
+    transition: all 0.35s ease;
+  }
+
+  .menu-toggle span:nth-child(1) { top: 4px; }
+  .menu-toggle span:nth-child(2) { top: 12px; }
+  .menu-toggle span:nth-child(3) { top: 20px; }
+
+  /* animación al abrir */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 12px;
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+
+  /* Panel lateral derecho */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(12px);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 90px 25px 40px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  .mobile-menu h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 10px;
+  }
+
+  .mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .mobile-menu a:hover {
+    color: #75aaff;
+    padding-left: 8px;
+  }
+
+  .mobile-section:not(:first-child) {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+  }
+
+  /* Fondo oscuro detrás del menú */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  
+}
+/* 🔧 Corrección visual para enlaces del menú lateral */
+.mobile-menu a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none !important;
+}
+
+.mobile-menu a:hover {
+  color: #6ec9ff !important;
+  text-shadow: 0 0 5px rgba(110, 201, 255, 0.5);
+}
+
+/* 🔒 Ocultar menú móvil en escritorio */
+@media (min-width: 851px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* 🔹 Corrección: alinear el menú principal a la derecha */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Asegurar que los ítems estén a la derecha */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: auto; /* 💥 esto lo empuja a la derecha */
+}
+
+/* Ajuste del logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* =====================================================
+   🔹 Botón "Volver al Temario" en Sidebar
+   ===================================================== */
+.nav-item-exit {
+  margin-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top:15px;
+  text-align: center;
+}
+
+.nav-item-exit a {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(120,200,255,0.2), rgba(255,255,255,0.08));
+  color: #bde3ff;
+  padding: 12px 24px;
+  border: 1px solid rgba(150,220,255,0.3);
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(100,180,255,0.15);
+}
+
+.nav-item-exit a:hover {
+  background: linear-gradient(135deg, rgba(100,180,255,0.35), rgba(255,255,255,0.1));
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(100,200,255,0.3);
+}
+
+@media (max-width: 1024px) {
+  .nav-item-exit {
+    margin-top: 50px;
+    padding-top: 30px;
+  }
+
+  .nav-item-exit a {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* === Mobile Menu oculto por defecto === */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 270px;
+  height: 100vh;
+  background: rgba(10, 10, 18, 0.96);
+  backdrop-filter: blur(12px);
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 9999; /* aseguramos que quede arriba de todo */
+}
+
+/* === Cuando está abierto === */
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Secciones internas */
+.mobile-section h4 {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 6px;
+}
+
+.mobile-section a {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-section a:hover {
+  color: #6ec9ff;
+  text-shadow: 0 0 8px rgba(110,201,255,0.6);
+}

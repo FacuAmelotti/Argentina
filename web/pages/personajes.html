@@ -517,6 +517,140 @@
 }
 
 </style>
+
+<style>
+  /* =====================================================
+   📱 Responsive Nav + Sidebar Deslizante
+   ===================================================== */
+
+/* Botón hamburguesa */
+.menu-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 32px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Sidebar base */
+.sidebar {
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* Estado cerrado en mobile */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    transform: translateX(100%);
+    opacity: 0;
+    padding: 80px 30px;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+  /* Ocultar el sidebar original de escritorio */
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+📱 Ocultar SUBMENÚ en pantallas chicas
+========================================================= */
+@media (max-width: 768px) {
+
+  /* 🔹 Oculta el submenú o nav secundario */
+  .timeline-nav,
+  .subnav,
+  .navbar .nav-menu li ul {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+    .music-panel {
+      top: 18px;
+      right: 80px;
+    }
+
+    .tools-grid {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .tool-card {
+    max-width: 200px; /* 🔹 antes 280px */
+    transform: scale(0.95);
+  }
+
+  .tool-card img {
+    height: 160px; /* 🔹 más baja */
+  }
+
+  .tool-info h2 {
+    font-size: 1rem;
+  }
+
+  .tool-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .tool-btn {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+  }
+  }
+</style>
+
+
 </head>
 <body>
 
@@ -541,6 +675,15 @@
       </ul>
     </div>
 
+    
+      <!-- Botón Hamburguesa -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
             <div class="music-panel">
   <img id="music-toggle" src="../src/img/sound_on.png" alt="Music Control" class="music-icon">
   <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.4" class="music-slider">
@@ -548,6 +691,21 @@
     <source src="../src/audio/main.mp3" type="audio/mpeg">
   </audio>
             </div>
+
+            <!-- Menú móvil lateral -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-section">
+        <h4>📜 Navegación</h4>
+        <a href="./historia.html">Temario</a>
+      </div>
+
+      <div class="mobile-section">
+        <h4>🇦🇷 Unidades</h4>
+        <a href="#precolonial">Precolombina y Conquista (1492–1600)</a>
+        <a href="#independencia">Época de la Independencia (1810–1824)</a>
+        <a href="#organizacion">Época de la Organización Nacional (1850–1880)</a>
+        <a href="#sigloxx">Siglo XX y Contemporáneos</a>
+      </div>
   </nav>
 
   <!-- 🔹 LÍNEA DE TIEMPO STICKY (INTEGRADA AL NAV) -->
@@ -849,6 +1007,27 @@ document.getElementById('tag-panel-close').addEventListener('click', () => {
   document.getElementById('tag-panel').classList.remove('open');
 });
 
+</script>
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Crea un overlay oscuro
+const overlay = document.createElement('div');
+overlay.className = 'menu-overlay';
+document.body.appendChild(overlay);
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  menuToggle.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  overlay.classList.remove('active');
+});
 </script>
 </body>
 </html>
